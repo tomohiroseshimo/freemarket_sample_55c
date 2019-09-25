@@ -1,0 +1,47 @@
+$full: 100%;
+$max-w: 1020px;
+
+.default_container{
+  width: $full;
+  height: $full;
+}
+.header{
+  background-color: #ffffff;
+  width: $max-w;
+  height: 100px;
+  margin: auto;
+}
+.upper_container{
+  width: 1020px;
+  margin-top: 5px;
+  float: left;
+}
+
+.logo{
+  width: 134px;
+  height: 36px; 
+  float: left;
+}
+.pc-header-form{
+   float: right;
+  .input-default{
+    background-color: rgb(245, 245, 245);
+    height: 40px;
+    width: 841px;
+   }
+}
+
+
+.body{
+  background-color: black;
+  width: $max-w;
+  height: 600px;
+  margin: auto;
+}
+
+.footer{
+  background-color: green;
+  width: $max-w;
+  height: 300px;
+  margin: auto;
+}

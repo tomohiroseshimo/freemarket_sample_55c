@@ -1,27 +1,31 @@
-.header
-  .header_container
-    .upper_container
-      .logo
-        = image_tag 'https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg'
-      .form
-    .lower_container
-      .lower_container_left
-        .category
-        .brand
-      .lower_container_right
-        .good
-        .info
-        .todo
-        .mypage
+.default_container
+  .header
+    .header_container
+      .upper_container
+        .logo
+          = image_tag 'https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg'
+        .form
+          %form(action="https://www.mercari.com/jp/search/" class="pc-header-form")
+            %input(class="input-default" name="keyword" placeholder="何かお探しですか？" type="“search”" value="")/
+            %i(class="“icon-search”")
+      .lower_container
+        .lower_container_left
+          .category
+          .brand
+        .lower_container_right
+          .good
+          .info
+          .todo
+          .mypage
 
-.body
-  .slider
+  .body
+    .slider
 
 
-  .contents_header
+    .contents_header
 
-  .contents
+    .contents
 
-  .aside
+    .aside
 
-.footer
+  .footer
