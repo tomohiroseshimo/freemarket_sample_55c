@@ -11,15 +11,20 @@
       .lower_container
         .lower_container_left
           .category
+            %a(href="") カテゴリーから探す 
+            %ul.category_list
           .brand
+            %a(href="") ブランドから探す
+            %ul.brand_list
         .lower_container_right
-          .good
-          .info
-          .todo
-          .mypage
-
+          %li.navi いいね！一覧
+          %li.navi お知らせ
+          %li.navi やることリスト
+          %li.navi マイページ
   .body
     .slider
+      .slider_box
+        = image_tag '//www-mercari-jp.akamaized.net/assets/img/featured/camp/index/index_keyvisual.png?3296506464',:class => "slider-img"
 
 
     .contents_header

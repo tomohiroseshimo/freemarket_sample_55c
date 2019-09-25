@@ -1,6 +1,7 @@
 $full: 100%;
 $max-w: 1020px;
 
+
 .default_container{
   width: $full;
   height: $full;
@@ -16,7 +17,6 @@ $max-w: 1020px;
   margin-top: 5px;
   float: left;
 }
-
 .logo{
   width: 134px;
   height: 36px; 
@@ -30,6 +30,30 @@ $max-w: 1020px;
     width: 841px;
    }
 }
+.lower_container{
+  width: 1020px;
+}
+.lower_container_left{
+  width:308.45px;
+  height: 44px;
+  float: left;
+}
+.category{
+  width:159.45;
+  float: left;
+}
+.brand{
+  width: 149px;
+  float: right;
+}
+.lower_container_right{
+  width:520.31px;
+  height: 44px;
+  float: right;
+}
+li.navi{
+  float: left;
+}
 
 
 .body{
@@ -37,6 +61,21 @@ $max-w: 1020px;
   width: $max-w;
   height: 600px;
   margin: auto;
+}
+.slider{
+
+}
+.slider_box{
+  background-color: gray;
+  margin: 0 calc(50% - 50vw);
+  padding: 0 calc(50vw - 50%);
+  display: flex; 
+}
+.slider-img{
+   width: 80%;
+   height:290px;
+   margin: 0 auto;
+   display: block;
 }
 
 .footer{
