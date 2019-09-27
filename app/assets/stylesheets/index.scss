@@ -13,15 +13,16 @@ $max-w: 1020px;
   margin: auto;
 }
 .upper_container{
-  width: 1020px;
+  width: $max-w;
   margin-top: 5px;
   float: left;
+  .logo{
+    width: 134px;
+    height: 36px; 
+    float: left;
+  }
 }
-.logo{
-  width: 134px;
-  height: 36px; 
-  float: left;
-}
+
 .pc-header-form{
    float: right;
   .input-default{
@@ -31,34 +32,37 @@ $max-w: 1020px;
    }
 }
 .lower_container{
-  width: 1020px;
+  width: $max-w;
+  .lower_container_left{
+    width:308.45px;
+    height: 44px;
+    margin-top: 15px; 
+    float: left;
+    .category{
+      width:159.45;
+      float: left;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .brand{
+      width: 149px;
+      float: right;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+  .lower_container_right{
+    width:520.31px;
+    height: 44px;
+    margin-top: 15px;
+    float: right;
+    li.navi{
+      float: left;
+    }
+  }
 }
-.lower_container_left{
-  width:308.45px;
-  height: 44px;
-  float: left;
-}
-.category{
-  width:159.45;
-  float: left;
-  color: black;
-  text-decoration: none;
-}
-.brand{
-  width: 149px;
-  float: right;
-  color: black;
-  text-decoration: none;
-}
-.lower_container_right{
-  width:520.31px;
-  height: 44px;
-  float: right;
-}
-li.navi{
-  float: left;
-}
-
 
 .body{
   background-color: #FFFFFF;
@@ -93,15 +97,15 @@ li.navi{
   font-size: 25px;
 }
 .contents_header_tags{
-  margin: 0 auto;
   max-width: 1440px;
   height: 30px;
+  margin-left: 270px;
 }
 .contents_header_buttons{
   height: 40px;
 }
 .button{
-  float:left;
+  display: inline-block;
 }
 
 .footer{
