@@ -8,6 +8,7 @@ $max-w: 1020px;
 }
 .header{
   background-color: #ffffff;
+  position: relative;
   width: $max-w;
   height: 100px;
   margin: auto;
@@ -18,7 +19,7 @@ $max-w: 1020px;
   float: left;
   .logo{
     width: 134px;
-    height: 36px; 
+    height: 36px;
     float: left;
   }
 }
@@ -66,8 +67,9 @@ $max-w: 1020px;
 
 .body{
   background-color: #FFFFFF;
+  position: relative;
   width: $max-w;
-  height: 600px;
+  min-height: 600px;
   margin: auto;
 }
 .slider{
@@ -89,7 +91,8 @@ $max-w: 1020px;
 .contents_header{
   background-color: #FFFFFF;
   max-width: 1440px;
-  max-height: 171px;
+  min-height: 171px;
+  position: relative;
 }
 .contents_header h2{
   height:39px;
@@ -108,12 +111,48 @@ $max-w: 1020px;
   display: inline-block;
 }
 
+.contents{
+  background-color: #F5F5F5;
+  height: 2230px;
+  width: 1020px;
+  &__body{
+    &__subtitle{
+        font-size: 20px;
+    }
+    &__wrapper{
+      height: 525px;
+      width: 1020px;
+      &__list{
+      }
+    }
+  }
+}
+
+.content{
+  height: 252px;
+  width: 188px;
+  background-color: white;
+  float: left;
+  margin: 5px 5px 5px 5px;
+  &__image{
+    height: 188px;
+    width: 188px;
+    background-color: #99FFFF;
+  }
+  &__description{
+
+  }
+}
+
+
+
 .footer{
   background-color:#222222;
+  position: relative;
+  bottom: 0;
   color: white;
   width: 1440px;
   height: 389px;
-  margin: auto;
   .navs{
     width: 1020px;
     margin: 0 auto;
