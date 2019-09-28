@@ -36,10 +36,11 @@ $max-w: 1020px;
   &__left{
     width:308.45px;
     height: 44px;
-    margin-top: 15px; 
+    margin-top: 15px;
     float: left;
+    font-size: 15px;
     .category{
-      width:159.45;
+      width:159.45px;
       float: left;
       color: black;
       text-decoration: none;
@@ -58,8 +59,14 @@ $max-w: 1020px;
     height: 44px;
     margin-top: 15px;
     float: right;
+    color: gray;
     li.navi{
       float: left;
+      a.nav{
+        text-decoration: none;
+        color: gray;
+        line-height: 32px;
+      }
     }
   }
 }

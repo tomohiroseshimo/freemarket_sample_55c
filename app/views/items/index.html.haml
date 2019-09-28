@@ -12,18 +12,28 @@
       .lower_container
         .lower_container__left
           .category
-            = link_to "カテゴリーから探す"
-            .category__display
-              %ul.category__display__lists
+            = link_to "#" do
+              = fa_icon "th-list" ,text: "カテゴリーから探す"
+            .category__pulldown
+              %ul.category__pulldown__lists
           .brand
-            = link_to "ブランドから探す"
-            %ul.brand_list
+            = link_to "#" do
+              = fa_icon "tags",text: "ブランドから探す"
+            .brand__pulldown
+              %ul.brand__pulldown__list
         .lower_container__right
           %ul.navis
-            %a.navi いいね！一覧
-            %a.navi お知らせ
-            %a.navi やることリスト
-            %a.navi マイページ
+            %a.navi
+              = link_to "#" do
+                = fa_icon "heart", text: "いいね！一覧"
+            %a.navi
+              = link_to "#" do
+                = fa_icon "bell", text: "お知らせ"
+            %a.navi
+              = link_to "#" do
+                = fa_icon "check", text: "やることリスト"
+            %a.navi 
+              = link_to "マイページ"
 
 
   .body
