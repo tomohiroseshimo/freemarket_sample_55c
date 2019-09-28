@@ -18,8 +18,13 @@ $max-w: 1020px;
     height: 36px;
     float: left;
   }
-  .seachbox{
+  .seachForm{
     background-color: #F5F5F5;
+    &__button{
+      width: 40px;
+      height: 40px;
+      background-color: black;
+    }
   }
 }
 
@@ -33,6 +38,7 @@ $max-w: 1020px;
 }
 .lower_container{
   width: $max-w;
+  font-size: 14px;
   &__left{
     width:308.45px;
     height: 44px;
@@ -60,12 +66,17 @@ $max-w: 1020px;
     margin-top: 15px;
     float: right;
     color: gray;
-    li.navi{
+    .navi{
       float: left;
-      a.nav{
+      .nav{
         text-decoration: none;
         color: gray;
         line-height: 32px;
+        display: block;
+        .icon{
+          width: 32px;
+          height: 32px;
+        }
       }
     }
   }

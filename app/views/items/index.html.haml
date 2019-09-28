@@ -5,7 +5,7 @@
       .upper_container
         .logo
           = link_to image_tag('https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg')
-        .searchbox
+        .searchForm
           %form(action="https://www.mercari.com/jp/search/" class="pc-header-form")
             %input(class="input-default" name="keyword" placeholder="何かお探しですか？" type="“search”" value="")/
             %i(class="icon-search")
@@ -32,8 +32,10 @@
             %a.navi
               = link_to "#" do
                 = fa_icon "check", text: "やることリスト"
-            %a.navi 
-              = link_to "マイページ"
+            %a.navi
+              = link_to image_tag("https://static.mercdn.net/images/member_photo_noimage_thumb.png", size:"32x32",)
+              %span
+                =link_to "マイページ"
 
 
   .body
