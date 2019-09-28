@@ -2,10 +2,6 @@ $full: 100%;
 $max-w: 1020px;
 
 
-.default_container{
-  width: $full;
-  height: $full;
-}
 .header{
   background-color: #ffffff;
   position: relative;
@@ -22,6 +18,9 @@ $max-w: 1020px;
     height: 36px;
     float: left;
   }
+  .seachbox{
+    background-color: #F5F5F5;
+  }
 }
 
 .pc-header-form{
@@ -34,7 +33,7 @@ $max-w: 1020px;
 }
 .lower_container{
   width: $max-w;
-  .lower_container_left{
+  &__left{
     width:308.45px;
     height: 44px;
     margin-top: 15px; 
@@ -54,7 +53,7 @@ $max-w: 1020px;
       font-weight: bold;
     }
   }
-  .lower_container_right{
+  &__right{
     width:520.31px;
     height: 44px;
     margin-top: 15px;

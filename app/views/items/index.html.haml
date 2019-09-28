@@ -1,27 +1,31 @@
 .default_container
+
   .header
     .header_container
       .upper_container
         .logo
-          = image_tag 'https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg'
-        .form
+          = link_to image_tag('https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg')
+        .searchbox
           %form(action="https://www.mercari.com/jp/search/" class="pc-header-form")
             %input(class="input-default" name="keyword" placeholder="何かお探しですか？" type="“search”" value="")/
-            %i(class="“icon-search”")
+            %i(class="icon-search")
       .lower_container
-        .lower_container_left
+        .lower_container__left
           .category
-            %a(href="") カテゴリーから探す
-            %ul.category_list
+            = link_to "カテゴリーから探す"
+            .category__display
+              %ul.category__display__lists
           .brand
-            %a(href="") ブランドから探す
+            = link_to "ブランドから探す"
             %ul.brand_list
-        .lower_container_right
+        .lower_container__right
           %ul.navis
             %a.navi いいね！一覧
             %a.navi お知らせ
             %a.navi やることリスト
             %a.navi マイページ
+
+
   .body
     .slider
       .slider_box
