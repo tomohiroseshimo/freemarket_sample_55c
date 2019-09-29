@@ -17,6 +17,7 @@ $max-w: 1020px;
 
 .upper-container{
   width: $max-w;
+  position: relative;
   margin-top: 5px;
   float: left;
   .logo{
@@ -46,6 +47,7 @@ $max-w: 1020px;
   width: 1020px;
   height: 44px;
   font-size: 14px;
+  margin-top: 8px;
   &__left{
     float:left;
     width: 308.45px;
