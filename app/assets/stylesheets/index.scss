@@ -155,12 +155,29 @@ $max-w: 1020px;
     height: 188px;
     width: 188px;
     background-color: #99FFFF;
-  }
+    position: relative;
+    .content-img{
+      max-width: 100%;
+      height: auto;
+      position: absolute;
+    }
+   }
   &__description{
-
+    font-size: 12px;
+    height: 46px;
+    padding: 0 8px;
   }
 }
-
+span{
+  position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  bottom: 4px;
+  padding: 0 8px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 
 
 .footer{
