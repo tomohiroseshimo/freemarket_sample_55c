@@ -100,7 +100,7 @@ $max-w: 1020px;
   display: flex; 
 }
 .slider-img{
-   width: 80%;
+   max-width: 80%;
    height:390px;
    margin: 0 auto;
    display: block;
@@ -140,26 +140,30 @@ $max-w: 1020px;
       height: 525px;
       width: 1020px;
       &__list{
+
       }
     }
   }
 }
 
 .content{
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
   height: 252px;
   width: 188px;
   background-color: white;
-  float: left;
   margin: 5px 5px 5px 5px;
+  box-sizing: border-box;
   &__image{
     height: 188px;
     width: 188px;
     background-color: #99FFFF;
-    position: relative;
+    // position: relative;
     .content-img{
       max-width: 100%;
       height: auto;
-      position: absolute;
+      // position: absolute;
     }
    }
   &__description{
@@ -169,7 +173,7 @@ $max-w: 1020px;
   }
 }
 span{
-  position: absolute;
+  // position: absolute;
   color: white;
   background-color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
