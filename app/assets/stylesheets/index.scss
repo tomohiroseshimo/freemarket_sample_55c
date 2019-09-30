@@ -29,22 +29,33 @@ $max-w: 1020px;
     height: 36px;
     float: left;
   }
-  .seachForm{
-    background-color: #F5F5F5;
-    &__button{
-      width: 40px;
-      height: 40px;
-      background-color: black;
-    }
-  }
 }
 .pc-header-form{
    float: right;
+   width: 841px;
+   height: 40px;
   .input-default{
     background-color: rgb(245, 245, 245);
-    height: 40px;
+    height: 38px;
     width: 841px;
+    padding:0 42px 0 10px;
    }
+  .searchButton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    a{
+      color:black;
+    }
+  }
 }
 
 .lower-container{

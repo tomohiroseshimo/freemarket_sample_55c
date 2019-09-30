@@ -4,8 +4,10 @@
       .logo
         = link_to image_tag('https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg')
       %form(action="https://www.mercari.com/jp/search/" class="pc-header-form")
-        %input(class="input-default" name="keyword" placeholder="何かお探しですか？" type="“search”" value="")/
-        %i(class="icon-search")
+        %input(class="input-default" name="keyword" placeholder="何かお探しですか？" type="search" value="")/
+        %i.searchButton
+          = link_to "#" do
+            = fa_icon "search"
     .lower-container.clearfix
       .lower-container__left
         .category
