@@ -1,6 +1,11 @@
 $full: 100%;
 $max-w: 1020px;
 
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
 .header{
   background-color: #ffffff;
@@ -19,7 +24,6 @@ $max-w: 1020px;
   width: $max-w;
   position: relative;
   margin-top: 5px;
-  float: left;
   .logo{
     width: 134px;
     height: 36px;
@@ -51,16 +55,32 @@ $max-w: 1020px;
   &__left{
     float:left;
     width: 308.45px;
+    height: 44px;
+    vertical-align: middle;
+    padding-top: 10px;
     .category{
       float: left;
+      height: 44px;
+      a{
+        text-align: center;
+        color: black;
+        text-decoration: none;
+      }
     }
     .brand{
       float: right;
+      height: 44px;
+      a{
+        text-align: center;
+        color: black;
+        text-decoration: none;
+      }
     }
   }
   &__right{
     float:right;
     width: 520.31px;
+    display: flex;
     .navis{
       float: left;
       height: 44px;
