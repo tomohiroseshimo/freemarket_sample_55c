@@ -84,9 +84,26 @@ $max-w: 1020px;
     .navis{
       float: left;
       height: 44px;
-      padding:0 14px 0 14px;
+      margin-top: 10px;
       .navi{
         float: left;
+        text-align: center;
+        padding:0 14px 0 14px;
+        a{
+          text-decoration: none;
+          color:black;
+          vertical-align:text-top;
+          height: 32px;
+          img{
+            margin-right: 10px;
+            border-radius: 50%;
+            vertical-align: middle;
+            a{
+              height: 69.31px;
+              width: 16px;
+            }
+          }
+        }
       }
     }
   }

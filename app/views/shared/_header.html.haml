@@ -20,15 +20,22 @@
             %ul.brand__pulldown__list
       %ul.lower-container__right
         %li.navis
-          %a.navi
+          .navi
             = link_to "#" do
-              = fa_icon "heart", text: "いいね！一覧"
-          %a.navi
+              = fa_icon "heart"
+              いいね！一覧
+        %li.navis
+          .navi
             = link_to "#" do
-              = fa_icon "bell", text: "お知らせ"
-          %a.navi
+              = fa_icon "bell"
+              お知らせ
+        %li.navis
+          .navi
             = link_to "#" do
-              = fa_icon "check", text: "やることリスト"
-          %a.navi
-            = link_to image_tag("https://static.mercdn.net/images/member_photo_noimage_thumb.png", size:"32x32",)
-            マイページ
+              = fa_icon "check"
+              やることリスト
+        %li.navis
+          .navi
+            =link_to "#" do
+              = image_tag("https://static.mercdn.net/images/member_photo_noimage_thumb.png", size:"32x32",)
+              マイページ
