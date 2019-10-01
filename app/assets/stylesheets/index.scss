@@ -135,6 +135,10 @@ $max-w: 1020px;
   &__body{
     &__subtitle{
         font-size: 20px;
+        display: flex;
+        a{
+          margin-left: auto;
+          }
     }
     &__wrapper{
       height: 525px;
@@ -145,7 +149,6 @@ $max-w: 1020px;
     }
   }
 }
-
 .content{
   display: inline-block;
   position: relative;
