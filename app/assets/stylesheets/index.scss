@@ -253,12 +253,23 @@ span{
         list-style:none;
         li{
           margin-top: 14px;
-          height:18px;
           a {
             font-size:12px;
+            height:38px;
             color:#A0A0A0;
             text-decoration: none;
             line-height: 1.5em;
+          }
+        }
+        li.footer-social-link{
+          display: inline-block;
+          a{
+            height: 42px;
+            width:47.531px;
+          }
+          i{
+            height:24px;
+            width:29.531px;
           }
         }
       }
