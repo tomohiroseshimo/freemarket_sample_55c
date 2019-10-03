@@ -309,10 +309,12 @@ span{
     margin: 30px auto 20px;
     text-align: center;
     .logo{
-
+      float:left;
     }
     .copy_right{
       text-align: center;
+      float: center;
+      font-size: 12px;
     }
   }
 }
