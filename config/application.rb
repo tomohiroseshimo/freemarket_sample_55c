@@ -8,6 +8,12 @@ Bundler.require(*Rails.groups)
 
 module FreemarketSample55c
   class Application < Rails::Application
+    # rails g コマンドを実行した際、不要なファイルを作成しないように
+    config.generators do |g|
+      g.javascripts false
+      g.heleper false
+      g.test_framwork false
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 

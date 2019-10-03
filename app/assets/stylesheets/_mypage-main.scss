@@ -1,0 +1,179 @@
+.mypage__main {
+  float: right;
+  &__user {
+    position: relative;
+    padding: 20px;
+    height: 160px;
+    background-image: image-url('commons/user-bg.jpg');
+    figure {
+      text-align: center;
+      overflow: hidden;
+      margin: 30px auto 0;
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+    }
+    &__name {
+      text-align: center;
+      margin: 8px 0 0;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    &__evaluation {
+      margin: 8px 0 0;
+      line-height: inherit;
+      text-align: center;
+      display: block;
+      box-sizing: inherit;
+      height: 16px;
+      font-size: 14px;
+      &__number {
+        display: inline-block;
+        span {
+          margin: 0 0 0 8px;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+      &__myitem {
+        display: inline-block;
+        margin: 0 0 0 16px;
+        span {
+          margin: 0 0 0 8px;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  &__infomation {
+    background-color: #fff;
+    &__tabs {
+      height: 74px;
+      border: 0;
+      list-style: none;
+      &__title1 {
+        float: left;
+        width: 350px;
+        height: 74px;
+        line-height: 72px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        border-top: 2px solid #ea352d;
+      }
+      &__title2 {
+        float: right;
+        width: 350px;
+        height: 74px;
+        line-height: 72px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: #eee;
+      }
+    }
+    &__contents {
+      
+      border-bottom: 1px solid #eee;
+      &__list {
+        padding: 16px;
+        display: block;
+        height: 48px;
+        border-bottom: 1px solid #eee;
+        figure {
+          width: 48px;
+          position: relative;
+          float: left;
+          overflow: hidden;
+          height: 48px;
+          margin: 0;
+          img {
+           position: absolute;
+           top: 0;
+           right: 0;
+           bottom: 0;
+           left: 0;
+           z-index: 1;
+          }
+        }
+        &__body {
+          margin: 0 40px 0 68px;
+          height: 38.438px;
+          &__text {
+            line-height: 1.5;
+          }
+          &__time {
+            display: inline-block;
+            color: #888;
+          }
+        } 
+      }
+      &__go-list {
+        padding: 16px;
+        list-style: none;
+        font-size: inherit;
+        height: 56px;
+        text-align: center;
+        a {
+          display: block;
+          height: 56px;
+          margin: 0 auto;
+          background: #eee;
+          color: #333;
+          line-height: 56px;
+          text-align: center;
+        }
+      }
+    }
+    .mypage__main__buyinghistory {
+      margin: 40px 0 0;
+      background: #fff;
+      &__top {
+        padding: 0 16px;
+        font-size: 16px;
+        line-height: 72px;
+        background-color: #fafafa;
+        font-weight: bold;
+      }
+      &__tabs {
+        height: 74px;
+        font-size: 16px;
+        font-weight: bold;
+        
+        &__title1 {
+          width: 50%;
+          line-height: 74px;
+          text-align: center;
+          border-top: 2px solid #ea352d;
+          display: inline-block;
+        }
+        &__title2 {
+          width: 50%;
+          line-height: 74px;
+          text-align: center;
+          float: right;
+          background-color: #eee;
+        }
+      }
+      &__content {
+        display: block;
+        padding: 160px 0 60px;
+        background-image: image-url('commons/logo-gray.svg');
+        background-repeat: no-repeat;
+        background-position: center 40px;
+        background-size: 78px 85px;
+        color: #ccc;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        &__now {
+          &__dealing {
+            
+          }
+        }
+      }
+    }
+  }
+}

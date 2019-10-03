@@ -1,0 +1,24 @@
+.mypage__content
+  %section.mypage__content__tab
+    %h2.mypage__content__tab__head
+      出品した商品
+    %ul.mypage__content__tab__lists
+      %li
+        %h3
+          = link_to '出品中', class: 'mypage__content__tab__lists__selling'
+      %li
+        %h3
+          = link_to '取引中', class: 'mypage__content__tab__lists__dealing'
+      %li
+        %h3
+          = link_to '売却済み', class: 'mypage__content__tab__lists__completed'
+    .mypage__content__tab__box
+      %ul.mypage__content__tab__box__now
+        %li.mypage__content__tab__box__now__notfound
+          出品中の商品がありません
+  %ul.mypage__content__tab__pager
+    %li.mypage__content__tab__pager__prev-cell
+      = link_to class: 'mypage__content__tab__lists__selling'
+      // 矢印アイコン
+    %li.myptage__content__tab__pager__next-cell
+      = link_to class: 'mypage__content__tab__lists__selling'

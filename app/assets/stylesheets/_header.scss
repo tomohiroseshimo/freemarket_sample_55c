@@ -1,0 +1,161 @@
+.header {
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+  border-bottom-color: lightgray;
+  &__top {
+    padding-top: 8px;
+    margin-left: auto;
+    height: 40px;
+    width: 1020px;
+    &__logo {
+      float: left;
+      height: 36px;
+      width: 134px;
+    }
+    .search {
+      position: relative;
+      float: right;
+      width: 841px;
+      height: 40px;
+      margin-left: 45px;
+      &__field {
+        background-color: #f5f5f5;
+        padding: 0 42px 0 10px;
+        height: 40px;
+        width: 100%;
+        border-radius: 4px;
+        .placeholder {
+          position: relative;
+          top: 1px;
+          left: 0;
+        } 
+      }
+      &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
+    }
+  }
+  &__bottom {
+    margin: 8px 0 0;
+    width: 1020px;
+    height: 40px;
+    &__filter {
+      width: 308px;
+      height: 44px;
+      list-style: none;
+      &__category {
+        width: 160px;
+        height: 44px;
+        padding: 0 11px;
+        &__icon {
+          display: inline-block;
+          font-weight: 400;
+          line-height: 1;
+          font-size: 12px;
+          margin-right: 4px;
+          color: #ea352d;
+        }
+        .span {
+          font-weight: 700;
+          font-size: inherit;
+          line-height: inherit;
+          text-align: center;
+          box-sizing: inherit;
+        }
+      }
+      &__brand {
+        width: 147px;
+        height: 44px;
+        position: relative;
+        padding: 0 11px;
+        display: inline-block;
+        cursor: pointer;
+        padding-right: 0;
+        &__icon {
+          display: inline-block;
+          font-weight: 400;
+          line-height: 1;
+          color: #ea352d;
+          margin-right: 4px;
+          font-size: 12px;
+        }
+        .span {
+          font-weight: 700;
+          font-size: inherit;
+          line-height: inherit;
+          text-align: center;
+          box-sizing: inherit;
+        }
+      }
+    }
+    &__menu {
+      position: absolute;
+      top: 44px;
+      z-index: 1000;
+      width: 521px;
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+      &__good {
+        display: inline-block;
+        position: relative;
+        padding: 0 14px;
+        &__icon {
+          font-size: 18px;
+          color: #ccc;
+        }
+        .span {
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+      &__info {
+        padding: 0 14px;
+        position: relative;
+        display: inline-block;
+        &__icon {
+          font-size: 20px;
+          color: #ccc;
+        }
+        .span {
+          font-size: 14px;
+          margin-left: 10px;
+        }
+      }
+      &__todo {
+        padding: 0 14px;
+        position: relative;
+        display: inline-block;
+        &__icon {
+          font-size: 16px;
+          color: #ccc;
+        }
+        &__span {
+          margin-left: 10px;
+          font-size: 14px;
+        }
+      }
+      &__mypage {
+        padding: 0 14px;
+        display: inline-block;
+        position: relative;
+        &__icon {
+         width: 32px;
+         height: 32px; 
+        }
+        &__span {
+          margin-left: 0 10px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
