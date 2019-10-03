@@ -13,12 +13,12 @@
           = link_to "公式ブログ", "https://jp-news.mercari.com/"
         %li
           = link_to "メルカリロゴ利用ガイドライン", "https://www.mercari.com/jp/logo-guidelines/"
-        %li.footer-social-link
-          = link_to "", "https://twitter.com/mercari_jp"
-          %i.fa.fa-twitter
-        %li.footer-social-link
-          = link_to "", "https://www.facebook.com/mercarijp"
-          %i.fa.fa-facebook-square
+        .footer-social-link
+          = link_to "https://twitter.com/mercari_jp" do
+            = fa_icon "twitter fa-3x"
+        .footer-social-link
+          = link_to "https://www.facebook.com/mercarijp" do
+            = fa_icon "facebook-square"
     .footer-cell
       %h2.footer-head ヘルプ＆ガイド
       %ul
