@@ -1,0 +1,43 @@
+.header
+  .header-container
+    .upper-container.clearfix
+      .logo
+        = link_to image_tag('https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg')
+      %form(action="https://www.mercari.com/jp/search/" class="pc-header-form")
+        %input(class="input-default" name="keyword" placeholder="何かお探しですか？" type="search" value="")/
+        %i.searchButton
+          = link_to "#" do
+            = fa_icon "search"
+    .lower-container.clearfix
+      .lower-container__left
+        .category
+          = link_to "#" do
+            = fa_icon "th-list" ,text: "カテゴリーから探す"
+          .category__pulldown
+            %ul.category__pulldown__lists
+        .brand
+          = link_to "#" do
+            = fa_icon "tags",text: "ブランドから探す"
+          .brand__pulldown
+            %ul.brand__pulldown__list
+      %ul.lower-container__right
+        %li.navis
+          .navi
+            = link_to "#" do
+              = fa_icon "heart"
+              いいね！一覧
+        %li.navis
+          .navi
+            = link_to "#" do
+              = fa_icon "bell"
+              お知らせ
+        %li.navis
+          .navi
+            = link_to "#" do
+              = fa_icon "check"
+              やることリスト
+        %li.navis
+          .mypage
+            =link_to "#" do
+              = image_tag("https://static.mercdn.net/images/member_photo_noimage_thumb.png", size:"32x32",)
+              マイページ
