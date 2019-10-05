@@ -1,8 +1,9 @@
 .mypage__main {
   float: right;
+  background-color: #f5f5f5;
   &__user {
+    padding-top: 20px;
     position: relative;
-    padding: 20px;
     height: 160px;
     background-image: image-url('commons/user-bg.jpg');
     figure {
@@ -131,11 +132,12 @@
       margin: 40px 0 0;
       background: #fff;
       &__top {
-        padding: 0 16px;
+        padding-left: 16px;
         font-size: 16px;
         line-height: 72px;
         background-color: #fafafa;
         font-weight: bold;
+        width: 684px;
       }
       &__tabs {
         height: 74px;
