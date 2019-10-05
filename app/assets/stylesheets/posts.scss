@@ -1,42 +1,33 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.header {
+@import "mixin/box";
+@import "mixin/bar";
+@import "mixin/footer";
+.header-post {
+  @include gray-box;
   height: 128px;
-  width: 100vw;
-  background:#EEEEEE;
-  
-  .test-header-logo {
-    text-align: center;
-    line-height: 120px;
+  position: relative;
+ .posts-header-logo {
+    margin-left: 600px;
+    height: 128px;
     font-size: 40px;
-    
-    
+    width: 260px;
+    position: absolute;
+    bottom: 80px;
     }
-  
 }
 
-.middle-box {
+.middle-box-posts {
+  @include gray-box;
   height: 380px;
-  width: 100vw;
-  background: #EEEEEE;
-
-  .middle-contents {
+  .middle-contents-posts {
+    @include white-box;
     height: 380px;
-    width: calc(100vw - 700px);
-    background: white;
-    margin: 0 100px 0 340px; 
     .middle-contents-header {
-      height: 97px;
-      width: calc(100vw - 700px);
-      background: white;
-      text-align: center;
-      line-height: 90px;
-      font-size: 20px;
-      font-weight: bold;
-      border-bottom: solid 3px #EEEEEE;
+     @include title-box;
     }
-    .middle-contents-bottom {
+    .middle-contents-bottom-posts {
       height: 182px;
       width: 500px;
       background: white;
@@ -67,32 +58,22 @@
 }
 
 .board {
+  @include gray-box;
   height: 110px;
-  width: 100vw;
-  background: #EEEEEE;
 } 
 
 .footer {
-  height: 192px;
-  width: 100vw;
-  background: #EEEEEE;
+ @include footer;
   .footer-contents {
-    margin: 0 240px 0 500px;
-    height: 192px;
-    width: 400px;
-    background: #EEEEEE; 
+    @include footer-contents;
     &__text {
-      font-size: 13px;
+      @include footer-text;
     }
   .footer-logo {
-    text-align: center;
-    line-height: 120px;
-    font-size: 50px;
+    @include footer-logo;
   }
   .footer-date {
-    text-align: center;
-    line-height: 5px;
-    font-size: 10px;
+   @include footer-date;
   }
      
   }  

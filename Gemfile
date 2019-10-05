@@ -68,3 +68,5 @@ gem "font-awesome-rails"
 
 gem "haml-rails"
 
+gem 'devise'
+

@@ -1,0 +1,29 @@
+@mixin footer {
+  height: 192px;
+  width: 100vw;
+  background: #EEEEEE;
+}
+
+@mixin footer-contents {
+  margin: 0 240px 0 500px;
+    height: 192px;
+    width: 400px;
+    background: #EEEEEE; 
+}
+
+@mixin footer-text {
+  line-height: 50px;
+      font-size: 13px;
+}
+
+@mixin footer-logo {
+  text-align: center;
+    line-height: 90px;
+    font-size: 50px;
+}
+
+@mixin footer-date {
+  text-align: center;
+    line-height: 1px;
+    font-size: 10px;
+}

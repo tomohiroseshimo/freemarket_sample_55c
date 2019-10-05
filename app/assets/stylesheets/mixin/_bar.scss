@@ -1,0 +1,95 @@
+@mixin bar {
+  float: right;
+  height: 72px;
+  width: 600px;
+  color: #999999;
+  font-size: 12px;
+}
+
+@mixin gray-text {
+  display: inline-block;
+  padding-top: 35px;
+  color: #999999;
+  font-size: 12px;
+}
+
+@mixin red-text {
+  display: inline-block;
+  padding-top: 35px;
+  color: red;
+  font-size: 12px;
+}
+
+@mixin red-line {
+  height: 6px;
+  margin-top: 10px;
+  border-bottom: solid 3px red;
+  float: left;
+} 
+
+@mixin red-line-circle {
+  width: 0rem;
+  height: 0rem;
+  border: solid 7px red;
+  border-radius: 50%;
+}
+
+@mixin other-red-line {
+  height: 6px;
+      width: 132px;
+      margin-top: 10px;
+      border-bottom: solid 3px #CCCCCC;
+      float: left;
+}
+
+@mixin other-red-line-circle {
+  width: 0rem;
+  height: 0rem;
+  border: solid 7px red;
+  border-radius: 50%;
+}
+
+@mixin other-gray-line {
+  height: 6px;
+  width: 125px;
+  margin-top: 10px;
+  border-bottom: solid 3px #CCCCCC;
+  float: left;
+} 
+ @mixin other-gray-line-circle {
+  width: 0rem;
+  height: 0rem;
+  border: solid 7px #CCCCCC;
+  border-radius: 50%;
+ }
+
+ @mixin line-last {
+  height: 6px;
+  width: 90px;
+  margin-top: 10px;
+  border-bottom: solid 3px #CCCCCC;
+  float: left;
+ }
+
+ @mixin line-last-circle {
+  width: 0rem;
+  height: 0rem;
+  border: solid 7px #CCCCCC;
+  border-radius: 50%;
+ }
+
+ @mixin circle-only {
+  height: 6px;
+  width: 1px;
+  margin-top: 10px;
+  border-bottom: solid 3px #CCCCCC;
+  float: left;
+ }
+
+ @mixin circle-only-right {
+  width: rem;
+  height: rem;
+  border: solid 7px #CCCCCC;
+  border-radius: 50%;
+  float: left;      
+ }
