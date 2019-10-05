@@ -105,16 +105,18 @@ $max-w: 1020px;
    margin: 0 auto;
    display: block;
 }
+
 .contents_header{
   background-color: #FFFFFF;
   max-width: 1440px;
-  min-height: 171px;
+  min-height: 100px;
   position: relative;
 }
 .contents_header h2{
   height:39px;
   text-align: center;
   font-size: 25px;
+  margin-bottom: 16px;
 }
 .contents_header_tags{
   max-width: 1440px;
@@ -126,6 +128,8 @@ $max-w: 1020px;
 }
 .button{
   display: inline-block;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .contents{
@@ -134,6 +138,7 @@ $max-w: 1020px;
   width: 1020px;
   &__body{
     &__subtitle{
+        margin-top: 40px;
         font-size: 20px;
         display: flex;
         a{
