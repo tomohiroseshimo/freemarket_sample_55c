@@ -141,14 +141,12 @@ $max-w: 1020px;
   margin: auto;
 }
 .slider{
-  max-width: 2880px;
-  max-height: 390px;
+  max-width: 1440px;
+  height: 390px;
 }
 .slider_box{
   background-color:#EEEDEB;
-  margin: 0 calc(50% - 50vw);
-  padding: 0 calc(50vw - 50%);
-  display: flex; 
+  
 }
 .slider-img{
    width: 80%;
