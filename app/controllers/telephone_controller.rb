@@ -1,0 +1,2 @@
+class TelephoneController < ApplicationController
+end

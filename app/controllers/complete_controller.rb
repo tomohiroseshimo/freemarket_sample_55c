@@ -1,0 +1,2 @@
+class CompleteController < ApplicationController
+end
