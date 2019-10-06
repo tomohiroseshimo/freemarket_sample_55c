@@ -1,0 +1,55 @@
+.mypage__sidebar {
+  float: left;
+  width: 280px;
+  margin: 0 40px 0 0;
+  &__main {
+    list-style: none;
+    &__box {
+      display: block;
+      width: 280px;
+      height: 685px;
+      &__mypage {
+        position: relative;
+        border-top: 1px solid #eee;
+        width: 280px;
+        height: 48px;
+        font-size: 14px;
+        background-color: #eee;
+        a {
+          position: absolute;
+          padding: 16px;
+          font-weight: 600;
+          width: 280px;
+        }
+      }
+      &__list {
+        position: relative;
+        border-bottom: 1px solid #eee;
+        display: block;
+        padding: 16px;
+        background: #fff;
+        font-size: 14px;
+        color: #333;
+      }
+    }
+    &__head {
+      margin: 40px 0 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &__list {
+      margin: 8px 0 0;
+      width: 280px;
+      li {
+        font-size: 14px;
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding: 16px;
+        display: block;
+        a {
+        }
+      }
+    }
+  }
+}

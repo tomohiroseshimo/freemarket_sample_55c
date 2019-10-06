@@ -1,0 +1,15 @@
+= render partial: "mypages/sidebar"
+.mypage__content
+  %section.mypage__content__container
+    %h2.mypage__content__container__head
+      プロフィール
+    %form{ action: "", method: "POST", class: "mypage__content__container__form"}
+      %input{ name: "__csrf_value", type: "hidden", value: "", class: "mypage__content__container__form__input"}
+      .mypage__content__container__form__profile-icon
+        %figure
+          = image_tag 'commons/user-icon.png', width: '60', height: "60"
+        %input{ type: "text", value: "", placeholder: "例)AYA☆セール中", class: "mypage__content__container__form__input-default"}
+      .mypage__content__container__form__profile-content
+        %textarea{ name: "introduction", class: "mypage__content__container__form__textarea-default", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
+        %input{ type: "hidden", value: "", name: "after_save_callback", class: "mypage__content__container__form__profile-content__input"}
+        %button{ type: "submit", class: "mypage__content__container__form__btn" } 変更する
