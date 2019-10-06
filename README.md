@@ -24,19 +24,6 @@ Things you may want to cover:
 * ...
 
 # freemarket_sample_55c DB設計
-## usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|email|string|null: false|
-|password|string|null: false|
-|nickname|string|null: false|
-|firstname|string|null: false|
-|lastname|string|null: false|
-|address|string|null: false|
-### Association
-- has_many :items
-- has_many :items_users
-
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -52,9 +39,21 @@ Things you may want to cover:
 |date|string|null: false|
 |price|integer|null: false|
 ### Association
-- belongs_to :user
 - has_many :items_users
+- belongs_to :user
 
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|nickname|string|null: false|
+|firstname|string|null: false|
+|lastname|string|null: false|
+|address|string|null: false|
+### Association
+- has_many :items
+- has_many :items_users
 
 ## items_usersテーブル
 |Column|Type|Options|
@@ -62,5 +61,6 @@ Things you may want to cover:
 |user_id|references|null: false, foreign_key: true|
 |items_id|references|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
 - belongs_to :item
+- belongs_to :user
+
