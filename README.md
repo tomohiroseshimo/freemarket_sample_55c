@@ -54,6 +54,7 @@ Things you may want to cover:
 ### Association
 - has_many :items
 - has_many :items_users
+- has_many :credits
 
 ## items_usersテーブル
 |Column|Type|Options|
@@ -64,3 +65,30 @@ Things you may want to cover:
 - belongs_to :item
 - belongs_to :user
 
+## categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|items_id|integer||
+### Association
+- has_many :items, 
+- has_many :items_categories
+
+## items_categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|items_id|integer|null: false, foreign_key: true|
+|categories_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :categoriey
+- belongs_to :item
+
+## credits
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|credit_number|integer|null: false|
+|expiry_date|integer|null: false|
+|security_code|integer|null: false|
+### Association
+- belongs_to :user
