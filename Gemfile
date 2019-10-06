@@ -7,6 +7,10 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.3'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.18', '< 0.6.0'
+
+gem 'sqlite3', '~>1.3.6'
+
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
