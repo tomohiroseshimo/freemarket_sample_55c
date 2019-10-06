@@ -1,3 +1,9 @@
-.mypage
-  = render partial: "mypages/sidebar"
-  = render partial: "mypages/mypage-main"
+.default_container
+  = render "shared/header"
+
+  .mypage
+    = render partial: "mypages/sidebar"
+    = render partial: "mypages/mypage-main"
+
+  .aside
+  = render "shared/footer"

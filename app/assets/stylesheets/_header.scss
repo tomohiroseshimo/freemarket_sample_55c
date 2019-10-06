@@ -3,12 +3,12 @@
   height: 90px;
   background-color: #fff;
   border-bottom-color: lightgray;
-  &__top {
+  &__container {
     padding-top: 8px;
     margin-left: auto;
     height: 40px;
     width: 1020px;
-    &__logo {
+    .upper-container.clearfix {
       float: left;
       height: 36px;
       width: 134px;
