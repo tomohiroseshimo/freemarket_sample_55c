@@ -6,20 +6,21 @@
     list-style: none;
     &__box {
       display: block;
+      border: 1px solid #eee;
       width: 280px;
-      height: 685px;
+      list-style: none;
       &__mypage {
         position: relative;
         border-top: 1px solid #eee;
-        width: 280px;
         height: 48px;
         font-size: 14px;
         background-color: #eee;
+        font-weight: 600;
+
         a {
           position: absolute;
           padding: 16px;
           font-weight: 600;
-          width: 280px;
         }
       }
       &__list {
@@ -29,7 +30,6 @@
         padding: 16px;
         background: #fff;
         font-size: 14px;
-        color: #333;
       }
     }
     &__head {
