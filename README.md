@@ -39,7 +39,7 @@ Things you may want to cover:
 |date|string|null: false|
 |price|integer|null: false|
 ### Association
-- has_many :items_users
+- has_many :items_categories
 - belongs_to :user
 
 ## usersテーブル
@@ -53,17 +53,7 @@ Things you may want to cover:
 |address|string|null: false|
 ### Association
 - has_many :items
-- has_many :items_users
 - has_many :credits
-
-## items_usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|references|null: false, foreign_key: true|
-|items_id|references|null: false, foreign_key: true|
-### Association
-- belongs_to :item
-- belongs_to :user
 
 ## categoriesテーブル
 |Column|Type|Options|
@@ -83,7 +73,7 @@ Things you may want to cover:
 - belongs_to :categoriey
 - belongs_to :item
 
-## credits
+## creditsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
