@@ -1,7 +1,7 @@
 .single-container
   .single-header
     %h1
-      = link_to "https://www.mercari.com/jp/" %do
+      = link_to "https://www.mercari.com/jp/" do
         = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2296184308"
 
   .single-main
@@ -215,7 +215,7 @@
                     %a{:href => "/jp/seller_terms/"} 加盟店規約
                     に同意したことになります。
                 %button.btn-default.btn-red{:type => "submit"}
-                    出品する
+                  出品する
                 %a.btn-default.btn-gray もどる
             .overlay
   .single-footer
