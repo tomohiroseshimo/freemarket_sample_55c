@@ -1,14 +1,20 @@
-.mypage {
+.mypages {
+  padding: 40px 85.5px 0 85.5px;
+  width: 1020px;
+  height: auto;
+  padding-bottom: 40px;
+  display: flex;
   border-radius: 4px #ccc;
   background-color: #f5f5f5;
   color: black;
+  margin: 0;
   .mypage__main {
     float: right;
     background-color: #f5f5f5;
     &__user {
       padding-top: 20px;
       position: relative;
-      height: 160px;
+      height: 180px;
       background-image: image-url('commons/user-bg.jpg');
       figure {
         text-align: center;
@@ -39,6 +45,10 @@
             margin: 0 0 0 8px;
             font-size: 14px;
             font-weight: 600;
+            color: #333;
+            background: none;
+            margin: 0 0 0 8px;
+            padding: 0;
           }
         }
         &__myitem {
@@ -46,8 +56,11 @@
           margin: 0 0 0 16px;
           span {
             margin: 0 0 0 8px;
+            padding: 0;
             font-size: 14px;
             font-weight: 600;
+            color: #333;
+            background: none;
           }
         }
       }
@@ -80,7 +93,7 @@
         }
       }
       &__contents {
-        
+        font-size: 14px;
         border-bottom: 1px solid #eee;
         &__list {
           padding: 16px;
@@ -112,6 +125,11 @@
             &__time {
               display: inline-block;
               color: #888;
+              span {
+                background: none;
+                color: #888;
+                font-size: 14px;
+              }
             }
           } 
         }
@@ -122,6 +140,7 @@
           height: 56px;
           text-align: center;
           a {
+            text-decoration: none;
             display: block;
             height: 56px;
             margin: 0 auto;
@@ -147,13 +166,16 @@
           height: 74px;
           font-size: 16px;
           font-weight: bold;
-          
           &__title1 {
             width: 50%;
             line-height: 74px;
             text-align: center;
             border-top: 2px solid #ea352d;
             display: inline-block;
+            a {
+              text-decoration: none;
+              color: #333;
+            }
           }
           &__title2 {
             width: 50%;
@@ -161,6 +183,10 @@
             text-align: center;
             float: right;
             background-color: #eee;
+            a {
+              text-decoration: none;
+              color: #333;
+            }
           }
         }
         &__content {

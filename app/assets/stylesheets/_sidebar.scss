@@ -2,6 +2,7 @@
   float: left;
   width: 280px;
   margin: 0 40px 0 0;
+  line-height: 1;
   &__main {
     list-style: none;
     &__box {
@@ -10,14 +11,15 @@
       width: 280px;
       list-style: none;
       &__mypage {
+        color: #ccc;
         position: relative;
-        border-top: 1px solid #eee;
         height: 48px;
         font-size: 14px;
         background-color: #eee;
-        font-weight: 600;
 
         a {
+          text-decoration: none;
+          color: black;
           position: absolute;
           padding: 16px;
           font-weight: 600;
@@ -26,10 +28,17 @@
       &__list {
         position: relative;
         border-bottom: 1px solid #eee;
-        display: block;
-        padding: 16px;
         background: #fff;
         font-size: 14px;
+        min-height: 48px;
+        a {
+          position: relative;
+          display: block;
+          text-decoration: none;
+          color: #000;
+          padding: 16px;
+
+        }
       }
     }
     &__head {
@@ -48,6 +57,9 @@
         padding: 16px;
         display: block;
         a {
+          font-size: 14px;
+          color: black;
+          text-decoration: none;
         }
       }
     }
