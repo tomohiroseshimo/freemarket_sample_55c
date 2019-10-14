@@ -9,6 +9,11 @@ class SellsController < ApplicationController
   def create
     # formのデータを受け取る
     @item = Item.new(item_params)
+    if @item.save
+      render 'index'
+    else
+      render 'new'
+    end
   end
 
   private
