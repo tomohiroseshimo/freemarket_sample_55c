@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get 'items' => 'items#index'
   get "/items/sell" => "items#new"
   get 'mypages' => 'mypages#index'
+  post 'items' => 'items#create'
 
 end
