@@ -1,11 +1,14 @@
 class ItemsController < ApplicationController
+
+  
   def index
   end
 
   def new
     @item = Item.new
-    @parents = Category.all.order("id ASC").limit(10)
+    # @parents = Category.all.order("id ASC").limit(10)　　　←全く同じコードをcategoriesコントローラーへ記載
   end
+  
   def create
     # formのデータを受け取る
     @item = Item.new(item_params)
