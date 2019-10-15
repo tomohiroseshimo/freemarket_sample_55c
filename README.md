@@ -28,6 +28,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|description|string|null: false|
 |image|string|null: false|
 |category|string|null: false|
 |brand|string||

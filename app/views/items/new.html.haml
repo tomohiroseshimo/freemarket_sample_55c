@@ -9,25 +9,25 @@
       %id.sell-container
         .data-reactroot
           .sell-container-inner
-            %h2.l-single-head
-              商品の情報を入力
-            %form.sell-form
+            %h2.l-single-head 商品の情報を入力
+            = form_for @item, class: "sell-form" do |f|
               .sell-upload-box
+                -# = f.hidden_field :user_id, value: current_user.id
                 %h3.sell-upload-head
-                  出品画像
+                  = f.label :出品画像
                   %span.form-require
                     必須
                 %p 最大10枚までアップロードできます
-                .sell-dropbox-container.clearfix.state-image-number-10
+                .sell-dropbox-container.clearfix
                   .sell-upload-items-container
-                    .sell-upload-items.have-item-0
-                      %ul
-                  .sell-upload-drop-box.have-item-0
-                    %input.sell-upload-drop-file{:type => "file", :style => "display: none;"}
-                    %pre.visible-pc
-                      ドラッグアンドドロップ
-                      またはクリックしてファイルをアップロード
-                    %i.icon-camera
+                    = f.fields_for :images do |fi|
+                      = fi.label :image, class: "sell-upload-drop-box" do
+                        .sell-upload-drop-file
+                          = fi.file_field :image,class:"file",style:"display:none;"
+                          %pre.visible-pc
+                            クリックしてファイルをアップロード
+                          %i.icon-camera
+                        -# 上の三行はアップロードした画像のプレビューを表示できるようにしたい記述だが、うまく機能しない。。
 
               .sell-content
                 .form-group
@@ -36,13 +36,13 @@
                     %span.form-require
                       必須
                   %div
-                    %input.input-default{:value => "", :placeholder => "商品名（必須 40文字まで)"}
+                    = f.text_field :name, class: "input-default", placeholder: "商品名（必須 40文字まで)"
                 .form-group
                   %label
                     商品の説明
                     %span.form-require
                       必須
-                  %textarea.textarea-default{:placeholder => "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"}
+                  = f.text_area :description, class: "textarea-default", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"
 
               .sell-content.clearfix
                 %h3.sell-sub-head

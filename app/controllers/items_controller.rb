@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
 
   def item_params
     # ストロングパラメータ
-    params.require(:item).permit(:name, :image, :category, :brand, :size, :condition,
+    params.require(:item).permit(:name, :description, :image, :category, :brand, :size, :condition,
        :cost, :shipping, :area, :date, :price, :buyer_id, :saler_id)
   end
 
