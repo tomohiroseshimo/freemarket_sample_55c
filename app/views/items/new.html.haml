@@ -10,7 +10,7 @@
         .data-reactroot
           .sell-container-inner
             %h2.l-single-head 商品の情報を入力
-            = form_for @item, class: "sell-form" do |f|
+            = form_for @item, class: "sell-form", url: items_path, mehod: :post do |f|
               .sell-upload-box
                 -# = f.hidden_field :user_id, value: current_user.id
                 %h3.sell-upload-head
@@ -20,10 +20,10 @@
                 %p 最大10枚までアップロードできます
                 .sell-dropbox-container.clearfix
                   .sell-upload-items-container
-                    = f.fields_for :images do |fi|
+                    = f.fields_for :image do |fi|
                       = fi.label :image, class: "sell-upload-drop-box" do
                         .sell-upload-drop-file
-                          = fi.file_field :image,class:"file",style:"display:none;"
+                          = fi.file_field :image, class:"file", style:"display:none;"
                           %pre.visible-pc
                             クリックしてファイルをアップロード
                           %i.icon-camera

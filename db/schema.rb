@@ -14,19 +14,18 @@ ActiveRecord::Schema.define(version: 2019_10_05_113641) do
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.string "description", null: false
-    t.string "image", null: false
-    t.string "category", null: false
+    t.text "description"
+    t.string "category"
     t.string "brand"
     t.string "size"
-    t.string "condition", null: false
-    t.string "cost", null: false
+    t.string "condition"
+    t.string "cost"
     t.string "shipping"
-    t.string "area", null: false
-    t.string "date", null: false
-    t.integer "price", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "area"
+    t.string "date"
+    t.integer "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
