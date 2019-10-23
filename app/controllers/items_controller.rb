@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+
   def index
   end
 
@@ -11,9 +12,9 @@ class ItemsController < ApplicationController
     # formのデータを受け取る
     @item = Item.new(item_params)
     if @item.save
-      render 'index'
+      render 'index', notice: '出品が完了しました'
     else
-      render 'new'
+      render 'new', notice: '商品を登録できませんでした'
     end
   end
 
@@ -21,8 +22,8 @@ class ItemsController < ApplicationController
 
   def item_params
     # ストロングパラメータ
-    params.require(:item).permit(:name, :description, :image, :category, :brand, :size, :condition,
-       :cost, :shipping, :area, :date, :price, :buyer_id, :saler_id)
+    params.require(:item).permit(:name, :description, :category, :condition, :cost, :area, :date, :price)
+    # 一旦imageキーを削除　現時点ではimageモデルがない
   end
 
   def set_item
