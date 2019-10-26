@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  root 'mypages#index'
+  root 'items#index'
   get 'items' => 'items#index'
-  get 'sells' => 'sells#index'
+  get "items/new" => "items#new"
+  get 'mypages' => 'mypages#index'
+  post 'items' => 'items#create'
 
 end
