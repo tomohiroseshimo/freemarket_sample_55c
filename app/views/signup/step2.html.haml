@@ -19,24 +19,22 @@
     .only-circle  
       .right-circle
 
-      
-.middle-box
-  .middle-contents   
-    .middle-contents-header
-      電話番号の確認
-    .middle-contents-bottom
-      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;携帯電話の番号
-      .middle-contents-bottom__form
-        &ensp;&ensp;携帯電話の番号を入力
-      .middle-contents-bottom__text 
-        本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-      .middle-contents-bottom__sms  
-        SMSを送信する
-      .middle-contents-bottom__text 
-        ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。  
-    .telephone-number
-      =link_to "https://www.facebook.com/" do
-        電話番号の確認が必要な理由＞    
+= form_for @user, url: step3_signup_index_path, method: :get, html: {class: 'second-main__box'} do |f|       
+  .middle-box
+    .middle-contents   
+      .middle-contents-header
+        電話番号の確認
+      .middle-contents-bottom
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;携帯電話の番号
+        = f.text_field :phone_number, placeholder: '携帯電話の番号を入力', class: "middle-contents-bottom__form-step2"
+        .middle-contents-bottom__text 
+          本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+        = f.submit "SMSを送信する", class: "middle-contents-bottom__sms" 
+        .middle-contents-bottom__text 
+          ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。  
+        .telephone-number
+          =link_to "https://www.facebook.com/" do
+            電話番号の確認が必要な理由＞    
 
 .footer
   .footer-contents
