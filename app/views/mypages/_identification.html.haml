@@ -1,0 +1,102 @@
+.user-info-container
+  %section.container
+    %h2.container__head 本人情報の登録
+    = form_with model: @user, class: "container__body" do |f|
+      %div
+        %p お客様の本人情報をご登録ください。
+        %p 登録されたおなまえ・生年月日を変更する場合、本人確認の提出が必要になります。 
+        = link_to root_path , class: 'link-right' do
+          本人確認書類のアップデートについて
+          %i.fa.fa-chevron-right
+      .container__body--group
+        %label お名前
+        %p
+          名前を呼び出す
+      .container__body--group
+        %label お名前カナ
+        %p
+          読み仮名を呼び出す
+      .container__body--group
+        %label 生年月日
+        %div.user_birthday
+          年
+          .p /
+          月
+          .p /
+          日
+      .container__body--group
+        %label{for: "zip_code"} 郵便番号
+        %span.form-arbitrary 任意
+        %input{type: "text", value_name: "zip_code", placeholder: "例)1234567", class: "input_default", kl_vkbd_parsed: "true"}
+      .container__body--group
+        %label{for: "prefecture"} 都道府県
+        %span.form-arbitrary 任意
+        .group-select_wrap
+          %i.icon-arrow-bottom
+          %select.select-default(name='prefecture')
+            %option --
+            %option 北海道
+            %option 青森県
+            %option 岩手県
+            %option 宮城県
+            %option 秋田県
+            %option 山形県
+            %option 福島県
+            %option 茨城県
+            %option 栃木県
+            %option 群馬県
+            %option 埼玉県
+            %option 千葉県
+            %option 東京都
+            %option 神奈川県
+            %option 新潟県
+            %option 富山県
+            %option 石川県
+            %option 福井県
+            %option 山梨県
+            %option 長野県
+            %option 岐阜県
+            %option 静岡県
+            %option 愛知県
+            %option 三重県
+            %option 滋賀県
+            %option 京都府
+            %option 大阪府
+            %option 兵庫県
+            %option 奈良県
+            %option 和歌山県
+            %option 鳥取県
+            %option 島根県
+            %option 岡山県
+            %option 広島県
+            %option 山口県
+            %option 徳島県
+            %option 香川県
+            %option 愛媛県
+            %option 高知県
+            %option 福岡県
+            %option 佐賀県
+            %option 長崎県
+            %option 熊本県
+            %option 大分県
+            %option 宮崎県
+            %option 鹿児島県
+            %option 沖縄県
+      .container__body--group
+        %label{for: "city"} 市区町村
+        %span.form-arbitrary 任意
+        %input{type: "text", value_name: "city", placeholder: "例) 横浜市緑区", class: "input_default", kl_vkbd_parsed: "true"}
+      .container__body--group
+        %label{for: "address1_label"} 番地
+        %span.form-arbitrary 任意
+        %input{type: "text", value_name: "address1", placeholder: "例) 青山1-1-1", class: "input_default", kl_vkbd_parsed: "true"}
+      .container__body--group
+        %label{for: "address2_label"} 建物名
+        %span.form-arbitrary 任意
+        %input{type: "text", value_name: "address2", placeholder: "例) 柳ビル103", class: "input_default", kl_vkbd_parsed: "true"}
+      = f.submit '登録する', class: 'btn-defualt btn-red' do
+        .btn-defualt
+      .container__footer--text-right
+        = link_to root_path , class: 'link-right2' do
+          本人確認の登録について
+          %i.fa.fa-chevron-right
