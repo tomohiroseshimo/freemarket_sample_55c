@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'mypages#index'
   get 'items' => 'items#index'
+
   
   resources :signup do
     collection do
@@ -19,5 +20,8 @@ Rails.application.routes.draw do
   end
 
   resources :posts
+
+  get 'sells' => 'sells#index'
+
 
 end
