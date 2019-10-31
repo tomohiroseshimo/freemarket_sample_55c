@@ -81,18 +81,22 @@
       &__form-pays {
         @include form;
         margin-bottom: 5px;
+        padding-left: 20px;
+        width: 350px;
       }
       &__form-mini {
         @include form;
-        width: 160px;
+        width: 120px;
         display: inline-block;
         margin-right: 0;
+        padding-left: 20px;
       }
       &__form-mini-right {
         @include form;
-        width: 160px;
+        width: 120px;
         display: inline-block;
         margin: 0 0 0 0;
+        padding-left: 20px;
       }
       &__date {
         @include form;
