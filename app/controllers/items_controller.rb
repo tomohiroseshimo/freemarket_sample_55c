@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    # @item.images.build
     # @parents = Category.all.order("id ASC").limit(10)　　　←全く同じコードをcategoriesコントローラーへ記載
   end
   
@@ -22,8 +23,7 @@ class ItemsController < ApplicationController
 
   def item_params
     # ストロングパラメータ
-    params.require(:item).permit(:name, :description, :category, :condition, :cost, :area, :date, :price)
-    # 一旦imageキーを削除　現時点ではimageモデルがない
+    params.require(:item).permit(:name, :description, :category, :condition, :cost, :area, :date, :price, images_attributes: [:image])
   end
 
   def set_item

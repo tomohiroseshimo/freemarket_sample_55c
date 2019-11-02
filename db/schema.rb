@@ -13,14 +13,14 @@
 ActiveRecord::Schema.define(version: 2019_10_19_181505) do
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "image", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "image"
+    t.string "name", null: false
+    t.text "description"
     t.string "category"
     t.string "brand"
     t.string "size"
@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 2019_10_19_181505) do
     t.integer "price"
     t.integer "buyer_id"
     t.integer "saler_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -18,16 +18,14 @@
                   %span.form-require
                     必須
                 %p 最大10枚までアップロードできます
-                .sell-dropbox-container.clearfix
-                  .sell-upload-items-container
-                    = f.fields_for :image do |fi|
-                      = fi.label :image, class: "sell-upload-drop-box" do
-                        .sell-upload-drop-file
-                          = fi.file_field :image, class:"file", style:"display:none;"
-                          %pre.visible-pc
-                            クリックしてファイルをアップロード
-                          %i.icon-camera
-                        -# 上の三行はアップロードした画像のプレビューを表示できるようにしたい記述だが、うまく機能しない。。
+                = f.fields_for :image do |fi|
+                  = fi.label :image, class: "sell-upload-drop-box" do
+                    .sell-upload-drop-file
+                      = fi.file_field :image, class:"file", style:"display:none;"
+                      %pre.visible-pc
+                        クリックしてファイルをアップロード
+                      %i.icon-camera
+                    -# 上の三行はアップロードした画像のプレビューを表示できるようにしたい記述だが、うまく機能しない。。
 
               .sell-content
                 .form-group
