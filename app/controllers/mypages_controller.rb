@@ -4,5 +4,6 @@ class MypagesController < ApplicationController
   end
 
   def identification
+    render "mypages/_identification"
   end
 end
