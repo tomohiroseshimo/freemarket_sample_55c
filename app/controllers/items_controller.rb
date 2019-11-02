@@ -5,7 +5,8 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    # @item.images.build
+    @item.images.build
+    # このまま導入するとunknown attribute 'item_id' for Image.というエラーが発生してしまう
     # @parents = Category.all.order("id ASC").limit(10)　　　←全く同じコードをcategoriesコントローラーへ記載
   end
   
@@ -23,7 +24,7 @@ class ItemsController < ApplicationController
 
   def item_params
     # ストロングパラメータ
-    params.require(:item).permit(:name, :description, :category, :condition, :cost, :area, :date, :price, images_attributes: [:image])
+    params.require(:item).permit(:name, :description, :category, :condition, :cost, :area, :date, :price, images_attributes: [:id, :image, :_destroy])
   end
 
   def set_item
