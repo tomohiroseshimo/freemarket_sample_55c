@@ -1,0 +1,101 @@
+// Place all the styles related to the complete controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "mixin/box";
+@import "mixin/bar";
+.header {
+  @include gray-box;
+  height: 128px;
+  position: relative;
+  .complete-header-logo {
+    margin-left: 320px;
+    float: left;
+    height: 128px;
+    line-height: 120px;
+    font-size: 40px;
+    width: 260px;
+    position: absolute;
+    bottom: 80px;
+    }
+  .progress-bar {
+    @include bar;
+    .progress-text-gray {
+     @include gray-text;
+    }  
+    .progress-text-red {
+     @include red-text;
+    }
+    
+    .line-red {
+    @include red-line;
+      &__circle {
+      @include red-line-circle;
+      }
+    }
+    .other-line-red {
+     @include other-red-line;
+      &__circle {
+       @include other-red-line-circle;
+       }
+      }
+    .other-line-gray {
+      @include other-gray-line;
+      &__circle {
+       @include other-gray-line-circle;
+       }
+    } 
+    .last-line-red-complete {
+      @include line-last;
+      border-bottom: solid 3px red;
+      &__circle {
+       @include line-last-circle;
+       border: solid 7px red;
+      }
+    }
+    .only-circle {
+     @include circle-only;
+      .right-circle-complete {
+       @include circle-only-right;
+       border: solid 7px red;
+      }  
+    }
+  }
+}
+
+
+.middle-box-complete{
+  @include gray-box;
+  height: 320px;
+  .middle-contents-complete {
+    @include white-box;
+    height: 320px;
+    .middle-contents-header {
+     @include title-box;
+    }
+    .middle-contents-bottom {
+      height: 230px;
+      width: 500px;
+      background: white;
+      margin: 40px auto;
+      font-weight: bold;
+      &__start {
+       @include red-box;
+        margin:30px 50px 10px 80px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      a {
+        text-decoration: none ;
+      }
+      }
+    }
+  }
+  .download{
+    @include gray-box;
+    height: 230px;
+    .download-contents {
+      @include white-box;
+      background: firebrick;
+      height: 230px;
+    }
+  }

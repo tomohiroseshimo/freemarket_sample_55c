@@ -1,0 +1,91 @@
+@mixin white-box {
+    width: calc(100vw - 700px);
+    background: white;
+    margin-left: 340px; 
+}
+ @mixin gray-box {
+    width: 100vw;
+    background: #EEEEEE;
+ }
+
+ @mixin red-box {
+    font-weight: 50;
+    height: 50px;
+    width :380px;
+    background: #DD0000;
+    font-size:15px;
+    color: white;
+    line-height: 47px;
+    text-align: center;
+  }      
+
+  @mixin title-box {
+    height: 97px;
+    width: calc(100vw - 700px);
+    background: white;
+    text-align: center;
+    line-height: 90px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: solid 2px #EEEEEE;
+    
+  } 
+
+  @mixin little {
+    height: 20px;
+    width: 40px;
+    background: #DD0000;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    margin: auto;
+    text-align: center;
+    font-weight: normal;
+  }
+  
+  @mixin little-gray {
+    height: 20px;
+    width: 40px;
+    background: #BBBBBB;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    margin: auto;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  @mixin board {
+    height: 30px;
+    width: 100px;
+  }
+
+  @mixin form {
+    font-weight: 50;
+    display: block;
+    height: 50px;
+    width :380px;
+    margin:0 50px 10px 80px;
+    border-radius: 5px;
+    font-size:16px;
+    
+    text-decoration: none;
+    border: solid 1px #CCCCCC;
+    line-height: 47px;
+  }
+
+  @mixin point-board {
+    height: 25px;
+    width: 300px;
+    margin:0 0 0 80px;
+    line-height: 20px;
+    padding-top: 5px;
+  }
+
+  @mixin text {
+    height: 100px;
+    width: 380px; 
+    font-weight: 100;
+    padding-left: 80px;
+    margin-bottom: 5px;
+  }
