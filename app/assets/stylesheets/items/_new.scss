@@ -71,17 +71,14 @@ li {
     font-size: 13px;
   }
 }
-.sell-dropbox-container{
-  height: 162px;
-  width: 620px;
+
+.sell-upload-drop-box{
+  height:80px;
+  width: 538px;
+  padding: 40px;
+  text-align: center;
   margin: 16px -80px 0 0;
   background-color: #F5F5F5;
-  .sell-upload-drop-box{
-    height:80px;
-    width: 538px;
-    padding: 40px;
-    text-align: center;
-  }
 }
 .sell-upload-drop-box {
   position: relative;
