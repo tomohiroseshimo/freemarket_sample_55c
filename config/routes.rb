@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   
   
+  devise_for :social_users, controllers: { omniauth_callbacks: 'social_users/omniauth_callbacks' }
   devise_for :users
   root 'mypages#index'
   get 'items' => 'items#index'
