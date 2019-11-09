@@ -7,6 +7,10 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
   end
 
+  def detail
+    render "items/_details"
+  end
+
   private
 
   def item_params

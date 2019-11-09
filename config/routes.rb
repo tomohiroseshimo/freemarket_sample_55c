@@ -7,7 +7,7 @@ end
 devise_for :social_users, controllers: { omniauth_callbacks: 'social_users/omniauth_callbacks' }
 devise_for :users
 
-root 'mypages#index'
+root 'items#index'
 
 get 'items' => 'items#index'
   resources :signup do
@@ -32,5 +32,5 @@ get 'items' => 'items#index'
      get 'identification'
     end
   end
-
+  get 'items/detail' => 'items#detail'
 end
