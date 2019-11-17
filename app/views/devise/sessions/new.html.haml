@@ -1,17 +1,46 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.header-login
+  .login-header-logo
+    = image_tag 'https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg', :size =>'200x300' 
+.middle-box-login
+  .middle-contents-login
+    .middle-contents-header-login
+      .middle-contents-header-login__box0
+      .middle-contents-header-login__box2
+        アカウントをお持ちでない方はこちら
+      =link_to new_user_registration_path, class: "middle-contents-header-login__new"  do  
+        新規会員登録   
+      
+      
+       
+    .middle-contents-bottom-login
+      =link_to social_user_facebook_omniauth_authorize_path, class: "middle-contents-bottom-login__btn middle-contents-bottom-login__btn--facebook" do 
+        &ensp; 
+        = fa_icon 'facebook lg'        
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;  Facebookで登録する
+      =link_to social_user_google_oauth2_omniauth_authorize_path, class: "middle-contents-bottom-login__btn middle-contents-bottom-login__btn--google" do
+        &ensp;  
+        = fa_icon 'google lg'
+        &ensp; &ensp; &ensp; &ensp; &ensp; Googleで登録する 
+      .clear-board  
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|  
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "middle-contents-bottom-login__form"  
+        = f.password_field :password, autocomplete: "current-password", class: "middle-contents-bottom-login__form"  
+        .middle-contents-bottom-login__robot  
+          私はロボットではありません 
+        .actions  
+          = f.submit "ログイン", class: "middle-contents-bottom-login__btn" 
+      = render "devise/shared/links"    
+.board
+.footer
+  .footer-contents
+    .footer-contents__text
+      =link_to "https://www.facebook.com/" do 
+        プライバシーポリシー&ensp;  
+      =link_to "https://www.facebook.com/" do   
+        メルカリ利用規約&ensp; 
+      =link_to "https://www.facebook.com/" do  
+        特定商取引に関する表記
+    .footer-logo
+      = image_tag 'https://www-mercari-jp.akamaized.net/assets/img/common/jp/logo_vertical.png?2561606804', :size =>'200x100'
+    .footer-date  
+      © 2019 Mercari    

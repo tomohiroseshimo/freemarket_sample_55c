@@ -1,0 +1,128 @@
+// Place all the styles related to the login controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "mixin/box";
+@import "mixin/bar";
+@import "mixin/footer";
+.header-login {
+  @include gray-box;
+  height: 128px;
+  position: relative;
+ .login-header-logo {
+    margin-left: 600px;
+    height: 128px;
+    font-size: 40px;
+    width: 260px;
+    position: absolute;
+    bottom: 80px;
+    }
+}
+
+.middle-box-login {
+  width: 100vw;
+  height: 800px;
+  background: #EEEEEE;
+  .middle-contents-login {
+   
+    background: white;
+    width: 400px;
+    height: 800px;
+    margin: auto;
+    
+    .middle-contents-header-login {
+      background: white;
+      border-bottom: solid 2px #EEEEEE;
+      height: 150px;
+      width: 400px;
+      
+      &__box0 {
+        height: 30px;
+        width: 400px;
+       
+      }
+      &__box2 {
+        font-size: 13px;
+        font-weight: normal;
+        margin-left: 80px;
+      }
+      &__new {
+        display: block;
+        background:#00BFFF;
+        height: 50px;
+        width :300px;
+        margin:0 50px 20px 50px;
+        text-align: center;
+        line-height: 50px;
+        text-decoration: none;
+        color: white;
+        
+      }
+     
+    }
+
+    .middle-contents-bottom-login {
+      height: 182px;
+      width: 400px;
+      background: white;
+      margin: 40px auto;
+      &__robot {
+        @include red-box;
+        height: 90px;
+        width: 300px;
+        margin-left: 50px;
+        margin-top: 40px;
+        color: black;
+      }
+      &__form {
+        @include form;
+        height: 50px;
+        width: 300px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+      }
+      &__btn {
+        display: block;
+        background: #DD0000;
+        height: 50px;
+        width :300px;
+        margin:30px 50px 20px 50px;
+        
+        font-size:15px;
+        color: white;
+        text-decoration: none;
+        
+        line-height: 47px;
+        &--facebook {
+          background: #000088; 
+        }  
+        &--google {
+          background: white;
+          color: black;
+          border: solid 1px black;
+        }
+      }  
+    }
+  }
+}
+
+.board {
+  @include gray-box;
+  height: 110px;
+} 
+
+.footer {
+ @include footer;
+  .footer-contents {
+    @include footer-contents;
+    &__text {
+      @include footer-text;
+    }
+  .footer-logo {
+    @include footer-logo;
+  }
+  .footer-date {
+   @include footer-date;
+  }
+     
+  }  
+}

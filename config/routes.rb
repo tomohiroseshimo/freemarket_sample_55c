@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'mypages#index'
   get 'items' => 'items#index'
-
-  
+  get 'items_login' => 'items_login#index'
+  get 'login' => 'login#index'
   resources :signup do
     collection do
       get 'step1'

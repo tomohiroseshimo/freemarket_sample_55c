@@ -1,0 +1,2 @@
+class ItemsLoginController < ApplicationController
+end
