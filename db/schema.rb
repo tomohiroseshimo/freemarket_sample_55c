@@ -10,15 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_11_02_141229) do
-
-  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "item_id"
-    t.index ["item_id"], name: "index_images_on_item_id"
-  end
+ActiveRecord::Schema.define(version: 2019_11_02_234326) do
 
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -39,19 +31,55 @@ ActiveRecord::Schema.define(version: 2019_11_02_141229) do
 
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "social_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "nickname", null: false
-    t.string "adress", null: false
-    t.string "firstname", null: false
-    t.string "lastname", null: false
-    t.string "password", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "provider"
+    t.string "uid"
+    t.index ["email"], name: "index_social_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_social_users_on_reset_password_token", unique: true
+  end
+
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nickname", null: false
+    t.string "email", null: false
+    t.string "last_name", null: false
+    t.string "first_name", null: false
+    t.string "last_name_kana", null: false
+    t.string "first_name_kana", null: false
+    t.integer "birthdate_year", null: false
+    t.integer "birthdate_month", null: false
+    t.integer "birthdate_day", null: false
+    t.integer "phone_number", null: false
+    t.string "address_last_name", null: false
+    t.string "address_first_name", null: false
+    t.string "address_last_name_kana", null: false
+    t.string "address_first_name_kana", null: false
+    t.string "address_number", null: false
+    t.integer "address_prefecture", default: 0, null: false
+    t.string "address_name", null: false
+    t.string "address_block", null: false
+    t.string "address_building"
+    t.integer "address_phone_number"
+    t.text "introduce"
+    t.string "encrypted_password", default: "", null: false
+    t.string "card_number", null: false
+    t.string "security_number", null: false
+    t.string "effectiveness_month", null: false
+    t.string "effectiveness_year", null: false
+    t.string "authentication_number", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "provider"
+    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

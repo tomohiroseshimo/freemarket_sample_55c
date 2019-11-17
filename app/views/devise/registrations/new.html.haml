@@ -11,11 +11,11 @@
         &ensp; 
         = fa_icon 'envelope lg'
         &emsp;&emsp;&emsp; メールアドレスで登録する
-      =link_to "https://www.facebook.com/", class: "middle-contents-bottom-posts__btn middle-contents-bottom-posts__btn--facebook" do 
+      =link_to social_user_facebook_omniauth_authorize_path, class: "middle-contents-bottom-posts__btn middle-contents-bottom-posts__btn--facebook" do 
         &ensp; 
         = fa_icon 'facebook lg'        
         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;  Facebookで登録する
-      =link_to "https://www.facebook.com/", class: "middle-contents-bottom-posts__btn middle-contents-bottom-posts__btn--google" do
+      =link_to social_user_google_oauth2_omniauth_authorize_path, class: "middle-contents-bottom-posts__btn middle-contents-bottom-posts__btn--google" do
         &ensp;  
         = fa_icon 'google lg'
         &ensp; &ensp; &ensp; &ensp; &ensp; Googleで登録する 
