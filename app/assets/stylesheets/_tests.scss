@@ -1,15 +1,8 @@
-// Place all the styles related to the send controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-@import "mixin/box";
-@import "mixin/bar";
-
 .header {
+  @include gray-box;
   height: 128px;
-  width: 100vw;
-  background:#EEEEEE;
   position: relative;
-  .send-header-logo {
+  .test-header-logo {
     margin-left: 320px;
     float: left;
     height: 128px;
@@ -22,28 +15,18 @@
   .progress-bar {
     @include bar;
     .progress-text-gray {
-      @include gray-text;
+     @include gray-text;
     }  
     .progress-text-red {
-      @include red-text;
+     @include red-text;
     }
     
     .line-red {
-     @include red-line;
-     width: 110px;
-     margin-left: 20px;
+    @include red-line;
       &__circle {
       @include red-line-circle;
       }
     }
-    .line-red-second {
-      @include red-line;
-      width: 130px;
-      &__circle {
-        @include red-line-circle;
-      }
-    }  
-    
     .other-line-red {
      @include other-red-line;
       &__circle {
@@ -51,7 +34,7 @@
        }
       }
     .other-line-gray {
-     @include other-gray-line; 
+      @include other-gray-line;
       &__circle {
        @include other-gray-line-circle;
        }
@@ -60,11 +43,10 @@
       @include line-last;
       &__circle {
        @include line-last-circle;
-     
-       }
+      }
     }
     .only-circle {
-      @include circle-only;
+     @include circle-only;
       .right-circle {
      @include circle-only-right;
       }  
@@ -73,16 +55,14 @@
 }
 
 
-.middle-box-send {
+.middle-box {
   @include gray-box;
-  height: 1380px;
-  
-  .middle-contents-send {
+  height: 500px;
+  .middle-contents {
     @include white-box;
-    height: 1380px;
-    
+    height: 500px;
     .middle-contents-header {
-      @include title-box;
+     @include title-box;
     }
     .middle-contents-bottom {
       height: 230px;
@@ -92,7 +72,6 @@
       font-weight: bold;
       &__form {
         @include form;
-        
       }
       &__text {
         margin-bottom: 30px;
@@ -102,9 +81,9 @@
         font-weight: normal;
         font-size: 13px;
       }  
-      &__next {
-        @include red-box;
-        margin:40px 50px 10px 80px; 
+      &__sms {
+       @include red-box;
+        margin:0 50px 10px 80px;
       }
         
       }
@@ -122,23 +101,3 @@
 
 
 
-
-.little-ob {
- @include little;
- display: inline-block;
- margin-left: 10px;
-}
-
-.little-ob-gray {
-  @include little-gray;
-  display: inline-block;
-  margin-left: 10px;
-}
-
-.point-board {
- @include point-board;
-}
-
-.clear-board {
- @include board;
-}

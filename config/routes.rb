@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'mypages#index'
   get 'items' => 'items#index'
-  resources :items_login
-  resources :login
+  resources :items_login, only: [:index]
+  resources :login, only: [:index, :create]
 
   resources :signup do
     collection do
