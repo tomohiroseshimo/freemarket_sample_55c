@@ -1,13 +1,9 @@
-// Place all the styles related to the complete controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-@import "mixin/box";
-@import "mixin/bar";
-.header {
-  @include gray-box;
+.head-step5 {
   height: 128px;
+  width: 100vw;
+  background:#EEEEEE;
   position: relative;
-  .complete-header-logo {
+  .pays-header-logo {
     margin-left: 320px;
     float: left;
     height: 128px;
@@ -19,45 +15,66 @@
     }
   .progress-bar {
     @include bar;
+    margin-right: 250px;
     .progress-text-gray {
-     @include gray-text;
+      @include gray-text;
     }  
     .progress-text-red {
-     @include red-text;
+      @include red-text;
     }
     
     .line-red {
-    @include red-line;
+     @include red-line;
+     width: 110px;
+     margin-left: 20px;
       &__circle {
       @include red-line-circle;
       }
     }
+    .line-red-second {
+      @include red-line;
+      width: 130px;
+      &__circle {
+        @include red-line-circle;
+      }
+    }  
+    
     .other-line-red {
      @include other-red-line;
+     width: 90px;
       &__circle {
        @include other-red-line-circle;
        }
       }
     .other-line-gray {
-      @include other-gray-line;
+     @include other-gray-line; 
       &__circle {
        @include other-gray-line-circle;
        }
     } 
-    .last-line-red-complete {
+    .last-line {
       @include line-last;
-      border-bottom: solid 3px red;
       &__circle {
        @include line-last-circle;
-       border: solid 7px red;
-      }
+     
+       }
     }
-    .only-circle {
-     @include circle-only;
+    .only-circle-complete {
+      @include circle-only;
       .right-circle-complete {
-       @include circle-only-right;
-       border: solid 7px red;
+        width: rem;
+        height: rem;
+        border: solid 7px red;
+        border-radius: 50%;
+        float: left;      
       }  
+    }
+    .line-red-third{
+      @include red-line;
+      width: 95px;
+      &__circle{
+        @include red-line-circle;
+      }
     }
   }
 }

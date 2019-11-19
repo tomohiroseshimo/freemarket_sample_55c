@@ -1,4 +1,4 @@
-.header {
+.head {
   @include gray-box;
   height: 128px;
   position: relative;
@@ -14,6 +14,7 @@
     }
   .progress-bar {
     @include bar;
+    margin-right: 240px;
     .progress-text-gray {
      @include gray-text;
     }  
@@ -48,7 +49,7 @@
     .only-circle {
      @include circle-only;
       .right-circle {
-     @include circle-only-right;
+        @include circle-only-right;
       }  
     }
   }

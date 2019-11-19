@@ -1,4 +1,4 @@
-.header {
+.head-step4 {
   height: 128px;
   width: 100vw;
   background:#EEEEEE;
@@ -15,6 +15,7 @@
     }
   .progress-bar {
     @include bar;
+    margin-right: 250px;
     .progress-text-gray {
       @include gray-text;
     }  

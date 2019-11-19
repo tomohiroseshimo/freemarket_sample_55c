@@ -1,9 +1,11 @@
-.header {
-  @include gray-box;
+.head-step5 {
   height: 128px;
+  width: 100vw;
+  background:#EEEEEE;
   position: relative;
   .pays-header-logo {
     margin-left: 320px;
+    float: left;
     height: 128px;
     line-height: 120px;
     font-size: 40px;
@@ -15,46 +17,57 @@
     @include bar;
     margin-right: 250px;
     .progress-text-gray {
-     @include gray-text;
+      @include gray-text;
     }  
     .progress-text-red {
-     @include red-text;
+      @include red-text;
     }
     
     .line-red {
-    @include red-line;
+     @include red-line;
+     width: 110px;
+     margin-left: 20px;
       &__circle {
       @include red-line-circle;
       }
     }
+    .line-red-second {
+      @include red-line;
+      width: 130px;
+      &__circle {
+        @include red-line-circle;
+      }
+    }  
+    
     .other-line-red {
      @include other-red-line;
+     width: 90px;
       &__circle {
        @include other-red-line-circle;
        }
       }
     .other-line-gray {
-      @include other-gray-line;
+     @include other-gray-line; 
       &__circle {
        @include other-gray-line-circle;
        }
     } 
-    .last-line-red {
+    .last-line {
       @include line-last;
       &__circle {
        @include line-last-circle;
-       border: solid 7px red;
-      }
+     
+       }
     }
     .only-circle {
-     @include circle-only;
+      @include circle-only;
       .right-circle {
      @include circle-only-right;
-     background: red;
       }  
     }
   }
 }
+
 
 
 .middle-box-pays {
