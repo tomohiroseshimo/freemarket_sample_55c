@@ -1,15 +1,11 @@
-@import "mixin/box";
-
-.middle-box-send {
+.middle-box-telephone {
   @include gray-box;
-  height: 1380px;
-  
-  .middle-contents-send {
+  height: 400px;
+  .middle-contents-telephone {
     @include white-box;
-    height: 1380px;
-    
+    height: 400px;
     .middle-contents-header {
-      @include title-box;
+     @include title-box;
     }
     .middle-contents-bottom {
       height: 230px;
@@ -17,22 +13,22 @@
       background: white;
       margin: 40px auto;
       font-weight: bold;
-      &__form-step4 {
+      &__form-step3 {
         @include form;
         padding-left: 20px;
         width: 350px;
       }
-      &__text {
+      &__text-telephone {
         margin-bottom: 30px;
         margin-left: 80px;
         width: 330px;
-        height: 50px;
+        height: 30px;
         font-weight: normal;
         font-size: 13px;
       }  
-      &__next {
-        @include red-box;
-        margin:40px 50px 10px 80px; 
+      &__sms {
+       @include red-box;
+        margin:0 50px 10px 80px;
       }
         
       }

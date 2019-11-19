@@ -89,9 +89,9 @@ $max-w: 1020px;
     }
   }
   &__right{
-    float:right;
+    float: right;
     width: 520.31px;
-    display: flex;
+    
     .navis{
       float: left;
       height: 44px;
@@ -129,7 +129,9 @@ $max-w: 1020px;
           }
         }
       }
+      
     }
+   
   }
 }
 
