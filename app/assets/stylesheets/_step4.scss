@@ -1,10 +1,10 @@
 .middle-box-send {
   @include gray-box;
-  height: 1380px;
+  height: 1450px;
   
   .middle-contents-send {
     @include white-box;
-    height: 1380px;
+    height: 1450px;
     
     .middle-contents-header {
       @include title-box;

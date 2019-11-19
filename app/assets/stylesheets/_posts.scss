@@ -56,8 +56,9 @@
   height: 110px;
 } 
 
-.footer {
+.foot {
  @include footer;
+
   .footer-contents {
     @include footer-contents;
     &__text {
@@ -67,7 +68,7 @@
     @include footer-logo;
   }
   .footer-date {
-   @include footer-date;
+    @include footer-date;
   }
      
   }  
