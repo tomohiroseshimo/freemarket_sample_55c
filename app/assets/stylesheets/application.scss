@@ -15,10 +15,10 @@
  */
  
  @import "./reset";
+ @import "font-awesome";
  @import "mixin/bar";
  @import "mixin/box";
  @import "mixin/footer";
- @import "font-awesome";
  @import "step1";
  @import "step2";
  @import "step3";
@@ -31,4 +31,11 @@
  @import "login";
  @import "items_login";
  @import "complete";
-
+ @import "mypages";
+ @import "mypage-main";
+ @import "sidebar";
+ @import "index";
+ @import "sells/sells";
+ @import "profile";
+ @import "tab";
+ @import "header";
