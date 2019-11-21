@@ -25,8 +25,10 @@ devise_for :users
   resources :posts
 
   get 'sells' => 'sells#index'
-  get 'mypage' => 'mypages#index'
-  get 'mypage/identification' =>'mypages#identification'
-
+  resources :mypages, only: :index do
+    collection do
+     get 'identification'
+    end
+  end
 
 end
