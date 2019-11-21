@@ -24,19 +24,6 @@ Things you may want to cover:
 * ...
 
 # freemarket_sample_55c DB設計
-## usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|email|string|null: false|
-|password|string|null: false|
-|nickname|string|null: false|
-|firstname|string|null: false|
-|lastname|string|null: false|
-|address|string|null: false|
-### Association
-- has_many :items
-- has_many :items_users
-
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -52,14 +39,46 @@ Things you may want to cover:
 |date|string|null: false|
 |price|integer|null: false|
 ### Association
+- has_many :items_categories
 - belongs_to :user
-- has_many :items_users
 
-## items_usersテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false, foreign_key: true|
-|items_id|references|null: false, foreign_key: true|
+|email|string|null: false|
+|password|string|null: false|
+|nickname|string|null: false|
+|firstname|string|null: false|
+|lastname|string|null: false|
+|address|string|null: false|
+### Association
+- has_many :items
+- has_many :credits
+
+## categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|items_id|integer||
+### Association
+- has_many :items, 
+- has_many :items_categories
+
+## items_categoriesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|items_id|integer|null: false, foreign_key: true|
+|categories_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :categoriey
+- belongs_to :item
+
+## creditsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|credit_number|integer|null: false|
+|expiry_date|integer|null: false|
+|security_code|integer|null: false|
 ### Association
 - belongs_to :user
-- belongs_to :item

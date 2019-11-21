@@ -68,7 +68,7 @@
     margin:0 50px 10px 80px;
     border-radius: 5px;
     font-size:16px;
-    color: #888888;
+    
     text-decoration: none;
     border: solid 1px #CCCCCC;
     line-height: 47px;
@@ -80,4 +80,12 @@
     margin:0 0 0 80px;
     line-height: 20px;
     padding-top: 5px;
+  }
+
+  @mixin text {
+    height: 100px;
+    width: 380px; 
+    font-weight: 100;
+    padding-left: 80px;
+    margin-bottom: 5px;
   }

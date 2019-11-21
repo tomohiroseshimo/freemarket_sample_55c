@@ -4,6 +4,7 @@
   width: 600px;
   color: #999999;
   font-size: 12px;
+  
 }
 
 @mixin gray-text {
@@ -32,6 +33,7 @@
   height: 0rem;
   border: solid 7px red;
   border-radius: 50%;
+  
 }
 
 @mixin other-red-line {
@@ -47,6 +49,7 @@
   height: 0rem;
   border: solid 7px red;
   border-radius: 50%;
+ 
 }
 
 @mixin other-gray-line {
