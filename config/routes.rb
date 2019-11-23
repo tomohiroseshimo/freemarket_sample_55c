@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
 
-  devise_scope :user do
-    get '/users/sign_out' => 'devise/sessions#destroy'
-  end
+devise_scope :user do
+  get '/users/sign_out' => 'devise/sessions#destroy'
+end
 
-  devise_for :social_users, controllers: { omniauth_callbacks: 'social_users/omniauth_callbacks' }
-  devise_for :users
+devise_for :social_users, controllers: { omniauth_callbacks: 'social_users/omniauth_callbacks' }
+devise_for :users
 
-  root 'mypages#index'
+root 'mypages#index'
 
-  get 'items' => 'items#index'
-
-  
+get 'items' => 'items#index'
   resources :signup do
     collection do
       get 'step1'
@@ -29,6 +27,10 @@ Rails.application.routes.draw do
   resources :posts
 
   get 'sells' => 'sells#index'
-
+  resources :mypages, only: :index do
+    collection do
+     get 'identification'
+    end
+  end
 
 end
