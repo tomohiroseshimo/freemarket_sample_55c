@@ -18,6 +18,7 @@
  @import "mixin/bar";
  @import "mixin/box";
  @import "mixin/footer";
+ @import "mixin/table";
  @import "posts";
  @import "tests";
  @import "telephone";
@@ -40,5 +41,11 @@
  @import "header";
  @import "font-awesome";
  @import "logout";
+
+ @import "index";
+ @import "menu";
+ @import "mypage-btn";
+
  @import "identification";
 @import "wrap"
+

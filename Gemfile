@@ -71,7 +71,7 @@ gem 'omniauth-google-oauth2'
 gem "haml-rails"
 gem "erb2haml"
 gem "font-awesome-rails"
-
+gem 'jquery-rails'
 gem "devise"
 gem "active_hash"
 
