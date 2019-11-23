@@ -1,23 +1,23 @@
-.header
+.head
   .test-header-logo
     = image_tag 'https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg', :size =>'200x300'
-  .progress-bar  
-    .progress-text-gray
+  .progress-bar-step2  
+    .progress-text-gray-step2
       会員情報&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-    .progress-text-red
+    .progress-text-red-step2
       電話番号認証
-    .progress-text-gray
+    .progress-text-gray-step2
       &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;お届け先住所入力&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;支払い方法&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;完了 
-    .line-red
-      .line-red__circle
-    .other-line-red
-      .other-line-red__circle
-    .other-line-gray
-      .other-line-gray__circle  
-    .last-line
-      .last-line__circle
-    .only-circle  
-      .right-circle
+    .other-line-gray-step2
+      .other-line-gray-step2__circle 
+    .other-line-red-step2
+      .other-line-red-step2__circle
+    .other-line-gray-step2
+      .other-line-gray-step2__circle 
+    .last-line-step2
+      .last-line-step2__circle
+    .only-circle-step2  
+      .right-circle-step2
 
 = form_for @user, url: step4_signup_index_path, method: :get, html: {class: 'third-main__box'} do |f|       
   .middle-box-telephone
@@ -56,7 +56,7 @@
         .text-normal
           一度電話番号を入力してください。   
         
-.footer
+.foot
   .footer-contents
     .footer-contents__text
       =link_to "https://www.facebook.com/" do 

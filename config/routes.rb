@@ -5,11 +5,16 @@
 
 Rails.application.routes.draw do
 
-  
-devise_for :users
-  root 'items#index'
+devise_scope :user do
+  get '/users/sign_out' => 'devise/sessions#destroy'
+end
 
-  
+devise_for :social_users, controllers: { omniauth_callbacks: 'social_users/omniauth_callbacks' }
+devise_for :users
+
+root 'mypages#index'
+
+get 'items' => 'items#index'
   resources :signup do
     collection do
       get 'step1'
@@ -21,7 +26,9 @@ devise_for :users
       get 'done' # 登録完了後のページ
     end
   end
-
+  resources :items_login, only: [:index]
+  resources :login, only: [:index, :create]
+  resources :logout, only: [:index]
   resources :posts
 
   get 'sells' => 'sells#index'

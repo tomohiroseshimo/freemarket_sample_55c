@@ -1,9 +1,4 @@
-// Place all the styles related to the tests controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-@import "mixin/box";
-@import "mixin/bar";
-.header {
+.head {
   @include gray-box;
   height: 128px;
   position: relative;
@@ -17,49 +12,48 @@
     position: absolute;
     bottom: 80px;
     }
-  .progress-bar {
+  .progress-bar-step2 {
     @include bar;
-    .progress-text-gray {
+    margin-right: 240px;
+    .progress-text-gray-step2 {
      @include gray-text;
     }  
-    .progress-text-red {
+    .progress-text-red-step2 {
      @include red-text;
     }
     
-    .line-red {
+    .line-red-step2 {
     @include red-line;
       &__circle {
       @include red-line-circle;
       }
     }
-    .other-line-red {
+    .other-line-red-step2 {
      @include other-red-line;
       &__circle {
        @include other-red-line-circle;
        }
       }
-    .other-line-gray {
+    .other-line-gray-step2 {
       @include other-gray-line;
       &__circle {
        @include other-gray-line-circle;
        }
     } 
-    .last-line {
+    .last-line-step2 {
       @include line-last;
       &__circle {
        @include line-last-circle;
       }
     }
-    .only-circle {
+    .only-circle-step2 {
      @include circle-only;
-      .right-circle {
+      .right-circle-step2 {
      @include circle-only-right;
       }  
     }
   }
 }
-
-
 .middle-box {
   @include gray-box;
   height: 500px;
@@ -75,8 +69,10 @@
       background: white;
       margin: 40px auto;
       font-weight: bold;
-      &__form {
+      &__form-step2 {
         @include form;
+        padding-left: 20px;
+        width: 350px;
       }
       &__text {
         margin-bottom: 30px;
@@ -101,8 +97,3 @@
     }  
     }
 }
-
-
-
-
-

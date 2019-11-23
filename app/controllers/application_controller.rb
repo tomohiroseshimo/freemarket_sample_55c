@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   before_action :basic_auth
 
+  def after_sign_out_path_for(resource)
+    items_login_index_path # ログアウト後に遷移するpathを設定
+  end
+
   private
 
   def basic_auth
