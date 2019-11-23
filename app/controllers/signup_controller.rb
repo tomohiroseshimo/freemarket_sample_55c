@@ -1,4 +1,6 @@
 class SignupController < ApplicationController
+  def index
+  end  
   def step1
     
     @user = User.new # 新規インスタンス作成
@@ -92,7 +94,7 @@ class SignupController < ApplicationController
       session[:id] = @user.id
       redirect_to done_signup_index_path
     else
-      render '/signup/registration'
+      render 'devise/registrations/new'
     end
   end
 

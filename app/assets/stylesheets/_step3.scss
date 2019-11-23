@@ -1,13 +1,8 @@
-// Place all the styles related to the complete controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-@import "mixin/box";
-@import "mixin/bar";
-.header {
+.head {
   @include gray-box;
   height: 128px;
   position: relative;
-  .complete-header-logo {
+  .test-header-logo {
     margin-left: 320px;
     float: left;
     height: 128px;
@@ -17,58 +12,54 @@
     position: absolute;
     bottom: 80px;
     }
-  .progress-bar {
+  .progress-bar-step2 {
     @include bar;
-    .progress-text-gray {
+    margin-right: 240px;
+    .progress-text-gray-step2 {
      @include gray-text;
     }  
-    .progress-text-red {
+    .progress-text-red-step2 {
      @include red-text;
     }
     
-    .line-red {
+    .line-red-step2 {
     @include red-line;
       &__circle {
       @include red-line-circle;
       }
     }
-    .other-line-red {
+    .other-line-red-step2 {
      @include other-red-line;
       &__circle {
        @include other-red-line-circle;
        }
       }
-    .other-line-gray {
+    .other-line-gray-step2 {
       @include other-gray-line;
       &__circle {
        @include other-gray-line-circle;
        }
     } 
-    .last-line-red-complete {
+    .last-line-step2 {
       @include line-last;
-      border-bottom: solid 3px red;
       &__circle {
        @include line-last-circle;
-       border: solid 7px red;
       }
     }
-    .only-circle {
+    .only-circle-step2 {
      @include circle-only;
-      .right-circle-complete {
-       @include circle-only-right;
-       border: solid 7px red;
+      .right-circle-step2 {
+     @include circle-only-right;
       }  
     }
   }
 }
-
-
-.middle-box-complete{
+.middle-box-telephone {
   @include gray-box;
-  height: 320px;
-  .middle-contents-complete {
+  height: 400px;
+  .middle-contents-telephone {
     @include white-box;
-    height: 320px;
+    height: 400px;
     .middle-contents-header {
      @include title-box;
     }
@@ -78,24 +69,31 @@
       background: white;
       margin: 40px auto;
       font-weight: bold;
-      &__start {
+      &__form-step3 {
+        @include form;
+        padding-left: 20px;
+        width: 350px;
+      }
+      &__text-telephone {
+        margin-bottom: 30px;
+        margin-left: 80px;
+        width: 330px;
+        height: 30px;
+        font-weight: normal;
+        font-size: 13px;
+      }  
+      &__sms {
        @include red-box;
-        margin:30px 50px 10px 80px;
-        text-decoration: none;
-        font-size: 17px;
+        margin:0 50px 10px 80px;
       }
-      a {
-        text-decoration: none ;
+        
       }
-      }
+    .telephone-number {
+      color: #00BFFF;
+      padding: 10px 20px 0 330px;
+      font-size: 15px;
+      font-weight: bold;
+      
+    }  
     }
-  }
-  .download{
-    @include gray-box;
-    height: 230px;
-    .download-contents {
-      @include white-box;
-      background: firebrick;
-      height: 230px;
-    }
-  }
+}

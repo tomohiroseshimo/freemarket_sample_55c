@@ -1,0 +1,118 @@
+.head-step5 {
+  height: 128px;
+  width: 100vw;
+  background:#EEEEEE;
+  position: relative;
+  .pays-header-logo {
+    margin-left: 320px;
+    float: left;
+    height: 128px;
+    line-height: 120px;
+    font-size: 40px;
+    width: 260px;
+    position: absolute;
+    bottom: 80px;
+    }
+  .progress-bar {
+    @include bar;
+    margin-right: 250px;
+    .progress-text-gray {
+      @include gray-text;
+    }  
+    .progress-text-red {
+      @include red-text;
+    }
+    
+    .line-red {
+     @include red-line;
+     width: 110px;
+     margin-left: 20px;
+      &__circle {
+      @include red-line-circle;
+      }
+    }
+    .line-red-second {
+      @include red-line;
+      width: 130px;
+      &__circle {
+        @include red-line-circle;
+      }
+    }  
+    
+    .other-line-red {
+     @include other-red-line;
+     width: 90px;
+      &__circle {
+       @include other-red-line-circle;
+       }
+      }
+    .other-line-gray {
+     @include other-gray-line; 
+      &__circle {
+       @include other-gray-line-circle;
+       }
+    } 
+    .last-line {
+      @include line-last;
+      &__circle {
+       @include line-last-circle;
+     
+       }
+    }
+    .only-circle-complete {
+      @include circle-only;
+      .right-circle-complete {
+        width: rem;
+        height: rem;
+        border: solid 7px red;
+        border-radius: 50%;
+        float: left;      
+      }  
+    }
+    .line-red-third{
+      @include red-line;
+      width: 95px;
+      &__circle{
+        @include red-line-circle;
+      }
+    }
+  }
+}
+
+
+.middle-box-complete{
+  @include gray-box;
+  height: 320px;
+  .middle-contents-complete {
+    @include white-box;
+    height: 320px;
+    .middle-contents-header {
+     @include title-box;
+    }
+    .middle-contents-bottom {
+      height: 230px;
+      width: 500px;
+      background: white;
+      margin: 40px auto;
+      font-weight: bold;
+      &__start {
+       @include red-box;
+        margin:30px 50px 10px 80px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      a {
+        text-decoration: none ;
+      }
+      }
+    }
+  }
+  .download{
+    @include gray-box;
+    height: 230px;
+    .download-contents {
+      @include white-box;
+      background: firebrick;
+      height: 230px;
+    }
+  }
