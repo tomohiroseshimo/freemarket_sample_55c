@@ -73,6 +73,7 @@ gem "erb2haml"
 gem "font-awesome-rails"
 gem 'jquery-rails'
 gem "devise"
+gem "active_hash"
 
 group :production do
   gem 'unicorn', '5.4.1'
