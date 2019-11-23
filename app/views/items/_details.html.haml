@@ -2,8 +2,6 @@
   .default-container
     = render "shared/header"
   .item-box-container
-    -# %h1.item-name
-    -#   = @item.name
     .item-name
       コンバース スニーカー 29cm JACK PURCELL／ジャックパーセル
     .item-main-content.clearfix
@@ -11,7 +9,6 @@
         .owl-stage
           .owl-item.active
             .owl-item-inner
-              -# = image_tag @item.image, size: '300×300'
               =image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_1.jpg?1569073031", size:'300*300'
         .owl-nav.disabled
           .owl-prev prev
@@ -52,15 +49,10 @@
           %tr
             %th 出品者
             %td
-              -# =link_to do
-              -#   = @user.nickname
               アミ
           %tr
             %th カテゴリー
             %td
-              -# =link_to do
-                -# %div
-                  -# = @item.category.name
               = link_to root_path, class: 'link-right' do
                 メンズ
               = link_to root_path, class: 'link-right' do
@@ -80,12 +72,10 @@
           %tr
             %th 商品の状態
             %td
-              -# = @item.condition
               やや傷や汚れあり
           %tr
             %th 配送料の負担
             %td
-              -# = @item.delivery_fee.name
               送料込み(出品者負担)
           %tr
             %th 配送の方法
@@ -94,27 +84,22 @@
           %tr
             %th 配送元地域
             %td
-              -# = @item.prefecture.name
               未定
           %tr
             %th 発送日の目安
             %td
-              -# = @item.delivery_date
               4~7日で発送
     .item-price-box.text-center
       %span.item-price.bold
         ¥9,450
-        -# = @item.price 
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
       .item-buy-btn
         %div{"data-turbolinks" => "false"}
-          -# =link_to '購入画面に進む' ,edit_product_purchase_confirmation_path(@item.id),{class: 'item-buy.f18-24'}
           =link_to '購入画面に進む' ,{class: 'item-buy.f18-24'}
     .item-btn-client
     .item-description
       %p.item-description-inner
-        -# = @item.content
     .item-detail-message
       .message-container
       はじめまして！
@@ -122,10 +107,6 @@
     .items-in-user-profile
       %section.items-box-container.clearfix.related-item-column.items-in-user-profile
       %h2.items-box-head
-        -# =link_to do
-        -# = @user.nickname + "さんのその他の出品"
-        "さんのその他の出品"
     .items-box-content.clearfix
-      -# = render 'items-box'
   .aside
     = render "shared/footer"
