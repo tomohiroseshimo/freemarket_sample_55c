@@ -74,6 +74,9 @@ gem "font-awesome-rails"
 gem 'jquery-rails'
 gem "devise"
 gem "active_hash"
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'pry-rails'
 
 group :production do
   gem 'unicorn', '5.4.1'
