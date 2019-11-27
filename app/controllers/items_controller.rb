@@ -7,6 +7,10 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
   end
 
+  def show
+    @items = Item.find_by(id: params[:id])
+  end
+
   private
 
   def item_params
