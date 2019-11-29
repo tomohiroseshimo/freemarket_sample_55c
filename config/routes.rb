@@ -10,6 +10,8 @@ devise_for :users
 root 'mypages#index'
 
 get 'items' => 'items#index'
+get "items/new" => "items#new"
+post 'items' => 'items#create'
   resources :signup do
     collection do
       get 'step1'
