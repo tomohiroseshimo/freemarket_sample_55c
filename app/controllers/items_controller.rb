@@ -13,6 +13,7 @@ class ItemsController < ApplicationController
   def create
     # formのデータを受け取る
     @item = Item.new(item_params)
+    # binding.pry
     if @item.save
       render 'index', notice: '出品が完了しました'
     else
@@ -24,7 +25,7 @@ class ItemsController < ApplicationController
 
   def item_params
     # ストロングパラメータ
-    params.require(:item).permit(:name, :description, :category, :condition, :cost, :area, :date, :price, images_attributes: [:id, :image, :_destroy])
+    params.require(:item).permit(:name, :description, :category, :condition, :cost, :area, :date, :price, images_attributes: [:id, :image, :_destroy]).merge(user_id: current_user.id)
   end
 
   def set_item
