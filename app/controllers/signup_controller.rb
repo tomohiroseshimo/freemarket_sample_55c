@@ -1,14 +1,14 @@
 class SignupController < ApplicationController
   def index
   end  
-  def wizard1
-    
+
+  def user_data
     @user = User.new # 新規インスタンス作成
   end
 
  
   
-  def wizard2
+  def telephone_number
     # step1で入力された値をsessionに保存
    session[:nickname] = user_params[:nickname]
    session[:email] = user_params[:email]
@@ -25,18 +25,18 @@ class SignupController < ApplicationController
    @user = User.new # 新規インスタンス作成
   end
   
-  def wizard3
+  def telephone_auther
     # step2で入力された値をsessionに保存
     session[:phone_number] = user_params[:phone_number]
     @user = User.new # 新規インスタンス作成
   end
 
-  def wizard4
+  def address
     session[:authentication_number] = user_params[:authentication_number]
     @user = User.new 
   end
   
-  def wizard5
+  def pay
     session[:address_number] = user_params[:address_number]
     session[:address_prefecture] = user_params[:address_prefecture]
     session[:address_first_name] = user_params[:address_first_name]
@@ -50,13 +50,7 @@ class SignupController < ApplicationController
     @user = User.new 
   end
 
-  def wizard6
-    session[:security_number] = user_params[:security_number]
-    session[:effectiveness_month] = user_params[:effectiveness_month]
-    session[:effectiveness_year] = user_params[:effectiveness_year]
-    session[:card_number] = user_params[:card_number]
-    @user = User.new 
-  end  
+ 
 
   def create
     @user = User.new(

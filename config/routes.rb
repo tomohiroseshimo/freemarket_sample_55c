@@ -13,12 +13,11 @@ get 'items' => 'items#index'
 post 'items' => 'items#pay'
   resources :signup do
     collection do
-    get 'wizard1'
-    get 'wizard2'
-    get 'wizard3'
-    get 'wizard4' # ここで、入力の全てが終了する
-    get 'wizard5'
-    get 'wizard6'
+    get 'user_data'
+    get 'telephone_number'
+    get 'telephone_auther'
+    get 'address' # ここで、入力の全てが終了する
+    get 'pay'
     get 'endpage' # 登録完了後のページ
     end
   end

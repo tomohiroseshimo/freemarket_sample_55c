@@ -19,23 +19,43 @@
     .only-circle-step2  
       .right-circle-step2
 
-= form_for @user, url: wizard3_signup_index_path, method: :get, html: {class: 'second-main__box'} do |f|       
-  .middle-box
-    .middle-contents   
+= form_for @user, url: address_signup_index_path, method: :get, html: {class: 'third-main__box'} do |f|       
+  .middle-box-telephone
+    .middle-contents-telephone   
       .middle-contents-header
-        電話番号の確認
+        電話番号認証
       .middle-contents-bottom
-        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;携帯電話の番号
-        = f.text_field :phone_number, placeholder: '携帯電話の番号を入力', class: "middle-contents-bottom__form-step2"
-        .middle-contents-bottom__text 
-          本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-        = f.submit "SMSを送信する", class: "middle-contents-bottom__sms" 
-        .middle-contents-bottom__text 
-          ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。  
-        .telephone-number
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;認証番号
+        = f.text_field :authentication_number, placeholder: '認証番号を入力', class: "middle-contents-bottom__form-step3"
+        .middle-contents-bottom__text-telephone 
+          SMSで届いた認証番号を入力して下さい
+        = f.submit "認証して完了", class: "middle-contents-bottom__sms" 
+  .second-box
+    .second-box-contents
+      .contents-text
+        30秒たっても認証番号が届かない方へ
+      .contents-text-other
+        電話で認証番号を聞くこともできます。 
+      .contents-authen
+        電話で認証番号を聞く&ensp;(無料)       
+  .third-box
+    .third-box-contents
+      .contents-text-third
+        認証番号を再送することもできます。もう一度電話番号を入力して下さい。
+      .contents-enter
+        =link_to "https://www.facebook.com/" do
+          電話番号を再度入力する           
+      .contents-text-bottom
+        .text-normal
+          ※SMSが届かない場合は
+        .text-link
           =link_to "https://www.facebook.com/" do
-            電話番号の確認が必要な理由＞    
-
+            SMS受信設定
+        .text-normal
+          を確認して、もう 
+        .text-normal
+          一度電話番号を入力してください。   
+        
 .foot
   .footer-contents
     .footer-contents__text
