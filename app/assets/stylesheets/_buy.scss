@@ -1,0 +1,57 @@
+.middle-box-buy {
+  @include gray-box;
+  height: 450px;
+  .middle-contents-buy {
+    @include white-box;
+    height: 450px;
+    .middle-contents-header {
+     @include title-box;
+    }
+    .box-a {
+      width: 500px;
+      height: 180px;
+      margin: auto;
+        &__image {
+        float: left;
+        width: 150px;
+        height: 160px; 
+        }
+        &__text {
+        float: left;
+        width: 300px; 
+        height: 160px; 
+        }
+      }
+
+    .point {
+      @include red-box;
+      background: #BBBBBB;
+      margin: auto;
+      }
+
+    .pay-mon {
+      font-weight: 50;
+      height: 50px;
+      width :380px;
+      font-size:15px;
+      color: white;
+      line-height: 47px;
+      background: #777777;
+      margin: auto;
+    }  
+    
+    .buy-btn {
+      font-weight: 50;
+      height: 50px;
+      width :380px;
+      font-size:15px;
+      color: white;
+      line-height: 47px;
+      background: #777777;
+      margin: auto;
+      text-align: center;
+    }
+    }  
+  }
+  
+
