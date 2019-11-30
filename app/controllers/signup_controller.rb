@@ -1,14 +1,14 @@
 class SignupController < ApplicationController
   def index
   end  
-  def step1
+  def wizard1
     
     @user = User.new # 新規インスタンス作成
   end
 
  
   
-  def step2
+  def wizard2
     # step1で入力された値をsessionに保存
    session[:nickname] = user_params[:nickname]
    session[:email] = user_params[:email]
@@ -25,18 +25,18 @@ class SignupController < ApplicationController
    @user = User.new # 新規インスタンス作成
   end
   
-  def step3
+  def wizard3
     # step2で入力された値をsessionに保存
     session[:phone_number] = user_params[:phone_number]
     @user = User.new # 新規インスタンス作成
   end
 
-  def step4
+  def wizard4
     session[:authentication_number] = user_params[:authentication_number]
     @user = User.new 
   end
   
-  def step5
+  def wizard5
     session[:address_number] = user_params[:address_number]
     session[:address_prefecture] = user_params[:address_prefecture]
     session[:address_first_name] = user_params[:address_first_name]
@@ -50,7 +50,7 @@ class SignupController < ApplicationController
     @user = User.new 
   end
 
-  def step6
+  def wizard6
     session[:security_number] = user_params[:security_number]
     session[:effectiveness_month] = user_params[:effectiveness_month]
     session[:effectiveness_year] = user_params[:effectiveness_year]
@@ -92,7 +92,7 @@ class SignupController < ApplicationController
     if @user.save
      # ログインするための情報を保管
       session[:id] = @user.id
-      redirect_to done_signup_index_path
+      redirect_to endpage_signup_index_path
     else
       render 'devise/registrations/new'
     end

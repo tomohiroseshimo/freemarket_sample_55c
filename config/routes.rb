@@ -13,22 +13,19 @@ get 'items' => 'items#index'
 post 'items' => 'items#pay'
   resources :signup do
     collection do
-    get 'step1'
-    get 'step2'
-    get 'step3'
-    get 'step4' # ここで、入力の全てが終了する
-    get 'step5'
-    get 'step6'
-    get 'done' # 登録完了後のページ
+    get 'wizard1'
+    get 'wizard2'
+    get 'wizard3'
+    get 'wizard4' # ここで、入力の全てが終了する
+    get 'wizard5'
+    get 'wizard6'
+    get 'endpage' # 登録完了後のページ
     end
   end
   
-  resources :items do
-    collection do
-      get  'buy'=>  'items#buy', as: 'buy'
+  get  'buy'=>  'items#buy'
      
-    end
-  end
+    
   resources :cards, only: [:index, :create, :new]
   resources :items_login, only: [:index]
   resources :login, only: [:index, :create]
