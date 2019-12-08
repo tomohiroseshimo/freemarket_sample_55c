@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
 
 
   def show
-    @items = Item.find(id: params[:id])
+    @items = Item.find(params[:id])
   end
 
   def pay
