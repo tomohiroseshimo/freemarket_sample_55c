@@ -45,6 +45,10 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
@@ -71,9 +75,13 @@ gem 'omniauth-google-oauth2'
 gem "haml-rails"
 gem "erb2haml"
 gem "font-awesome-rails"
-
+gem 'jquery-rails'
 gem "devise"
 gem "active_hash"
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'pry-rails'
+gem 'payjp'
 
 group :production do
   gem 'unicorn', '5.4.1'

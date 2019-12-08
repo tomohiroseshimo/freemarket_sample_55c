@@ -6,18 +6,24 @@ $max-w: 1020px;
   display: block;
   clear: both;
 }
-
+.default_container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
 .header{
   background-color: #ffffff;
   position: relative;
   width: 100%;
   height: 100px;
   margin: auto;
+  border-bottom: solid 1px #BBBBBB;
 }
 .header-container{
   width: 1020px;
   height: 100px;
   margin:0 auto;
+ 
 }
 
 .upper-container{
@@ -60,18 +66,33 @@ $max-w: 1020px;
 
 .lower-container{
   width: 1020px;
-  height: 44px;
+  height: 40px;
   font-size: 14px;
   margin-top: 8px;
+  
   &__left{
     float:left;
-    width: 308.45px;
-    height: 44px;
-    vertical-align: middle;
+    width: 400px;
+    height: 40px;
     padding-top: 10px;
+    
     .category{
       float: left;
-      height: 44px;
+      height: 42px;
+      width: 250px;
+      background: white;
+      border-bottom: solid 1px #BBBBBB;
+      &__pulldown {
+        background: white;
+        font-size: 15px;
+        color: #777777;
+        width: 250px;
+        position: absolute;
+        left: 190px;
+        top: 100px;
+        z-index: 1;
+       
+      }
       a{
         text-align: center;
         color: black;
@@ -81,6 +102,17 @@ $max-w: 1020px;
     .brand{
       float: right;
       height: 44px;
+      width: 140px;
+      &__pulldown {
+        background: white;
+        font-size: 15px;
+        color: #777777;
+        width: 250px;
+        position: absolute;
+        left: 400px;
+        top: 100px;
+        z-index: 1;
+      }
       a{
         text-align: center;
         color: black;
@@ -90,16 +122,92 @@ $max-w: 1020px;
   }
   &__right{
     float: right;
-    width: 520.31px;
+    width: 530px;
+    height: 40px;
     
     .navis{
       float: left;
-      height: 44px;
+      height: 40px;
+      width: 130px;
+      
       .navi{
         float: left;
         margin-top: 10px;
         text-align: center;
         padding:0 14px 0 14px;
+        width: 130px;
+        &__pulldown {
+          background: white;
+          font-size: 15px;
+          color: #777777;
+          width: 250px;
+          position: absolute;
+          left: 800px;
+          top: 100px;
+          z-index: 1;
+        }
+      
+      }
+        a{
+          text-decoration: none;
+          color:black;
+          vertical-align:text-top;
+          height: 32px;
+          img{
+            margin-right: 10px;
+            border-radius: 50%;
+            vertical-align: middle;
+          }
+        }
+        .navi-first {
+          float: left;
+          margin-top: 10px;
+          text-align: center;
+          padding:0 14px 0 14px;
+          width: 130px; 
+          height: 42px;
+          border-bottom: solid 1px #BBBBBB;
+          &__pulldown {
+            background: white;
+            font-size: 15px;
+            color: black;
+            width: 250px;
+            position: absolute;
+            left: 800px;
+            top: 100px;
+            z-index: 1;
+          }
+        }
+        a{
+          text-decoration: none;
+          color:black;
+          vertical-align:text-top;
+          height: 32px;
+          img{
+            margin-right: 10px;
+            border-radius: 50%;
+            vertical-align: middle;
+          }
+        }
+        .navi-second {
+          float: left;
+          margin-top: 10px;
+          text-align: center;
+          padding:0 14px 0 14px;
+          width: 130px; 
+          height: 42px;
+          border-bottom: solid 1px #BBBBBB;
+          &__pulldown-second {
+            background: white;
+            font-size: 15px;
+            color: #777777;
+            width: 250px;
+            position: absolute;
+            left: 900px;
+            top: 100px;
+            z-index: 1;
+          }
+        
         a{
           text-decoration: none;
           color:black;
@@ -117,6 +225,19 @@ $max-w: 1020px;
         text-align: center;
         margin-top:4px;
         padding:0 14px 0 14px;
+        width: 130px;
+        height: 48px;
+        border-bottom: solid 1px #BBBBBB;
+        &__pulldown {
+          background: white;
+            font-size: 15px;
+            color: #777777;
+            width: 300px;
+            position: absolute;
+            left: 1050px;
+            top: 99px;
+            z-index: 1;
+        }
         a{
           text-decoration: none;
           color:black;
@@ -129,9 +250,7 @@ $max-w: 1020px;
           }
         }
       }
-      
     }
-   
   }
 }
 
@@ -141,6 +260,7 @@ $max-w: 1020px;
   width: $max-w;
   min-height: 600px;
   margin: auto;
+  z-index: 0;
 }
 .slider{
   max-width: 1440px;

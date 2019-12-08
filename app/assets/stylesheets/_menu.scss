@@ -1,0 +1,62 @@
+table {
+  width: 250px;
+  height: 60px;
+}
+table th.a {
+  @include cell;
+  border-top: solid 1px white;
+}
+table th.b {
+  @include cell;
+}
+table th.c {
+  @include cell;
+}
+table th.d {
+  @include cell;
+}
+table th.e {
+  @include cell;
+}
+table th.f {
+  @include cell;
+}
+table th.g {
+  @include cell;
+}
+table th.h {
+  @include cell;
+}
+table th.i {
+  @include cell;
+}
+table th.j {
+  @include cell;
+}
+table th.k {
+  @include cell;
+}
+table th.l {
+  @include cell;
+}
+table th.m {
+  @include cell;
+  border-bottom: solid 1px #BBBBBB;
+}
+
+table th.n {
+  @include cell-a;
+  font-size: 13px;
+  border-top: solid 1px white;
+}
+table th.o {
+  @include cell-a;
+  border-bottom: solid 1px #BBBBBB;
+}
+table th.p {
+  @include cell-a;
+  border-top: solid 1px white;
+  border-bottom: solid 1px #BBBBBB;
+}
+
+
