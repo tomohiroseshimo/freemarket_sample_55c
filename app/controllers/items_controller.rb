@@ -8,7 +8,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @items = Item.find_by(id: params[:id])
+    @items = Item.find(id: params[:id])
   end
 
   private
