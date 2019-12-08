@@ -16,6 +16,11 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
   end
 
+
+  def show
+    @items = Item.find(params[:id])
+  end
+
   def pay
     Payjp.api_key = ENV['PAYJP_ACCESS_KEY']
     Payjp::Charge.create(
@@ -24,7 +29,6 @@ class ItemsController < ApplicationController
       currency: 'jpy'
     )
   end
-  
 
 
   private

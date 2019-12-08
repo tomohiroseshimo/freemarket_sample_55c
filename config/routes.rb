@@ -9,6 +9,7 @@ devise_for :users
 
 root 'mypages#index'
 
+resources :items
 get 'items' => 'items#index'
 post 'items' => 'items#pay'
   resources :signup do
