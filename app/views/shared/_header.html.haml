@@ -130,4 +130,6 @@
                         %li.mypage-side__main__box__list 
                           = link_to '購入した商品 - 過去の取引', class: 'mypage__sidebar-main__box__purchaced'
                           / 矢印アイコン
-              
+                          
+                        = form_tag(action: :pay, method: :post) do
+                          %script.payjp-button{:src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => "pk_test_a5896eae722c5b5837cfe429"}
