@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   def index
+    @item = Item.find(3)
   end
 
   def new
@@ -13,12 +14,16 @@ class ItemsController < ApplicationController
   def create
     # formのデータを受け取る
     @item = Item.new(item_params)
-    # binding.pry
     if @item.save
       render 'index', notice: '出品が完了しました'
     else
       render 'new', notice: '商品を登録できませんでした'
     end
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
   end
 
   private

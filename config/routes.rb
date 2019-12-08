@@ -12,6 +12,10 @@ root 'mypages#index'
 get 'items' => 'items#index'
 get "items/new" => "items#new"
 post 'items' => 'items#create'
+
+get 'destroy' => 'items#destroy'
+delete 'items/:id' => 'items#destroy'
+
   resources :signup do
     collection do
       get 'step1'
