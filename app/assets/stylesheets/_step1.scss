@@ -1,0 +1,126 @@
+.other-line-gray-step1 {
+  height: 6px;
+  width: 105px;
+  margin-top: 10px;
+  border-bottom: solid 3px #CCCCCC;
+  float: left;
+  margin-left: 20px;
+}
+
+.middle-box-step1 {
+  @include gray-box;
+  height: 1380px;
+  .middle-contents-step1 {
+    @include white-box;
+    height: 1380px;
+    .middle-contents-header {
+     @include title-box;
+    }
+    .middle-contents-bottom-step1 {
+      height: 230px;
+      width: 500px;
+      background: white;
+      margin: 40px 0 0 100px;
+      font-weight: bold;
+      &__form {
+        @include form;
+        padding-left: 20px;
+      }
+      &__form-mini {
+        @include form;
+        width: 160px;
+        display: inline-block;
+        margin-right: 0;
+        padding-left: 20px;
+      }
+      &__form-mini-right {
+        @include form;
+        width: 160px;
+        display: inline-block;
+        margin: 0 0 0 0;
+        padding-left: 20px;
+      }
+      &__form-little {
+        @include form;
+        width: 70px;
+        display: inline-block;
+        margin-right: 0;
+        padding-left: 20px;
+      }
+      &__date {
+        @include form;
+        width: 20px;
+        display: inline-block;
+        margin-left: 3px;
+        margin-right: 3px;
+        border: solid 0 #CCCCCC; 
+      }
+      &__other-form-little {
+        @include form;
+        width: 70px;
+        display: inline-block;
+        margin: 0 0 0 0;
+        padding-left: 20px;
+      }  
+  }
+    .text-title {
+      font-size: 18px;
+      padding-left: 80px;
+      margin-bottom: 2px;
+
+    }
+    .text {
+     @include text;
+    } 
+    .text2 {
+      @include text;
+      color: #888888;
+    }
+    .authentication-box {
+      width: 380px;
+      background: aqua;
+      height: 100px;
+      margin-left: 80px;
+
+    }
+  }
+}
+.third-box-step1 {
+  @include gray-box;
+  height: 300px;
+  .third-box-contents-step1 {
+    @include white-box;
+    height: 260px;
+    border-top: solid 2px white;
+    
+    .contents-text-bottom-step1 {
+      height: 5px;
+      width :380px;
+      margin: 40px 0 0 200px;
+      font-size: 15px;
+      .text-normal {
+       float: left; 
+      }
+      .text-link {
+       float: left;
+        color: #00BFFF;
+      }
+    }
+  }
+  .step1-next {
+    @include red-box;
+    margin: 40px 0 0 0;
+    width: 340px;
+  }
+  .text-data {
+    color: #00BFFF;
+    padding: 20px 20px 0 375px;
+    font-size: 15px;
+    font-weight: bold;
+    
+  }  
+}
+input[type="submit"] {
+  height: 100px;
+  width: 100px;
+}

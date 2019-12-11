@@ -1,0 +1,75 @@
+.header-post {
+  @include gray-box;
+  height: 128px;
+  position: relative;
+ .posts-header-logo {
+    margin-left: 600px;
+    height: 128px;
+    font-size: 40px;
+    width: 260px;
+    position: absolute;
+    bottom: 80px;
+    }
+}
+
+.middle-box-posts {
+  @include gray-box;
+  height: 380px;
+  .middle-contents-posts {
+    @include white-box;
+    height: 380px;
+    .middle-contents-header {
+     @include title-box;
+    }
+    .middle-contents-bottom-posts {
+      height: 182px;
+      width: 500px;
+      background: white;
+      margin: 40px auto;
+      &__btn {
+        display: block;
+        background: #DD0000;
+        height: 50px;
+        width :300px;
+        margin:0 50px 20px 100px;
+        border-radius: 5px;
+        font-size:13px;
+        color: white;
+        text-decoration: none;
+        
+        line-height: 47px;
+        &--facebook {
+          background: #000088; 
+        }  
+        &--google {
+          background: white;
+          color: black;
+          border: solid 1px black;
+        }
+      }  
+    }
+  }
+}
+
+.board {
+  @include gray-box;
+  height: 110px;
+} 
+
+.foot {
+ @include footer;
+
+  .footer-contents {
+    @include footer-contents;
+    &__text {
+      @include footer-text;
+    }
+  .footer-logo {
+    @include footer-logo;
+  }
+  .footer-date {
+    @include footer-date;
+  }
+     
+  }  
+}

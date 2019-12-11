@@ -1,11 +1,35 @@
 class ItemsController < ApplicationController
+ 
+
   def index
+    
+  end
+
+  def buy
+  end
+
+  def show
   end
 
   def create
     # formのデータを受け取る
     @item = Item.new(item_params)
   end
+
+
+  def show
+    @items = Item.find(params[:id])
+  end
+
+  def pay
+    Payjp.api_key = ENV['PAYJP_ACCESS_KEY']
+    Payjp::Charge.create(
+      amount: 3500, # 決済する値段
+      card: params['payjp-token'],
+      currency: 'jpy'
+    )
+  end
+
 
   private
 

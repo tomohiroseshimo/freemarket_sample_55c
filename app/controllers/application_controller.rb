@@ -2,6 +2,10 @@ class ApplicationController < ActionController::Base
   before_action :basic_auth, if: :production?
   protect_from_forgery with: :exception
 
+  def after_sign_out_path_for(resource)
+    items_login_index_path # ログアウト後に遷移するpathを設定
+  end
+
   private
 
   def production?
