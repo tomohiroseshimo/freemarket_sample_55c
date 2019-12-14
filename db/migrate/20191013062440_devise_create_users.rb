@@ -2,6 +2,9 @@
 
 class DeviseCreateUsers < ActiveRecord::Migration[5.2]
   def change
+    if table_exists?(:users)
+      drop_table :users
+    else
     create_table :users do |t|
       ## Database authenticatable
       t.string :nickname, null: false
@@ -61,6 +64,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
       t.timestamps null: false
     end
+  end
 
     add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
