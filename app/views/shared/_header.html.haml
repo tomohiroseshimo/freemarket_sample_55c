@@ -7,11 +7,11 @@
         %input(class="input-default" name="keyword" placeholder="何かお探しですか？" type="search" value="")/
         %i.searchButton
           = link_to "#" do
-            = fa_icon "search"
+            = fa_icon "search"   
     .lower-container.clearfix
       .lower-container__left
         .category
-          = link_to "#" do
+          = link_to "#", data: {"turbolinks" => false} do
             = fa_icon "th-list" ,text: "カテゴリーから探す"       
           .category__pulldown
             %table{:border => "0"} 
@@ -43,8 +43,8 @@
                 %th.m カテゴリー一覧                 
               %tr 
         .brand
-          = link_to "#" do
-            = fa_icon "tags",text: "ブランドから探す"
+          = link_to "#", data: {"turbolinks" => false} do
+            = fa_icon "tags", text: "ブランドから探す"
           .brand__pulldown
             %table{:border => "0"} 
               %tr{"data-href" => "http://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC"}        
@@ -64,13 +64,13 @@
       %ul.lower-container__right
         %li.navis
           .navi
-            = link_to "#" do
+            = link_to "#", data: {"turbolinks" => false} do
               = fa_icon "heart"
               いいね！一覧
            
         %li.navis
           .navi-first
-            = link_to "#" do
+            = link_to "#", data: {"turbolinks" => false} do
               = fa_icon "bell"
               お知らせ
             .navi-first__pulldown   
@@ -86,7 +86,7 @@
                          
         %li.navis
           .navi-second
-            = link_to "#" do
+            = link_to "#", data: {"turbolinks" => false} do
               = fa_icon "check"
               やることリスト
             .navi-second__pulldown-second 
@@ -99,7 +99,7 @@
             
         %li.navis
           .mypage
-            =link_to "#" do
+            =link_to  mypages_path, data: {"turbolinks" => false} do
               = image_tag("https://static.mercdn.net/images/member_photo_noimage_thumb.png", size:"32x32",)
               マイページ
             .mypage__pulldown 
@@ -131,5 +131,4 @@
                           = link_to '購入した商品 - 過去の取引', class: 'mypage__sidebar-main__box__purchaced'
                           / 矢印アイコン
                           
-                        = form_tag(action: :pay, method: :post) do
-                          %script.payjp-button{:src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => "pk_test_a5896eae722c5b5837cfe429"}
+                        
