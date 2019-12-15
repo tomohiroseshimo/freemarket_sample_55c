@@ -7,7 +7,7 @@ end
 devise_for :social_users, controllers: { omniauth_callbacks: 'social_users/omniauth_callbacks' }
 devise_for :users
 
-root 'mypages#index'
+root 'items#index'
 
 resources :items
 get 'items' => 'items#index'
