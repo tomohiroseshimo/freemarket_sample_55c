@@ -82,6 +82,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry-rails'
 gem 'payjp'
+gem "gretel"
 
 group :production do
   gem 'unicorn', '5.4.1'
