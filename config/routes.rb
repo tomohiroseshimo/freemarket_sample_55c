@@ -45,11 +45,11 @@ post 'items' => 'items#pay'
 
 resources :mypages, only: [:index, :destroy, :edit, :update] do
   collection do
-   get 'mypage_exhibit'
-   get 'mypage_sold'
-   get 'mypage_transaction'
-   get 'mypage_buy_transaction'
-   get 'mypage_buy_transaction_past'
+    get 'mypage_exhibit'
+    get 'mypage_sold'
+    get 'mypage_transaction'
+    get 'mypage_buy_transaction'
+    get 'mypage_buy_transaction_past'
   end
 end
 end
