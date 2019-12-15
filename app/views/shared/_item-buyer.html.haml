@@ -1,0 +1,20 @@
+%section.visible-sp
+  .item-btn-client
+    購入画面に進む
+  .item-detail-message
+    .message-container
+      はじめまして！
+    .item-other-btn
+      .link_btn_left
+        %button.item-other-btn-left
+          %i.icon-like-border
+          いいね！
+          = rand(30) + 1
+      .link_btn_right
+        %i.fa.fa-lock
+        = link_to 'あんしん・あんぜんへの取り組み', root_path, class: 'link_btn_right'
+  %ul.nav-item-link-prev-next.clearfix
+    .items-in-user-profile
+      %section.items-box-container.clearfix.related-item-column.items-in-user-profile
+      %h2.items-box-head
+    .items-box-content.clearfix
