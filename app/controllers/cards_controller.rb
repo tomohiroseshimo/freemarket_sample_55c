@@ -3,14 +3,14 @@ class CardsController < ApplicationController
     before_action :set_card
   
     def new # カードの登録画面。送信ボタンを押すとcreateアクションへ。
-      card = Card.where(user_id: current_user.id).first
+      card = Card.find_by(user_id: current_user.id)
       
     end
   
-   # indexアクションはここでは省略
+   
   
     def create #PayjpとCardのデータベースを作成
-      Payjp.api_key = 'sk_test_baf7d0f68a631d3c11689893'
+      Payjp.api_key = ENV['PAYJP_ACCESS_KEY']
   
       if params['payjp-token'].blank?
         redirect_to action: "new"
@@ -34,6 +34,6 @@ class CardsController < ApplicationController
     private
   
     def set_card
-      @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
+      @card = Card.find_by(user_id: current_user.id) if Card.where(user_id: current_user.id).present?
     end
   end
