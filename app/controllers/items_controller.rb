@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+ 
+
   def index
     @items = Item.all
   end
@@ -11,6 +13,13 @@ class ItemsController < ApplicationController
     
     # このまま導入するとunknown attribute 'item_id' for Image.というエラーが発生してしまう
     # @parents = Category.all.order("id ASC").limit(10) ←全く同じコードをcategoriesコントローラーへ記載
+　 end
+
+  def buy
+  end
+
+  def show
+
   end
 
   def create
@@ -27,6 +36,21 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @item.destroy
   end
+
+
+  def show
+    @items = Item.find(params[:id])
+  end
+
+  def pay
+    Payjp.api_key = ENV['PAYJP_ACCESS_KEY']
+    Payjp::Charge.create(
+      amount: 3500, # 決済する値段
+      card: params['payjp-token'],
+      currency: 'jpy'
+    )
+  end
+
 
   private
 
