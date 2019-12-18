@@ -13,19 +13,27 @@
             = form_for @item, class: "sell-form", url: items_path, mehod: :post do |f|
               .sell-upload-box
                 -# = f.hidden_field :user_id, value: current_user.id
-                -# %h3.sell-upload-head
-                -#   = f.label :出品画像
-                -#   %span.form-require
-                -#     必須
-                -# %p 最大10枚までアップロードできます
-                -# = f.fields_for :images do |fi|
-                -#   = fi.label :image, class: "sell-upload-drop-box" do
-                -#     .sell-upload-drop-file
-                -#       = fi.file_field :image, class:"file", style:"display:none;"
-                -#       %pre.visible-pc
-                -#         クリックしてファイルをアップロード
-                -#       %i.icon-camera
-                    -# 上の三行はアップロードした画像のプレビューを表示できるようにしたい記述だが、うまく機能しない。。
+                %h3.sell-upload-head
+                  = f.label :出品画像
+                  %span.form-require
+                    必須
+                %p 最大10枚までアップロードできます
+                .sell-dropbox-container
+                  = f.fields_for :images do |image|
+                    #preview
+                    .dropzone-area
+                      = image.label :images, class: "sell-upload-drop-box", for: "upload-image" do
+                        .sell-upload-drop-file
+                          = image.file_field :images, class:"upload-image", id: "upload-image", 'data-image': 0, multiple: true, style:"display:none;"
+                          %p ここをクリックしてください
+                          -# %pre.visible-pc
+                          -#   クリックしてファイルをアップロード
+                          -#   またはクリックしてファイルをアップロード
+                          -# %i.icon-camera
+                    -# #preview2
+                    -# .dropzone-area2
+                    -#   = image.label :images, class: "sell-upload-drop-box", for: "upload-image" do
+                    -#     %p ここをクリックしてください
 
               .sell-content
                 .form-group
@@ -40,7 +48,7 @@
                     商品の説明
                     %span.form-require
                       必須
-                  -# = f.text_area :description, class: "textarea-default", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"
+                    = f.text_area :description, class: "textarea-default", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"
 
               .sell-content.clearfix
                 %h3.sell-sub-head
@@ -111,15 +119,17 @@
                         .l-right.sell-price-input
                           ¥
                           %div
-                            =f.number_field :price, class: "input-default", placeholder: "例）300", value: ""
+                            =f.number_field :price, class: "input-default", id: "jsNum", placeholder: "例）300", value: ""
                     %li.clearfix
-                      .l-left
-                        販売手数料 (10%)
-                      .l-right -
+                      %div
+                        .l-left
+                          販売手数料 (10%)
+                        %input#jsFee.l-right{disabled: "disabled",  type: "text", value: "-"}  
                     %li.clearfix.bold
-                      .l-left
-                        販売利益
-                      .l-right -
+                      %div
+                        .l-left
+                          販売利益
+                        %input#jsProfit.l-right{disabled: "disabled",  type: "text", value: "-"}
               .modal{:role => "dialog", :tabindex => "-1"}
                 .modal-inner
               .sell-content.sell-btn-box
