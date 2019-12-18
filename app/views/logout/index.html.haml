@@ -1,3 +1,8 @@
+.header
+  = render "shared/header"
+.space  
+  - breadcrumb :logout
+  = render "layouts/breadcrumbs" 
 .mypage
   = render partial: "mypages/sidebar"
   = link_to  destroy_user_session_path, class: "out-btn" do
