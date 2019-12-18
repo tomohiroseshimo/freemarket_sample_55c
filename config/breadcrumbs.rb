@@ -32,6 +32,11 @@ crumb :mypage_buy_transaction_past do
   parent :mypage
 end
 
+crumb :logout do
+  link "ログアウト", logout_index_path
+  parent :mypage
+end
+
 
 # crumb :projects do
 #   link "Projects", projects_path
