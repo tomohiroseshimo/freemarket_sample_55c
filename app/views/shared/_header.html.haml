@@ -11,7 +11,7 @@
     .lower-container.clearfix
       .lower-container__left
         .category
-          = link_to "#", data: {"turbolinks" => false} do
+          = link_to "", data: {"turbolinks" => false} do
             = fa_icon "th-list" ,text: "カテゴリーから探す"       
           .category__pulldown
             %table{:border => "0"} 
@@ -43,7 +43,7 @@
                 %th.m カテゴリー一覧                 
               %tr 
         .brand
-          = link_to "#", data: {"turbolinks" => false} do
+          = link_to "", data: {"turbolinks" => false} do
             = fa_icon "tags", text: "ブランドから探す"
           .brand__pulldown
             %table{:border => "0"} 
@@ -64,13 +64,13 @@
       %ul.lower-container__right
         %li.navis
           .navi
-            = link_to "#", data: {"turbolinks" => false} do
+            = link_to "", data: {"turbolinks" => false} do
               = fa_icon "heart"
               いいね！一覧
            
         %li.navis
           .navi-first
-            = link_to "#", data: {"turbolinks" => false} do
+            = link_to "", data: {"turbolinks" => false} do
               = fa_icon "bell"
               お知らせ
             .navi-first__pulldown   
@@ -86,7 +86,7 @@
                          
         %li.navis
           .navi-second
-            = link_to "#", data: {"turbolinks" => false} do
+            = link_to "", data: {"turbolinks" => false} do
               = fa_icon "check"
               やることリスト
             .navi-second__pulldown-second 
