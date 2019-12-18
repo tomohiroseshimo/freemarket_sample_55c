@@ -3,8 +3,8 @@
     -# - @items.first(4).each do |item|
       .content__image 
         -# - item.images.each do |image|
-        -# = image_tag(url_for(@items.image)), :class => "content-img"
-        %span.item.price
+        -#   = image_tag @items.image :class => "content-img"
+          %span.item.price
       .content__description
         %p.item.description
   .content
