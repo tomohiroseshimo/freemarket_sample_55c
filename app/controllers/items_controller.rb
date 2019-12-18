@@ -16,7 +16,6 @@ class ItemsController < ApplicationController
   def create
     # formのデータを受け取る
     @item = Item.new(item_params)
-    # binding.pry
     if @item.save
       render 'index', notice: '出品が完了しました'
     else
