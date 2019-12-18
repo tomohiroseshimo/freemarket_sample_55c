@@ -11,7 +11,16 @@ root 'items#index'
 
 resources :items
 get 'items' => 'items#index'
+
+get "items/new" => "items#new"
+post 'items' => 'items#create'
+
+get 'destroy' => 'items#destroy'
+delete 'items/:id' => 'items#destroy'
+
+
 post 'items' => 'items#pay'
+
   resources :signup do
     collection do
     get 'user_data'

@@ -37,7 +37,7 @@ li {
 .single-main {
   height: 2016px;
   .l-single-container.buy-item-container{
-    margin:0 370px;
+    margin:0 auto;
     background-color: white;
     width: 700px;
     .l-single-head{
@@ -76,6 +76,7 @@ li {
   }
 }
 .sell-dropbox-container{
+  display: flex;
   height: 162px;
   width: 620px;
   margin: 16px -80px 0 0;
@@ -86,6 +87,10 @@ li {
     padding: 40px;
     text-align: center;
   }
+}
+#preview{
+  display: flex;
+  z-index: 1;
 }
 .sell-upload-drop-box {
   position: relative;
@@ -101,6 +106,7 @@ li {
   float: right;
   margin-left: 2%;
 }
+
 .sell-upload-drop-box pre {
   position: absolute;
   top: 50%;
@@ -145,6 +151,9 @@ li {
       background-color: #fff;
       font-size: 16px;
       line-height: 1.5;
+    }
+    .textarea-default{
+      font-weight: normal;
     }
   }
 }
@@ -213,7 +222,7 @@ ul.sell-price{
     padding: 0 0 24px;
     border:0;
     div{
-      width:400px;
+      width:300px;
       line-height: 48px;
       label{
         display: block;
@@ -233,6 +242,7 @@ ul.sell-price{
           margin: 0 0 0 5%;
           width:48px;
           input.input-default{
+            text-align: right;
             width: 126px;
             height: 28px;
             padding: 10px 16px 8px 16px;
@@ -246,6 +256,7 @@ ul.sell-price{
       }
     }
   }
+
   li{
     width: 400px;
     padding: 24px 0;
@@ -259,8 +270,10 @@ ul.sell-price{
     }
     .l-right{
       float: right;
-      width:1%;
-      height:14px;
+      // width:1%;
+      height: 14px;
+      text-align: right;
+      border: white;
     }
   }
 }
@@ -278,7 +291,7 @@ ul.sell-price{
     height: 84px;
     font-size: 14px;
   }
-  button{
+  .btn-red{
     width: 618px;
     height: 48px;
     background: #ea352d;
@@ -287,9 +300,15 @@ ul.sell-price{
     margin:40px 0 0;
   }
   .btn-gray {
+    display: block;
+    line-height: 3;
+    height: 48px;
+    width: 45%;
     background: #aaa;
     border: 1px solid #aaa;
+    text-decoration: none;
     color: #fff;
+    text-align: center;
   }
   .btn-default {
     display: block;
