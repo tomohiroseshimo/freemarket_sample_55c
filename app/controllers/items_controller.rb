@@ -7,19 +7,14 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    
-    # active_storageのためのコメントアウト
-    # @item.images.build
-    
     # このまま導入するとunknown attribute 'item_id' for Image.というエラーが発生してしまう
     # @parents = Category.all.order("id ASC").limit(10) ←全く同じコードをcategoriesコントローラーへ記載
-　 end
+  end
 
   def buy
   end
 
   def show
-
   end
 
   def create
@@ -32,6 +27,10 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+  
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
@@ -55,15 +54,9 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    # ストロングパラメータ 大場さんの記述 images_attributes: [:id, :image, :_destroy] 自分の記述{image: []} メンターの記述 {:images_attributes["0"] => [:image]}
+    # ストロングパラメータ 自分の記述{image: []} メンターの記述 {:images_attributes["0"] => [:image]}
     params.require(:item).permit(:name, :description, :category, :condition, :cost, :area, :date, :price).merge(user_id: current_user.id, images: params[:item][:images][:images])
   end
-
-  # イーチ文で回す
-  # def image_params
-  #   params.require(:item).require(:images_attributes).require(["0"])[0][:image]
-  #   params[:item][:images_attributes]["0"][:image]
-  # end
 
   def set_item
     #データの取得
