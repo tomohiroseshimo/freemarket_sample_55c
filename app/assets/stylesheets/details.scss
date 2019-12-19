@@ -25,35 +25,33 @@
   margin: 0 auto;
   background-color:rgb(245, 245, 245);
 }
-.content--photo-up {
-  background: rgb(245, 245, 245);
+.photos--main {
   height: 300px;
   width: 300px;
   border-collapse: collapse;
   // position: relative;
   float: left;
-  .photo-up-piece {
-    float:left;
-    margin: 0 auto;
+  &__piece {
+    width:300px;
+    height: 300px;
+    object-fit: contain;
   }
 }
-.content--photo-down {
+
+.photos--thumb {
   width:300px;
   height: 120px;
   border-collapse: collapse;
   overflow: hidden;
   float: left;
-  .content-photo-down__piece {
+  .photos--thumb__piece {
     height: 60px;
     width: 60px;
     float: left;
+    display: inline;
     border-collapse: collapse;
     cursor: pointer;
-  }
-  .content--photo-down__piece.activ {
-    filter:alpha(opacity=100)!important;
-    -moz-opacity: 1!important;
-    opacity: 1!important;
+    object-fit: contain;
   }
 }
 // .content--photo {

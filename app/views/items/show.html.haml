@@ -3,16 +3,26 @@
     = render "shared/header"
   .item-box-container
     .item-box-container__name
-      -# コンバース スニーカー 29cm JACK PURCELL／ジャックパーセル
-      = @items.name
+      コンバース スニーカー 29cm JACK PURCELL／ジャックパーセル
+      -# = @items.name
     .item-main-content.clearfix
       .photos
-        %ul.content--photo-up
-          %li.photo-up-piece
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_1.jpg?1569073031", width:230, height:300
-        %ul.content--photo-down
-          %li.content-photo-down__piece
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_1.jpg?1569073031", width:300, height:300
+        %ul.photos--main
+          %li.photos--main__piece
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_1.jpg?1569073031", class: "photos--main__piece", style: "background-image", alt: ""
+        %ul.photos--thumb
+          %li.photos--thumb__piece
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_1.jpg?1569073031", class: "photos--thumb__piece", style: "background-image", alt: ""
+          %li.photos--thumb__piece
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_2.jpg?1569073031", class: "photos--thumb__piece", style: "background-image", alt: ""
+          %li.photos--thumb__piece
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_3.jpg?1569073031", class: "photos--thumb__piece", style: "background-image", alt: ""
+          %li.photos--thumb__piece
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_4.jpg?1569073031", class: "photos--thumb__piece", style: "background-image", alt: ""
+          %li.photos--thumb__piece
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_5.jpg?1569073031", class: "photos--thumb__piece", style: "background-image", alt: ""
+          -# %li.photos--thumb__piece
+          -#   = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_3.jpg?1569073031", class: "photos--thumb__piece", style: "background-image"
       %table.item-detail-table
         %tbody
           %tr
@@ -38,11 +48,11 @@
           %tr
             %th 商品のサイズ
             %th.right
-              = @items.size
+              -# = @items.size
           %tr
             %th 商品の状態
             %th.right
-              = @items.condition
+              -# = @items.condition
           %tr
             %th 配送料の負担
             %th.right
