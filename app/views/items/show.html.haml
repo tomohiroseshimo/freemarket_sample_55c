@@ -7,20 +7,20 @@
       -# = @items.name
     .item-main-content.clearfix
       .photos
-        %ul.photos--main
-          %li.photos--main__piece
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_1.jpg?1569073031", class: "photos--main__piece", style: "background-image", alt: ""
+        .photos--main
+          .photos--main__piece
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_1.jpg?1569073031", class: "photos--main__piece img01", style: "background-image", alt: ""
         %ul.photos--thumb
           %li.photos--thumb__piece
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_1.jpg?1569073031", class: "photos--thumb__piece", style: "background-image", alt: ""
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_1.jpg?1569073031", class: "photos--thumb__piece img01", style: "background-image", alt: ""
           %li.photos--thumb__piece
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_2.jpg?1569073031", class: "photos--thumb__piece", style: "background-image", alt: ""
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_2.jpg?1569073031", class: "photos--thumb__piece img01", style: "background-image", alt: ""
           %li.photos--thumb__piece
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_3.jpg?1569073031", class: "photos--thumb__piece", style: "background-image", alt: ""
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_3.jpg?1569073031", class: "photos--thumb__piece img01", style: "background-image", alt: ""
           %li.photos--thumb__piece
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_4.jpg?1569073031", class: "photos--thumb__piece", style: "background-image", alt: ""
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_4.jpg?1569073031", class: "photos--thumb__piece img01", style: "background-image", alt: ""
           %li.photos--thumb__piece
-            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_5.jpg?1569073031", class: "photos--thumb__piece", style: "background-image", alt: ""
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_5.jpg?1569073031", class: "photos--thumb__piece img01", style: "background-image", alt: ""
           -# %li.photos--thumb__piece
           -#   = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_3.jpg?1569073031", class: "photos--thumb__piece", style: "background-image"
       %table.item-detail-table
@@ -48,10 +48,12 @@
           %tr
             %th 商品のサイズ
             %th.right
+              87
               -# = @items.size
           %tr
             %th 商品の状態
             %th.right
+              未使用
               -# = @items.condition
           %tr
             %th 配送料の負担
@@ -76,6 +78,9 @@
       %span.item-tax (税込)
       %span.item-shipping-fee 送料込み
     .bottom-content
-      =render partial: "shared/item-buyer"
+      - if @current_user == @items.user_id
+        =render partial: "shared/item-seller"
+      - else
+        =render partial: "shared/item-buyer"
   .aside
     = render "shared/footer"
