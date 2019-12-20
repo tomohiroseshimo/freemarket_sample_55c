@@ -1,6 +1,6 @@
 .default_container
   = render "shared/header"
-
+  
   .body
     .slider
       .slider_box
@@ -30,3 +30,4 @@
           = render 'items/content_two'
     .aside
   = render "shared/footer"
+  -# = link_to '削除', "/items/#{@item.id}", method: :delete

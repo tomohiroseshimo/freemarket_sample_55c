@@ -11,7 +11,16 @@ root 'items#index'
 
 resources :items
 get 'items' => 'items#index'
+
+get "items/new" => "items#new"
+post 'items' => 'items#create'
+
+get 'destroy' => 'items#destroy'
+delete 'items/:id' => 'items#destroy'
+
+
 post 'items' => 'items#pay'
+
   resources :signup do
     collection do
     get 'user_data'
@@ -34,10 +43,23 @@ post 'items' => 'items#pay'
   
 
   get 'sells' => 'sells#index'
+
   resources :mypages, only: :index do
     collection do
      get 'identification'
     end
   end
   get 'items/detail' => 'items#detail'
+
+
+
+resources :mypages, only: [:index, :destroy, :edit, :update] do
+  collection do
+    get 'mypage_exhibit'
+    get 'mypage_sold'
+    get 'mypage_transaction'
+    get 'mypage_buy_transaction'
+    get 'mypage_buy_transaction_past'
+  end
+end
 end

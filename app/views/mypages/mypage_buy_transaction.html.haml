@@ -1,0 +1,9 @@
+.header
+  = render "shared/header"
+.space  
+  - breadcrumb :mypage_buy_transaction
+  = render "layouts/breadcrumbs" 
+  
+.mypages
+  = render partial: "mypages/sidebar"
+  = render partial: "mypages/mypage-main"

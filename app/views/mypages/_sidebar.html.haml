@@ -2,7 +2,7 @@
   .mypage__sidebar__main
     %ul.mypage__sidebar__main__box
       %li.mypage__sidebar__main__box__mypage
-        = link_to 'マイページ', class: 'mypage__sidebar__main__box__mypage__link'
+        = link_to 'マイページ', mypages_path, data: {"turbolinks" => false}, class: 'mypage__sidebar__main__box__mypage__link'
         / 矢印アイコン
       %li.mypage__sidebar__main__box__list
         = link_to 'お知らせ', class: 'mypage__sidebar__main__box__info__link'
@@ -17,19 +17,19 @@
         = link_to '出品する', class: 'mypage__sidebar-main__box__sell'
         / 矢印アイコン
       %li.mypage__sidebar__main__box__list 
-        = link_to '出品した商品 - 出品中', class: 'mypage__sidebar-main__box__listing'
+        = link_to '出品した商品 - 出品中', mypage_exhibit_mypages_path, data: {"turbolinks" => false}, class: 'mypage__sidebar-main__box__listing'
         / 矢印アイコン
       %li.mypage__sidebar__main__box__list 
-        = link_to '出品した商品 - 取引中', class: 'mypage__sidebar-main__box__listing-inprogress'
+        = link_to '出品した商品 - 取引中', mypage_transaction_mypages_path, data: {"turbolinks" => false}, class: 'mypage__sidebar-main__box__listing-inprogress'
         / 矢印アイコン
       %li.mypage__sidebar__main__box__list 
-        = link_to '出品した商品 - 売却済み', class: 'mypage__sidebar-main__box__listing-completed'
+        = link_to '出品した商品 - 売却済み', mypage_sold_mypages_path, data: {"turbolinks" => false}, class: 'mypage__sidebar-main__box__listing-completed'
         / 矢印アイコン
       %li.mypage__sidebar__main__box__list
-        = link_to '購入した商品 - 売却済み', class: 'mypage__sidebar-main__box__purchace'
+        = link_to '購入した商品 - 売却済み', mypage_buy_transaction_mypages_path, data: {"turbolinks" => false}, class: 'mypage__sidebar-main__box__purchace'
         / 矢印アイコン
       %li.mypage__sidebar__main__box__list 
-        = link_to '購入した商品 - 過去の取引', class: 'mypage__sidebar-main__box__purchaced'
+        = link_to '購入した商品 - 過去の取引', mypage_buy_transaction_past_mypages_path, data: {"turbolinks" => false}, class: 'mypage__sidebar-main__box__purchaced'
         / 矢印アイコン
       %li.mypage__sidebar__main__box__list 
         = link_to 'ニュース一覧', class: 'mypage__sidebar-main__box__news'
@@ -74,5 +74,5 @@
         = link_to '電話番号の確認', class: 'mypage__sidebar__main__list__tell'
         / 矢印アイコン
       %li 
-        = link_to 'ログアウト', logout_index_path, class: 'mypage__sidebar__main__list__logout'
+        = link_to 'ログアウト', logout_index_path, data: {"turbolinks" => false}, class: 'mypage__sidebar__main__list__logout'
         / 矢印アイコン

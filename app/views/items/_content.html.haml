@@ -1,10 +1,12 @@
 .contents__body__wrapper__list
   .content
-    .content__image 
-      = image_tag 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Shibainu_Maru.jpg', :class => "content-img"
-      %span ¥1000
-    .content__description
-      G.Uの靴下セット
+    -# - @items.first(4).each do |item|
+      .content__image 
+        -# - item.images.each do |image|
+        -#   = image_tag @items.image :class => "content-img"
+          %span.item.price
+      .content__description
+        %p.item.description
   .content
     .content__image
       = image_tag 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Shibainu_Maru.jpg', :class => "content-img"
