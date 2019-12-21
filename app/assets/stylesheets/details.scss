@@ -1,0 +1,133 @@
+.item-box {
+  padding: 24px 40px 40px;
+  width: 620px;
+  background: #fff;
+  margin: 40px auto 0;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  &--name{
+    font-size: 24px;
+    text-align: center;
+    word-wrap: break-word;
+    line-height: 1.4;
+  }
+  &--content {
+    margin: 16px 0 0;
+  }
+  &--price {
+    margin: 24px 0 0;
+    text-align: center;
+    &__bold {
+      margin: 0 16px 0 0;
+      font-size: 50px;
+      color: black;
+      background-color: #fff;
+    }
+    &__tax {
+    font-size: 10px;
+    color: black;
+    background-color: #fff;
+    }
+    &__fee {
+      display: inline-block;
+      font-size: 16px;
+      color: black;
+      background-color: #fff;
+    }
+  }
+  &--btn {
+    color: #fff;
+    display: block;
+    width: 100%;
+    margin: 24px 0 0;
+    background: #ea352d;
+    line-height: 60px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    &__gray{
+      background-color: gray;
+      color: #fff;
+      display: block;
+      width: 100%;
+      margin: 24px 0 0;
+      line-height: 60px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 24px;
+    }
+  }
+  &--others{
+    margin-top: 50px;
+  }
+}
+
+.photos {
+  float: left;
+  width: 300px;
+  min-height: 380px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color:rgb(245, 245, 245);
+  &--main {
+    height: 300px;
+    width: 300px;
+    border-collapse: collapse;
+    float: left;
+    &__piece {
+      width:300px;
+      height: 300px;
+      object-fit: contain;
+    }
+  }
+  &--thumb {
+    width:300px;
+    height: 120px;
+    border-collapse: collapse;
+    overflow: hidden;
+    float: left;
+    &__piece {
+      height: 60px;
+      width: 60px;
+      float: left;
+      display: inline;
+      border-collapse: collapse;
+      cursor: pointer;
+      object-fit: contain;
+    }
+  }
+}
+
+.item-detail-table {
+  float: right;
+  max-width: 300px;
+  height: 420px;
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #f5f5f5;
+  th {
+    width: 39%;
+    text-align: left;
+    font-weight: 400;
+    background: #fafafa;
+    border-collapse: collapse;
+    border: 1px solid #f5f5f5;
+    padding: 16px 8px;
+    line-height: 1.5;
+  }
+  th.right {
+    width: 100%;
+    background: #fff;
+    float: left;
+    border-collapse: collapse;
+    border: 1px solid #f5f5f5;
+    padding: 16px 8px;
+    .link-right {
+      margin: 8px 0 0;
+      line-height: 1.5;
+      text-align: left;
+      color: #0099e8;
+      text-decoration: none;
+    }
+  }
+}

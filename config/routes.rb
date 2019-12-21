@@ -49,6 +49,7 @@ post 'items' => 'items#pay'
      get 'identification'
     end
   end
+  get 'items/detail' => 'items#detail'
 
 
 

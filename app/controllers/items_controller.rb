@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
- 
 
   def index
     @items = Item.all
@@ -16,10 +15,6 @@ class ItemsController < ApplicationController
 　 end
 
   def buy
-  end
-
-  def show
-
   end
 
   def create
