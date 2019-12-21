@@ -1,11 +1,11 @@
 .wrap
   .default-container
     = render "shared/header"
-  .item-box-container
-    .item-box-container__name
+  .item-box
+    .item-box--name
       コンバース スニーカー 29cm JACK PURCELL／ジャックパーセル
       -# = @items.name
-    .item-main-content.clearfix
+    .item-box--content.clearfix
       .photos
         .photos--main
           .photos--main__piece
@@ -71,16 +71,16 @@
             %th 発送日の目安
             %th.right
               4~7日で発送
-    .item-price-box.text-center
-      %span.item-price.bold
+    .item-box--price
+      %span.item-box--price__bold
         ¥
         = number_with_delimiter(@items.price)
-      %span.item-tax (税込)
-      %span.item-shipping-fee 送料込み
+      %span.item-box--price__tax (税込)
+      %span.item-box--price__fee 送料込み
     .bottom-content
-      - if @current_user == @items.user_id
-        =render partial: "shared/item-seller"
-      - else
-        =render partial: "shared/item-buyer"
-  .aside
-    = render "shared/footer"
+      -# - if @current_user == @items.user_id
+      -#   =render partial: "shared/item-seller"
+      -# - else
+      =render partial: "shared/item-buyer"
+.aside
+  = render "shared/footer"
