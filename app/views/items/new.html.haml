@@ -19,6 +19,7 @@
                     必須
                 %p 最大10枚までアップロードできます
                 .sell-dropbox-container
+                  -# = f.file_field :images
                   = f.fields_for :images do |image|
                     #preview
                     .dropzone-area

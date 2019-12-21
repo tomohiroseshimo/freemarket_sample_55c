@@ -30,6 +30,12 @@ class ItemsController < ApplicationController
   def edit
     @item = Item.find(params[:id])
   end
+
+  def update
+    @item = Item.find(params[:id])
+    @item.update(item_params)
+    render 'index'
+  end
   
   def destroy
     @item = Item.find(params[:id])
@@ -62,4 +68,9 @@ class ItemsController < ApplicationController
     #データの取得
     @item = Item.find(params[:id])
   end
+
+  # def item_find
+  #   Item.find(params[:id])
+  # end
+
 end
