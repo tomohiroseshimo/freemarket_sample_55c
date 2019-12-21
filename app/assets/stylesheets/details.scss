@@ -21,7 +21,7 @@
   float: left;
   width: 300px;
   min-height: 380px;
-  overflow: hidden;  /* ここに書くことで隠れる */
+  overflow: hidden;
   margin: 0 auto;
   background-color:rgb(245, 245, 245);
 }
@@ -29,7 +29,6 @@
   height: 300px;
   width: 300px;
   border-collapse: collapse;
-  // position: relative;
   float: left;
   &__piece {
     width:300px;
@@ -54,38 +53,6 @@
     object-fit: contain;
   }
 }
-// .content--photo {
-  //         float: left;
-  //         width: 300px;
-  //         min-height: 380px;
-  //         overflow: hidden;
-  //         margin: 0 auto;
-  //         background: gray;
-  //         .content--photo-up {
-  //           background: rgb(245, 245, 245);
-  //           height: 300px;
-  //           width: 300px;
-  //           border-collapse: collapse;
-  //           position: relative;
-  //           .photo-up-piece {
-  //             height: 300px;
-  //             width:300px;
-  //             float:left;
-  //           }
-  //         }
-  //         .content--photo-down {
-  //           height: 120px;
-  //           border-collapse: collapse;
-  //           overflow: hidden;
-  //           .content-photo-down__piece {
-  //             height: 60px;
-  //             width: 60px;
-  //             float: left;
-  //             border-collapse: collapse;
-  //             cursor: pointer;
-  //           }
-  //         }
-  //       }
 
 .item-price-box {
   margin: 24px 0 0;
