@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
- 
 
   def index
     @items = Item.all
@@ -14,8 +13,6 @@ class ItemsController < ApplicationController
   def buy
   end
 
-  def show
-  end
 
   def create
     # formのデータを受け取る

@@ -82,6 +82,8 @@ gem 'carrierwave'
 
 gem 'pry-rails'
 
+gem 'fog-aws'
+
 
 gem 'payjp'
 gem "gretel"
