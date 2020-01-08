@@ -21,17 +21,20 @@
                 .sell-dropbox-container
                   -# = f.fields_for :images do |image|
                   #preview
-                    - @item.images.each do |image, index|
-                      .select.image{data: {numbder: index}}
+                    -# - binding.pry
+                    -# -console
+                    - @item.images.each do |image|
+                      .select.image{data: {numbder: image.id}}
                         = image_tag image, id: "d-img"
                         %p#d-btn 削除
                         %p 編集
-                  .dropzone-area
-                    = f.label :images, class: "sell-upload-drop-box", for: "upload-image" do
-                      .sell-upload-drop-file
-                        = f.file_field :images, class:"upload-image", id: "upload-image", 'data-image': 0, multiple: true, style:"display:none;"
-                        %p ここをクリックしてください
-                          
+                  = f.fields_for :images do |image|
+                    .dropzone-area
+                      = image.label :images, class: "sell-upload-drop-box", for: "upload-image" do
+                        .sell-upload-drop-file
+                          = image.file_field :images, class:"upload-image", id: "upload-image", 'data-image': 0, multiple: true, style:"display:none;"
+                          %p ここをクリックしてください
+                          = f.hidden_field :file, class: "item_images_hidden", value: ""
               .sell-content
                 .form-group
                   %label

@@ -27,21 +27,30 @@
 
 
 $(function(){
-  $('#d-btn').click(function(){
-    $('#d-img').remove();
+  $('.select.image').on('click', '#d-btn', function(){
+    var image_number = $(this).parent()[0];
+    $(this).parent().remove();
   });
 });
 
-
-$('#image-box').on('click', '.js-remove', function() {
-  const targetIndex = $(this).parent().parent().data('index');
-  console.log(targetIndex);
-  // 該当indexを振られているチェックボックスを取得する
-  const hiddenCheck = $(`input#${targetIndex}.hidden-destroy`);
-  // もしチェックボックスが存在すればチェックを入れる
-  if (hiddenCheck) hiddenCheck.prop('checked', true);
-  $(this).parent().parent().remove();
-  $(`div[data-index="${targetIndex}"]`).remove();
-  // 画像入力欄が0個にならないようにしておく
-  // if ($('.js-file').length == 0) $('#image-box').append(buildFileField(fileIndex[0]));
+$(function(){
+  $('.select.image').on('click', function(){
+    var num = $(this).closest('.select.image').data('numbder')
+    // console.log(num)
+    // debugger
+    $('.dropzone-area').append(`<input value=${num} type="hidden" name="item[remove_images][]"></input>`);
+  });
 });
+
+/* // $('#image-box').on('click', '.js-remove', function() {
+//   const targetIndex = $(this).parent().parent().data('index');
+//   console.log(targetIndex);
+//   // 該当indexを振られているチェックボックスを取得する
+//   const hiddenCheck = $(`input#${targetIndex}.hidden-destroy`);
+//   // もしチェックボックスが存在すればチェックを入れる
+//   if (hiddenCheck) hiddenCheck.prop('checked', true);
+//   $(this).parent().parent().remove();
+//   $(`div[data-index="${targetIndex}"]`).remove();
+//   // 画像入力欄が0個にならないようにしておく
+//   // if ($('.js-file').length == 0) $('#image-box').append(buildFileField(fileIndex[0]));
+// }); */

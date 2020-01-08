@@ -81,7 +81,7 @@ gem "active_hash"
 gem 'carrierwave'
 
 gem 'pry-rails'
-gem 'fog'
+
 
 gem 'payjp'
 gem "gretel"
