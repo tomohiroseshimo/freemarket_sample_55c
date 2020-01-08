@@ -36,8 +36,6 @@ $(function(){
 $(function(){
   $('.select.image').on('click', function(){
     var num = $(this).closest('.select.image').data('numbder')
-    // console.log(num)
-    // debugger
     $('.dropzone-area').append(`<input value=${num} type="hidden" name="item[remove_images][]"></input>`);
   });
 });

@@ -31,10 +31,8 @@ class ItemsController < ApplicationController
   def update 
     @item = Item.find(params[:id])
     @item.update(item_params)
-    # binding.pry
     remove_images_params[:remove_images].each do |i|
       image = @item.images.find(i)
-      # binding.pry
       image.purge
     end
     render 'index'
