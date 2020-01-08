@@ -12,17 +12,13 @@
             %h2.l-single-head 商品の情報を入力
             = form_for @item, class: "sell-form", url: item_path, mehod: :patch do |f|
               .sell-upload-box
-                -# = f.hidden_field :user_id, value: current_user.id
                 %h3.sell-upload-head
                   = f.label :出品画像
                   %span.form-require
                     必須
                 %p 最大10枚までアップロードできます
                 .sell-dropbox-container
-                  -# = f.fields_for :images do |image|
                   #preview
-                    -# - binding.pry
-                    -# -console
                     - @item.images.each do |image|
                       .select.image{data: {numbder: image.id}}
                         = image_tag image, id: "d-img"

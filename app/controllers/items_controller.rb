@@ -25,11 +25,11 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
+    set_item
   end
 
   def update 
-    @item = Item.find(params[:id])
+    set_item
     @item.update(item_params)
     remove_images_params[:remove_images].each do |i|
       image = @item.images.find(i)
