@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only:[:edit, :update]
+
 
   def index
     @items = Item.all
@@ -25,11 +27,9 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    set_item
   end
 
   def update 
-    set_item
     @item.update(item_params)
     remove_images_params[:remove_images].each do |i|
       image = @item.images.find(i)
