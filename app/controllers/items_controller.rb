@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only:[:edit, :update]
+
 
   def index
     @items = Item.all
@@ -6,16 +8,13 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    
-    # active_storageのためのコメントアウト
-    # @item.images.build
-    
     # このまま導入するとunknown attribute 'item_id' for Image.というエラーが発生してしまう
     # @parents = Category.all.order("id ASC").limit(10) ←全く同じコードをcategoriesコントローラーへ記載
-　 end
+  end
 
   def buy
   end
+
 
   def create
     # formのデータを受け取る
@@ -27,6 +26,18 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update 
+    @item.update(item_params)
+    remove_images_params[:remove_images].each do |i|
+      image = @item.images.find(i)
+      image.purge
+    end
+    render 'index'
+  end
+  
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
@@ -50,18 +61,17 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    # ストロングパラメータ 大場さんの記述 images_attributes: [:id, :image, :_destroy] 自分の記述{image: []} メンターの記述 {:images_attributes["0"] => [:image]}
+    # ストロングパラメータ 自分の記述{image: []} メンターの記述 {:images_attributes["0"] => [:image]}
     params.require(:item).permit(:name, :description, :category, :condition, :cost, :area, :date, :price).merge(user_id: current_user.id, images: params[:item][:images][:images])
   end
-
-  # イーチ文で回す
-  # def image_params
-  #   params.require(:item).require(:images_attributes).require(["0"])[0][:image]
-  #   params[:item][:images_attributes]["0"][:image]
-  # end
 
   def set_item
     #データの取得
     @item = Item.find(params[:id])
   end
+
+  def remove_images_params
+    params.require(:item).permit(remove_images: [])
+  end
+
 end
