@@ -9,16 +9,20 @@ devise_for :users
 
 root 'items#index'
 
-resources :items
+resources :items 
 get 'items' => 'items#index'
 get "items/new" => "items#new"
 post 'items' => 'items#create'
 
+get 'ttt' => 'items#ttt' 
+get 'show/:id' => 'items#show'
+
+
 get "items/:id/edit" => "items#edit"
 
-get 'destroy' => 'items#destroy'
-delete 'items/:id' => 'items#destroy'
 
+delete 'items/:id' => 'items#destroy'
+delete 'destroy/:id' => 'items#destroy'
 
 post 'items' => 'items#pay'
 
@@ -52,6 +56,8 @@ post 'items' => 'items#pay'
   end
   get 'items/detail' => 'items#detail'
 
+  resources :destroy
+    
 
 
 resources :mypages, only: [:index, :destroy, :edit, :update] do

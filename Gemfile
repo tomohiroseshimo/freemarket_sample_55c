@@ -87,7 +87,7 @@ gem 'fog-aws'
 
 gem 'payjp'
 gem "gretel"
-
+gem 'jquery-turbolinks'
 
 group :production do
   gem 'unicorn', '5.4.1'
