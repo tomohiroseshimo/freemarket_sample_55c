@@ -1,0 +1,43 @@
+.default_container
+  = render "shared/header"
+  .back
+    .head_space
+    .details_box
+      .name
+        #{@item.name}
+      .image  
+        #{@item.image}
+      .data
+        %table{:border => ""}
+          %tr
+            %td
+              カテゴリー
+            %td #{@item.category}
+          %tr
+            %td
+              ブランド
+            %td #{@item.brand}
+          %tr
+            %td
+              商品の状態
+            %td #{@item.status}
+          %tr
+            %td
+              配送料の負担
+            %td  #{@item.cost}
+          %tr
+            %td
+              配送源の地域
+            %td #{@item.area}
+      .price
+        ¥#{@item.price}   
+        .unit
+          (税込)送料込み
+      .buy_space
+        .buy_box
+          購入画面に進む
+      .description
+        #{@item.description}         
+
+
+          

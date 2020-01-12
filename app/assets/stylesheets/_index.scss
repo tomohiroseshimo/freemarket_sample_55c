@@ -308,6 +308,7 @@ $max-w: 1020px;
   background-color: #F5F5F5;
   height: 2230px;
   width: 1020px;
+  
   &__body{
     &__subtitle{
         margin-top: 40px;
@@ -321,9 +322,12 @@ $max-w: 1020px;
       height: 525px;
       width: 1020px;
       &__list{
-
+        a{
+          color: black;
+          text-decoration: none;
+          }
+       }  
       }
-    }
   }
 }
 .content{
@@ -346,6 +350,11 @@ $max-w: 1020px;
       // position: absolute;
     }
    }
+  .name_box {
+    width: 188px;
+    height: 40px;
+    background: #999999;
+  } 
   &__description{
     font-size: 12px;
     height: 46px;
@@ -450,4 +459,10 @@ span{
       font-size: 12px;
     }
   }
+}
+
+.saga {
+  height: 200px;
+  width: 500px;
+  background: #99FFFF;
 }

@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function() {
 $(function () {
   $(".category__pulldown").hide();
   $(".category").hover(function() {
@@ -242,6 +243,6 @@ $(function () {
       } 
     ); 
  })
-
+});
 
   

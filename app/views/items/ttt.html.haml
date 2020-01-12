@@ -1,0 +1,15 @@
+- @item.each do |i|
+  .saga
+    - i.id
+    - i.name
+    = i.category
+    = i.brand
+    = i.condition
+    = i.cost
+    = i.area
+    = i.date
+    = i.price
+    = i.description
+    = i.status
+    = link_to '削除', "/show/#{i.id}"
+  
