@@ -25,7 +25,7 @@ class ItemsController < ApplicationController
     # formのデータを受け取る
     @item = Item.new(item_params)
     if @item.save
-      render 'index', notice: '出品が完了しました'
+      redirect_to items_path, notice: '出品が完了しました'
     else
       render 'new', notice: '商品を登録できませんでした'
     end
