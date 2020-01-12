@@ -11,11 +11,16 @@ root 'items#index'
 
 resources :items 
 get 'items' => 'items#index'
-
 get "items/new" => "items#new"
 post 'items' => 'items#create'
+
 get 'ttt' => 'items#ttt' 
 get 'show/:id' => 'items#show'
+
+
+get "items/:id/edit" => "items#edit"
+
+
 delete 'items/:id' => 'items#destroy'
 delete 'destroy/:id' => 'items#destroy'
 
@@ -49,6 +54,7 @@ post 'items' => 'items#pay'
      get 'identification'
     end
   end
+  get 'items/detail' => 'items#detail'
 
   resources :destroy
     

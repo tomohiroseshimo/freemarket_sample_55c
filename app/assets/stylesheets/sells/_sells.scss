@@ -91,6 +91,10 @@ li {
 #preview{
   display: flex;
   z-index: 1;
+  img{
+    height: 100px;
+    width: 100px;
+  }
 }
 .sell-upload-drop-box {
   position: relative;
