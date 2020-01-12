@@ -33,11 +33,11 @@
             %span 1日前
       %li.mypage__main__infomation__contents__go-list
         - @item.each do |i|
-          = link_to "/show/#{i.id}"  do
+          = link_to "/commodity/#{i.id}"  do
             .ex_list
               .ex_img
                 = i.image
-            .ex_name  
+              .ex_name  
                 = i.name 
     -#     - @item.each do |i|
     -# = link_to "/show/#{i.id}"  do

@@ -57,7 +57,7 @@ post 'items' => 'items#pay'
 
   resources :destroy
     
- 
+get 'commodity/:id' => 'mypages#commodity'
 
 resources :mypages, only: [:index, :destroy, :edit, :update] do
   collection do

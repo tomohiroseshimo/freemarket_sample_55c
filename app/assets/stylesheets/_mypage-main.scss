@@ -129,23 +129,26 @@
         .ex_list {
           width: 700px;
           height: 100px;
-          background: coral;
+          background: #EEEEEE;
           position: relative;
           .ex_img {
             width: 80px;
             height: 90px;
-            background: crimson;
+            
            position: absolute;
            left: 5px; 
            bottom: 5px;
           }
           .ex_name {
-            width: 100px;
-            height: 50px;
-            background: darkblue;
+            width: 200px;
+            height: 30px;
+            
             position: absolute;
-            left: 100px;
-            top: 10px; 
+            left: 90px;
+            top: 3px;
+            line-height: 30px; 
+            text-align: left;
+            
 
            
           }
