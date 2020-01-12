@@ -36,7 +36,8 @@
           (税込)送料込み
       .buy_space
         .buy_box
-          購入画面に進む
+          = link_to "購入画面に進む", "/buy/#{@item.id}"
+            
       .description
         #{@item.description}         
 

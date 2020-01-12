@@ -14,6 +14,7 @@ class ItemsController < ApplicationController
   end
 
   def buy
+    @item = Item.find(params[:id])
   end
 
   

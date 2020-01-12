@@ -6,4 +6,8 @@ class MypagesController < ApplicationController
   def identification
     render "mypages/_identification"
   end
+   
+  def mypage_exhibit
+    @item = Item.all
+  end  
 end

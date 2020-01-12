@@ -20,7 +20,6 @@ get 'show/:id' => 'items#show'
 
 get "items/:id/edit" => "items#edit"
 
-
 delete 'items/:id' => 'items#destroy'
 delete 'destroy/:id' => 'items#destroy'
 
@@ -37,7 +36,7 @@ post 'items' => 'items#pay'
     end
   end
   
-  get  'buy'=>  'items#buy'
+  get  'buy/:id'=>  'items#buy'
      
     
   resources :cards, only: [:index, :create, :new]
@@ -58,11 +57,11 @@ post 'items' => 'items#pay'
 
   resources :destroy
     
-
+ 
 
 resources :mypages, only: [:index, :destroy, :edit, :update] do
   collection do
-    get 'mypage_exhibit'
+    get 'mypage_exhibit' 
     get 'mypage_sold'
     get 'mypage_transaction'
     get 'mypage_buy_transaction'

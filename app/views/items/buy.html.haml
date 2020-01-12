@@ -7,13 +7,13 @@
       購入内容の確認
     .box-a
       .box-a__image
-        = image_tag 'https://static.mercdn.net/thumb/photos/m83481426158_1.jpg?1574600903', :size =>'80x80'
+        #{@item.image}
       .box-a__text
-        ミラオーウェン/デニム
+        #{@item.name}
     .point 
       ポイント 
     .pay-mon  
-      支払金額&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; ¥300  
+      支払金額&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; ¥#{@item.price}
     = form_tag(action: :pay, method: :post) do
       .buy-btn  
         %script.payjp-button{:src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => "pk_test_a5896eae722c5b5837cfe429"}  
