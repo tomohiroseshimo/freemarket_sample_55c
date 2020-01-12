@@ -1,15 +1,87 @@
-- @item.each do |i|
-  .saga
-    - i.id
-    - i.name
-    = i.category
-    = i.brand
-    = i.condition
-    = i.cost
-    = i.area
-    = i.date
-    = i.price
-    = i.description
-    = i.status
-    = link_to '削除', "/show/#{i.id}"
-  
+.wrap
+  .default-container
+    = render "shared/header"
+  .item-box
+    .item-box--name
+      コンバース スニーカー 29cm JACK PURCELL／ジャックパーセル
+      -# = @items.name
+    .item-box--content.clearfix
+      .photos
+        .photos--main
+          .photos--main__piece
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_1.jpg?1569073031", class: "photos--main__piece img01", style: "background-image", alt: ""
+        %ul.photos--thumb
+          %li.photos--thumb__piece
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_1.jpg?1569073031", class: "photos--thumb__piece img01", style: "background-image", alt: ""
+          %li.photos--thumb__piece
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_2.jpg?1569073031", class: "photos--thumb__piece img01", style: "background-image", alt: ""
+          %li.photos--thumb__piece
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_3.jpg?1569073031", class: "photos--thumb__piece img01", style: "background-image", alt: ""
+          %li.photos--thumb__piece
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_4.jpg?1569073031", class: "photos--thumb__piece img01", style: "background-image", alt: ""
+          %li.photos--thumb__piece
+            = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_5.jpg?1569073031", class: "photos--thumb__piece img01", style: "background-image", alt: ""
+          -# %li.photos--thumb__piece
+          -#   = image_tag "https://static.mercdn.net/item/detail/orig/photos/m74153224228_3.jpg?1569073031", class: "photos--thumb__piece", style: "background-image"
+      %table.item-detail-table
+        %tbody
+          %tr
+            %th 出品者
+            %th.right アミ
+          %tr
+            %th カテゴリー
+            %th.right
+              = link_to root_path, class: 'link-right' do
+                メンズ
+                %br
+              = link_to root_path, class: 'link-right' do
+                %i.fa.fa-chevron-right
+                靴
+                %br
+              = link_to root_path, class: 'link-right' do
+                %i.fa.fa-chevron-right
+                スニーカー
+          %tr
+            %th ブランド
+            %th.right
+              コンバース
+          %tr
+            %th 商品のサイズ
+            %th.right
+              87
+              -# = @items.size
+          %tr
+            %th 商品の状態
+            %th.right
+              未使用
+              -# = @items.condition
+          %tr
+            %th 配送料の負担
+            %th.right
+              送料込み(出品者負担)
+          %tr
+            %th 配送の方法
+            %th.right
+              ゆうゆうメルカリ便
+          %tr
+            %th 配送元地域
+            %th.right
+              未定
+          %tr
+            %th 発送日の目安
+            %th.right
+              4~7日で発送
+    .item-box--price
+      %span.item-box--price__bold
+        ¥
+        -# = number_with_delimiter(@items.price)
+      %span.item-box--price__tax (税込)
+      %span.item-box--price__fee 送料込み
+    .bottom-content
+      -# - if @current_user == @items.user_id
+      -#   =render partial: "shared/item-seller"
+      -# - else
+      =render partial: "shared/item-buyer"
+.aside
+  = render "shared/footer"
+
