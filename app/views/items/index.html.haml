@@ -1,6 +1,10 @@
 .default_container
-  = render "shared/header"
-  
+  -# = render "shared/header"
+  -if user_signed_in?
+    = render "shared/header"
+  -else
+    = render "shared/header-login"
+
   .body
     .slider
       .slider_box
