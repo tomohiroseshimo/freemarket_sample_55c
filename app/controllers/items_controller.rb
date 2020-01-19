@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only:[:edit, :update]
-
+  require "payjp"
 
   def index
     @item = Item.all
@@ -17,7 +17,9 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
-  
+  def after
+    @item = Item.find(params[:id])
+  end  
 
 
   
@@ -63,12 +65,14 @@ class ItemsController < ApplicationController
   end 
 
   def pay
+    @item = Item.find(params[:id])
     Payjp.api_key = ENV['PAYJP_ACCESS_KEY']
-    Payjp::Charge.create(
-      amount: 3500, # 決済する値段
+    charge = Payjp::Charge.create(
+      amount: @item.price, # 決済する値段
       card: params['payjp-token'],
       currency: 'jpy'
     )
+    redirect_to after_path
   end
 
 

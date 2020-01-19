@@ -7,7 +7,8 @@
       .name
         #{@item.name}
       .image  
-        #{@item.image}
+        - @item.images.each do |image|
+          = image_tag(image, width:100, height:100)
       .data
         %table{:border => ""}
           %tr
