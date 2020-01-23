@@ -40,7 +40,8 @@ class ItemsController < ApplicationController
       image = @item.images.find(i)
       image.purge
     end
-    render 'index'
+    render 'index' 
+    # リダイレクトにする
   end
   
   def destroy
