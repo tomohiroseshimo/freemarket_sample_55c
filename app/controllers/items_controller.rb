@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only:[:edit, :update]
-  require "payjp"
-
+ 
+# buyとpayには飛べない authenthicate mypage関係は全て飛べない
   def index
     @item = Item.all
   end
