@@ -1,8 +1,7 @@
--# %section.visible-sp
 .item-box--btn
-  購入画面に進む
+  = link_to "購入画面に進む", "/buy/#{@item.id}"
 .item-box--message
-  はじめまして！
+  #{@item.description}
   .item-box--link
     .item-box--link__left
       %button.item-other-btn-left
@@ -16,4 +15,3 @@
   %section.item-box--others__seller
     %h2.item-box--others__seller
       出品者のその他の商品
-    = render 'items/content'
