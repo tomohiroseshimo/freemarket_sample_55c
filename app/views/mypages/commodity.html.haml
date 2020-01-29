@@ -38,7 +38,7 @@
         .buy_box
           = link_to "商品の編集", "/items/#{@item.id}/edit"
         .des_box
-          = link_to '削除', "/destroy/#{@item.id}", method: :delete, data: {confirm: '本当に削除しますか？'}
+          = link_to '削除', "/items/#{@item.id}", method: :delete, data: {confirm: '本当に削除しますか？'}
   
             
       .description

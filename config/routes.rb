@@ -65,5 +65,4 @@ get 'show/:id' => 'items#show'
 get "items/:id/edit" => "items#edit"
 get "after/:id" => "items#after",as: 'after'
 delete 'items/:id' => 'items#destroy'
-delete 'destroy/:id' => 'items#destroy'
 end
