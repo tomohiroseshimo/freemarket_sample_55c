@@ -1,0 +1,11 @@
+.middle-box-buy {
+  @include gray-box;
+  height: 450px;
+  .middle-contents-pay {
+    @include white-box;
+    height: 200px;
+    .middle-contents-header {
+     @include title-box;
+    }
+  }
+}

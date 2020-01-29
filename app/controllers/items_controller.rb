@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only:[:edit, :update]
-
-
+  before_action :authenticate_user!, only: [:show, :new, :buy, :create, :edit, :update, :destroy, :pay]
+# buyとpayには飛べない authenthicate mypage関係は全て飛べない
   def index
     @item = Item.all
   end
@@ -17,7 +17,9 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
-  
+  def after
+    @item = Item.find(params[:id])
+  end  
 
 
   
@@ -64,12 +66,14 @@ class ItemsController < ApplicationController
   end 
 
   def pay
-    Payjp.api_key = ENV['PAYJP_ACCESS_KEY']
-    Payjp::Charge.create(
-      amount: 3500, # 決済する値段
+    @item = Item.find(params[:id])
+    Payjp.api_key = ENV['PAYJP_SKLIVE_KEY']
+    charge = Payjp::Charge.create(
+      amount: @item.price, # 決済する値段
       card: params['payjp-token'],
       currency: 'jpy'
     )
+    redirect_to after_path
   end
 
 

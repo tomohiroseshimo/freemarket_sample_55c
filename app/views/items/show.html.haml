@@ -7,7 +7,8 @@
       .name
         #{@item.name}
       .image  
-        #{@item.image}
+        - @item.images.each do |image|
+          = image_tag(image, width:100, height:100)
       .data
         %table{:border => ""}
           %tr
@@ -36,7 +37,7 @@
           (税込)送料込み
       .buy_space
         .buy_box
-          = link_to "購入画面に進む", "/buy/#{@item.id}"
+          = link_to "購入画面に進む", "/buy/#{@item.id}", data: {"turbolinks" => false}
             
       .description
         #{@item.description}         
