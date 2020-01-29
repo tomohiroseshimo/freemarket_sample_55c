@@ -6,21 +6,19 @@
         #{@item.name}
       .item-box--content.clearfix
         .photos
-          .photos--main
-            .photos--main__piece
-              #{@item.image}
-            - @item.images.each do |image|
-              = image_tag(image, width:100, height:100)
-              -# = image_tag @item.images[i].variant(resize:'300x300',auto_orient: true).processed
+          %ul.photos--main
+            - @item.images.each_with_index do |image, i|
+              %li.photos--main__piece
+                = image_tag @item.images[i].variant(resize:'300x300',auto_orient: true).processed
           %ul.photos--thumb
-            -# - @item.images.each_with_index do |item, i|
-            %li.photos--thumb__piece
-              -# = image_tag @item.items[i].variant(resize:'60x60',auto_orient: true).processed
+            - @item.images.each_with_index do |image, i|
+              %li.photos--thumb__piece
+                = image_tag @item.images[i].variant(resize:'60x60',auto_orient: true).processed
         %table.item-detail-table
           %tbody
             %tr
               %th.left 出品者
-              %td.right あみ
+              %td.right #{@item.user.nickname}
             %tr
               %th.left カテゴリー
               %td.right #{@item.category}

@@ -87,33 +87,29 @@
   width: 300px;
   min-height: 380px;
   overflow: hidden;
-  margin: 0 auto;
   background-color:rgb(245, 245, 245);
   &--main {
     height: 300px;
-    width: 300px;
+    width: 3000px;
     border-collapse: collapse;
-    float: left;
+    position: relative;
+    margin: auto;
     &__piece {
       width:300px;
       height: 300px;
-      object-fit: contain;
+      float: left;
+      margin: auto;
+
     }
   }
   &--thumb {
     width:300px;
     height: 120px;
-    border-collapse: collapse;
-    overflow: hidden;
     float: left;
     &__piece {
-      height: 60px;
-      width: 60px;
       float: left;
-      display: inline;
       border-collapse: collapse;
       cursor: pointer;
-      object-fit: contain;
     }
   }
 }
@@ -121,15 +117,11 @@
 .item-detail-table {
   float: right;
   max-width: 300px;
-  // height: 420px;
   margin: 0 auto;
   width: 100%;
   border-collapse: collapse;
-  // border: 1px solid #f5f5f5;
   tr{
     width: 100%;
-    // height: 100%;
-    // padding: 16px 8px;
     th.left {
       width: 120px;
       text-align: left;
