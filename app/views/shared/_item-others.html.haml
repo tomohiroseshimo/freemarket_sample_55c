@@ -1,0 +1,11 @@
+.contents__body__wrapper__list
+  - @item_all.each do |i|
+    = link_to "/show/#{i.id}"  do
+      - i.id
+      .content
+        .content__image
+          - i.images.each do |image|
+            = image_tag(image, width:100, height:100)
+          = i.price
+        .content__description
+          = i.description

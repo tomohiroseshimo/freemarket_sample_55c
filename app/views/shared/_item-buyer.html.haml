@@ -2,16 +2,17 @@
   = link_to "購入画面に進む", "/buy/#{@item.id}"
 .item-box--message
   #{@item.description}
-  .item-box--link
-    .item-box--link__left
-      %button.item-other-btn-left
-        %i.icon-like-border
-        いいね！
-        = rand(30) + 1
-    .item-box--link__right
-      %i.fa.fa-lock
-      = link_to 'あんしん・あんぜんへの取り組み', root_path, class: 'link_btn_right'
+.item-box--link
+  .item-box--link__left
+    %button.item-other-btn-left
+      %i.icon-like-border
+      いいね！
+      = rand(30) + 1
+  .item-box--link__right
+    %i.fa.fa-lock
+    = link_to 'あんしん・あんぜんへの取り組み', root_path, class: 'link_btn_right'
 .item-box--others
   %section.item-box--others__seller
     %h2.item-box--others__seller
-      出品者のその他の商品
+    その他の商品
+    = render  "shared/item-others"

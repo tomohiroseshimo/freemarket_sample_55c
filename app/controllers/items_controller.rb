@@ -55,8 +55,7 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    
-    
+    @item_all = Item.limit(9).order('id DESC')
   end
 
   def ttt

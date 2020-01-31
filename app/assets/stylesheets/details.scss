@@ -64,23 +64,35 @@
       font-weight: 600;
       font-size: 24px;
     }
+    // bottom-contentが親。記述を変える必要あり。
   &--link{
     position: relative;
-    &__left{
-    float: left;
-    width: 50px;
-    }
-    &__right{
-      float: right;
-      width: 300px;
-    }
-  }
-  }
-  &--others{
-    margin-top: 50px;
   }
 }
-
+}
+.item-box--link{
+  position: relative;
+  height: 30px;
+  margin-top: 20px;
+  &__left{
+    float: left;
+    width: 100px;
+    }
+  &__right{
+    float: right;
+    text-align: right;
+    width: 300px;
+    a{
+      text-decoration: none;
+      }
+      a:link{
+        color:black;
+      }
+      a:visited{
+        color: black;
+      }
+  }
+}
 
 .photos {
   float: left;
@@ -93,13 +105,11 @@
     width: 3000px;
     border-collapse: collapse;
     position: relative;
-    margin: auto;
+
     &__piece {
       width:300px;
       height: 300px;
       float: left;
-      margin: auto;
-
     }
   }
   &--thumb {
@@ -123,7 +133,7 @@
   tr{
     width: 100%;
     th.left {
-      width: 120px;
+      width: 140px;
       text-align: left;
       font-weight: 400;
       background-color: #fafafa;
@@ -135,7 +145,7 @@
     }
     td.right {
       height: 100%;
-      width: 180px;
+      width: 160px;
       background: #fff;
       float: left;
       border-collapse: collapse;
