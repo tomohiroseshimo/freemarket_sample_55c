@@ -1,11 +1,10 @@
 .contents__body__wrapper__list
-  - @item_all.each do |i|
-    = link_to "/show/#{i.id}"  do
-      - i.id
+  - @item_all.each do |item|
+    = link_to item_path(item) do
       .content
         .content__image
-          - i.images.each do |image|
-            = image_tag(image, width:100, height:100)
-          = i.price
+          - if item.images.count > 0
+            = image_tag item.images.first.variant(resize: "188x188").processed
         .content__description
-          = i.description
+          = item.name
+          #{@item.price}円
