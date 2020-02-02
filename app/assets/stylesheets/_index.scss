@@ -372,7 +372,11 @@ $shadow-color: rgb(190, 187, 187);
     height: 188px;
     width: 188px;
     background-color: #99FFFF;
-    // position: relative;
+    position: relative;
+    img{
+      height: 188px;
+      width: 188px;
+    }
     .content-img{
       max-width: 100%;
       height: auto;
@@ -390,8 +394,8 @@ $shadow-color: rgb(190, 187, 187);
     padding: 0 8px;
   }
 }
-span{
-  // position: absolute;
+span.content-price{
+  position: absolute;
   color: $color-white;
   background-color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
