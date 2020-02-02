@@ -58,13 +58,13 @@ ActiveRecord::Schema.define(version: 2019_12_20_092129) do
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "category", null: false
+    t.integer "category"
     t.string "brand"
-    t.integer "condition", null: false
-    t.integer "cost", null: false
-    t.integer "area", null: false
-    t.integer "date", null: false
-    t.integer "price", null: false
+    t.integer "condition"
+    t.integer "cost"
+    t.integer "area"
+    t.integer "date"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
@@ -121,8 +121,6 @@ ActiveRecord::Schema.define(version: 2019_12_20_092129) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "provider"
-    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

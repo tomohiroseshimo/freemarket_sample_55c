@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load',function(){
+$(function(){
   var dropzone = $('.dropzone-area');
   var dropzone2 = $('.dropzone-area2');
   // var dropzone_box = $('.sell-upload-drop-box');
@@ -66,7 +66,7 @@ $(document).on('turbolinks:load',function(){
       })
       return;
     }
-    var new_image = $(`<input multiple= "multiple" class="upload-image" data-image= ${images.length} type="file" id="upload-image">`);
+    var new_image = $(`<input multiple= "multiple" class="upload-image" data-image= ${images.length} type="file" id="upload-image" name= "item[images][images][]">`);
     input_area.prepend(new_image);
   });
                                   // 63行目に name="images[image][]"があった 

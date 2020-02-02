@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only:[:edit, :update]
-  require "payjp"
-
+  before_action :authenticate_user!, only: [:show, :new, :buy, :create, :edit, :update, :destroy, :pay]
+# buyとpayには飛べない authenthicate mypage関係は全て飛べない
   def index
     @item = Item.all
   end
@@ -25,6 +25,7 @@ class ItemsController < ApplicationController
   
   def create
     # formのデータを受け取る
+    # binding.pry
     @item = Item.new(item_params)
     if @item.save
       redirect_to items_path, notice: '出品が完了しました'
@@ -42,7 +43,7 @@ class ItemsController < ApplicationController
       image = @item.images.find(i)
       image.purge
     end
-    render 'index'
+    redirect_to root_path
   end
 
   def destroy
