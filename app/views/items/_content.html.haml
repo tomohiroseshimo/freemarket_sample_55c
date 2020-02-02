@@ -4,9 +4,10 @@
       - i.id
       .content
         .content__image
-          - i.images.each do |image|
-            = image_tag(image, width:100, height:100)
-          = i.price
+          - if i.images.count > 0
+            %span.content-price
+              = "¥ #{i.price}"
+            = image_tag i.images.first.variant(resize: "188x188").processed
         .content__description
           = i.description
     
