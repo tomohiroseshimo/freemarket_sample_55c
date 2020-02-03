@@ -39,15 +39,15 @@
                 = i.image
               .ex_name  
                 = i.name 
-    -#     - @item.each do |i|
-    -# = link_to "/show/#{i.id}"  do
-    -#   - i.id
-    -#   .content
-    -#     .content__image 
-    -#       = i.image
-    -#       = i.price
-        .content__description
-          = i.description
+          -#     - @item.each do |i|
+          -# = link_to "/show/#{i.id}"  do
+          -#   - i.id
+          -#   .content
+          -#     .content__image 
+          -#       = i.image
+          -#       = i.price
+          .content__description
+            = i.description
     %ul.mypage__main__buyinghistory
       .mypage__main__buyinghistory__top
         購入した商品
