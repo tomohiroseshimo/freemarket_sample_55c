@@ -29,7 +29,7 @@ resources :login, only: [:index, :create]
 resources :logout, only: [:index]
 resources :posts
 
-resources :destroy
+
 
 resources :mypages, only: [:index, :destroy, :edit, :update] do
   collection do
@@ -56,5 +56,4 @@ get 'show/:id' => 'items#show'
 get "items/:id/edit" => "items#edit"
 get "after/:id" => "items#after",as: 'after'
 delete 'items/:id' => 'items#destroy'
-delete 'destroy/:id' => 'items#destroy'
 end
