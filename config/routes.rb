@@ -22,23 +22,14 @@ resources :signup do
   end
 end
 
-  
+
 resources :cards, only: [:index, :create, :new]
 resources :items_login, only: [:index]
 resources :login, only: [:index, :create]
 resources :logout, only: [:index]
 resources :posts
 
-
-resources :mypages, only: :index do
-  collection do
-    get 'identification'
-  end
-end
-
-
 resources :destroy
-
 
 resources :mypages, only: [:index, :destroy, :edit, :update] do
   collection do
@@ -47,6 +38,9 @@ resources :mypages, only: [:index, :destroy, :edit, :update] do
     get 'mypage_transaction'
     get 'mypage_buy_transaction'
     get 'mypage_buy_transaction_past'
+  end
+  member do
+    get 'identification'
   end
 end
 
