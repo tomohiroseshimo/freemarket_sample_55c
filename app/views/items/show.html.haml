@@ -9,11 +9,11 @@
           %ul.photos--main
             - @item.images.each_with_index do |image, i|
               %li.photos--main__piece
-                = image_tag @item.images[i].variant(resize:'300x300',auto_orient: true).processed
+                = image_tag @item.images[i].variant(resize:'300x300',auto_orient: true)
           %ul.photos--thumb
             - @item.images.each_with_index do |image, i|
               %li.photos--thumb__piece
-                = image_tag @item.images[i].variant(resize:'60x60',auto_orient: true).processed
+                = image_tag @item.images[i].variant(resize:'60x60',auto_orient: true)
         %table.item-detail-table
           %tbody
             %tr

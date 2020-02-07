@@ -20,6 +20,10 @@
           padding: 16px;
           font-weight: 600;
           width: 280px;
+          text-decoration: none;
+        }
+        a:visited{
+          color: black;
         }
       }
       &__list {
@@ -30,6 +34,13 @@
         background: #fff;
         font-size: 14px;
         color: #333;
+        a{
+          text-decoration: none;
+          color: black;
+        }
+        a:visited{
+          color: black;
+        }
       }
     }
     &__head {
@@ -48,6 +59,11 @@
         padding: 16px;
         display: block;
         a {
+          text-decoration: none;
+          color: black;
+        }
+        a:visited{
+          color: black;
         }
       }
     }
