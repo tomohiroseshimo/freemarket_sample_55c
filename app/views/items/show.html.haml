@@ -1,61 +1,47 @@
-.wrap
-  .default_container
-    = render "shared/header"
-    .item-box
-      .item-box--name
+
+.default_container
+  = render "shared/header"
+  .back
+    .head_space
+    .details_box
+      .name
         #{@item.name}
-      .item-box--content.clearfix
-        .photos
-          %ul.photos--main
-            - @item.images.each_with_index do |image, i|
-              %li.photos--main__piece
-                = image_tag @item.images[i].variant(resize:'300x300',auto_orient: true).processed
-          %ul.photos--thumb
-            - @item.images.each_with_index do |image, i|
-              %li.photos--thumb__piece
-                = image_tag @item.images[i].variant(resize:'60x60',auto_orient: true).processed
-        %table.item-detail-table
-          %tbody
-            %tr
-              %th.left 出品者
-              %td.right #{@item.user.nickname}
-            %tr
-              %th.left カテゴリー
-              %td.right #{@item.category}
-            %tr
-              %th.left
-                ブランド
-              %td.right #{@item.brand}
-            %tr
-              %th.left 商品のサイズ
-              %td.right
-            %tr
-              %th.left
-                商品の状態
-              %td.right #{@item.status}
-            %tr
-              %th.left
-                配送料の負担
-              %td.right  #{@item.cost}
-            %tr
-              %th.left 配送の方法
-              %td.right
-                ゆうゆうメルカリ便
-            %tr
-              %th.left
-                配送元の地域
-              %td.right #{@item.area}
-            %tr
-              %th.left 発送日の目安
-              %td.right
-      .item-box--price
-        %span.item-box--price__bold
-          ¥#{@item.price}
-        %span.item-box--price__tax (税込)
-        %span.item-box--price__fee 送料込み
-      .bottom-content
-        - if current_user.id == @item.user_id
-          = render "shared/edit-btn"
-        - else
-          = render partial: "shared/item-buyer"
-= render "shared/footer"
+      .image  
+        - @item.images.each do |image|
+          = image_tag(image, width:100, height:100)
+      .data
+        %table{:border => ""}
+          %tr
+            %td
+              カテゴリー
+            %td #{@item.category}
+          %tr
+            %td
+              ブランド
+            %td #{@item.brand}
+          %tr
+            %td
+              商品の状態
+            %td #{@item.status}
+          %tr
+            %td
+              配送料の負担
+            %td  #{@item.cost}
+          %tr
+            %td
+              配送源の地域
+            %td #{@item.area}
+      .price
+        ¥#{@item.price}   
+        .unit
+          (税込)送料込み
+      .buy_space
+        .buy_box
+          = link_to "購入画面に進む", "/buy/#{@item.id}", data: {"turbolinks" => false}
+            
+      .description
+        #{@item.description}         
+
+
+          
+

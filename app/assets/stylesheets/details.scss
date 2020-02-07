@@ -44,15 +44,6 @@
     text-align: center;
     font-weight: 600;
     font-size: 24px;
-    a{
-    text-decoration: none;
-    }
-    a:link{
-      color: #fff;
-    }
-    a:visited{
-      color: #fff;
-    }
     &__gray{
       background-color: gray;
       color: #fff;
@@ -64,32 +55,9 @@
       font-weight: 600;
       font-size: 24px;
     }
-  &--link{
-    position: relative;
   }
-}
-}
-.item-box--link{
-  position: relative;
-  height: 30px;
-  margin-top: 20px;
-  &__left{
-    float: left;
-    width: 100px;
-    }
-  &__right{
-    float: right;
-    text-align: right;
-    width: 300px;
-    a{
-      text-decoration: none;
-      }
-      a:link{
-        color:black;
-      }
-      a:visited{
-        color: black;
-      }
+  &--others{
+    margin-top: 50px;
   }
 }
 
@@ -98,27 +66,33 @@
   width: 300px;
   min-height: 380px;
   overflow: hidden;
+  margin: 0 auto;
   background-color:rgb(245, 245, 245);
   &--main {
     height: 300px;
-    width: 3000px;
+    width: 300px;
     border-collapse: collapse;
-    position: relative;
-
+    float: left;
     &__piece {
       width:300px;
       height: 300px;
-      float: left;
+      object-fit: contain;
     }
   }
   &--thumb {
     width:300px;
     height: 120px;
+    border-collapse: collapse;
+    overflow: hidden;
     float: left;
     &__piece {
+      height: 60px;
+      width: 60px;
       float: left;
+      display: inline;
       border-collapse: collapse;
       cursor: pointer;
+      object-fit: contain;
     }
   }
 }
@@ -126,38 +100,34 @@
 .item-detail-table {
   float: right;
   max-width: 300px;
+  height: 420px;
   margin: 0 auto;
   width: 100%;
   border-collapse: collapse;
-  tr{
+  border: 1px solid #f5f5f5;
+  th {
+    width: 39%;
+    text-align: left;
+    font-weight: 400;
+    background: #fafafa;
+    border-collapse: collapse;
+    border: 1px solid #f5f5f5;
+    padding: 16px 8px;
+    line-height: 1.5;
+  }
+  th.right {
     width: 100%;
-    th.left {
-      width: 140px;
+    background: #fff;
+    float: left;
+    border-collapse: collapse;
+    border: 1px solid #f5f5f5;
+    padding: 16px 8px;
+    .link-right {
+      margin: 8px 0 0;
+      line-height: 1.5;
       text-align: left;
-      font-weight: 400;
-      background-color: #fafafa;
-      border-collapse: collapse;
-      border: 1px solid #f5f5f5;
-      padding: 16px 8px;
-      line-height: 1.5;
-
-    }
-    td.right {
-      height: 100%;
-      width: 160px;
-      background: #fff;
-      float: left;
-      border-collapse: collapse;
-      border: 1px solid #f5f5f5;
-      padding: 16px 8px;
-      line-height: 1.5;
-      .link-right {
-        margin: 8px 0 0;
-        line-height: 1.5;
-        text-align: left;
-        color: #0099e8;
-        text-decoration: none;
-      }
+      color: #0099e8;
+      text-decoration: none;
     }
   }
 }

@@ -37,7 +37,7 @@ class ItemsController < ApplicationController
   def edit
   end
 
-  def update
+  def update 
     @item.update(item_params)
     remove_images_params[:remove_images].each do |i|
       image = @item.images.find(i)
@@ -45,17 +45,25 @@ class ItemsController < ApplicationController
     end
     redirect_to root_path
   end
-
+  
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
     redirect_to items_path
     end
+  
+
 
   def show
     @item = Item.find(params[:id])
-    @item_all = Item.limit(9).order('id DESC')
+    
+    
   end
+
+  def ttt
+    @item = Item.all
+    
+  end 
 
   def pay
     @item = Item.find(params[:id])
