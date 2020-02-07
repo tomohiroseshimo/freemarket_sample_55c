@@ -69,7 +69,7 @@ $(function(){
     var new_image = $(`<input multiple= "multiple" class="upload-image" data-image= ${images.length} type="file" id="upload-image" name= "item[images][images][]">`);
     input_area.prepend(new_image);
   });
-                                  // 63行目に name="images[image][]"があった 
+
   $(document).on('click', '.delete', function() {
     var target_image = $(this).parent().parent();
     $.each(inputs, function(index, input){

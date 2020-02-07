@@ -37,7 +37,7 @@ resources :mypages, only: :index do
 end
 
 
-resources :destroy
+
 
 
 resources :mypages, only: [:index, :destroy, :edit, :update] do
