@@ -9,7 +9,7 @@ devise_for :users
 
 root 'items#index'
 
-resources :items 
+resources :items
 
 resources :signup do
   collection do
@@ -28,22 +28,21 @@ resources :items_login, only: [:index]
 resources :login, only: [:index, :create]
 resources :logout, only: [:index]
 resources :posts
-  
+
 
 resources :mypages, only: :index do
   collection do
     get 'identification'
   end
 end
-  
 
 
-    
+
 
 
 resources :mypages, only: [:index, :destroy, :edit, :update] do
   collection do
-    get 'mypage_exhibit' 
+    get 'mypage_exhibit'
     get 'mypage_sold'
     get 'mypage_transaction'
     get 'mypage_buy_transaction'
@@ -51,16 +50,14 @@ resources :mypages, only: [:index, :destroy, :edit, :update] do
   end
 end
 
-get  'buy/:id'=>  'items#buy', as: 'buy'  
+get  'buy/:id'=>  'items#buy', as: 'buy'
 post 'pay/:id'=>   'items#pay', as: 'pay'
-get 'ttt' => 'items#ttt'  
-get 'sells' => 'sells#index' 
+get 'sells' => 'sells#index'
 get 'items/detail' => 'items#detail'
 get 'commodity/:id' => 'mypages#commodity'
 get 'items' => 'items#index'
 get "items/new" => "items#new"
 post 'items' => 'items#create'
-get 'ttt' => 'items#ttt' 
 get 'show/:id' => 'items#show'
 get "items/:id/edit" => "items#edit"
 get "after/:id" => "items#after",as: 'after'
