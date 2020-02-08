@@ -180,6 +180,10 @@
           text-align: center;
           border-top: 2px solid #ea352d;
           display: inline-block;
+          a{
+            text-decoration: none;
+            color: black;
+          }
         }
         &__title2 {
           width: 50%;
@@ -187,6 +191,10 @@
           text-align: center;
           float: right;
           background-color: #eee;
+          a{
+            text-decoration: none;
+            color: black;
+          }
         }
       }
       &__content {
