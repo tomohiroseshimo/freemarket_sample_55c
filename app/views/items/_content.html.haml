@@ -1,6 +1,6 @@
 .contents__body__wrapper__list
   - @item.each do |i|
-    = link_to "/show/#{i.id}"  do
+    = link_to item_path(i)  do
       - i.id
       .content
         .content__image
@@ -9,11 +9,4 @@
               = "¥ #{i.price}"
             = image_tag i.images.first.variant(resize: "188x188")
         .content__description
-          = i.description
-    
-    
-  
-  
-
-
-
+          = i.name
