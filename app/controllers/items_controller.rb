@@ -37,12 +37,34 @@ class ItemsController < ApplicationController
   def edit
   end
 
-  def update 
-    @item.update(item_params)
-    remove_images_params[:remove_images].each do |i|
-      image = @item.images.find(i)
-      image.purge
+  def update
+    @item = Item.find(params[:id])
+    #if文で画像を消すのみのパターン
+    if remove_images_params[:remove_images].present?
+      # 画像を消しかつ追加するパターン
+      if params[:item][:images].present?
+        @item.update(item_params)
+        remove_images_params[:remove_images].each do |i|
+          image = @item.images.find(i)
+          image.purge
+        end  
+      else
+        @item.update(item_nonimage_params)
+        remove_images_params[:remove_images].each do |i|
+          image = @item.images.find(i)
+          image.purge
+        end
+      end
+    else
+      if params[:item][:images].present?
+        # 画像を追加するだけのパターン
+        @item.update(item_params)
+      else
+        # 画像を変えないパターン
+        @item.update(item_nonimage_params)
+      end
     end
+
     redirect_to root_path
   end
   
@@ -50,7 +72,7 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @item.destroy
     redirect_to items_path
-    end
+  end
   
 
 
@@ -80,17 +102,21 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    # ストロングパラメータ 自分の記述{image: []} メンターの記述 {:images_attributes["0"] => [:image]}
     params.require(:item).permit(:name, :description, :category, :condition, :cost, :area, :date, :price).merge(user_id: current_user.id, images: params[:item][:images][:images])
-  end
-
-  def set_item
-    #データの取得
-    @item = Item.find(params[:id])
   end
 
   def remove_images_params
     params.require(:item).permit(remove_images: [])
+  end
+
+  def item_nonimage_params
+    params.require(:item).permit(:name, :description, :category, :condition, :cost, :area, :date, :price).merge(user_id: current_user.id)
+  end
+
+    
+  def set_item
+    #データの取得
+    @item = Item.find(params[:id])
   end
 
 end
