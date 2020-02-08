@@ -99,7 +99,7 @@
             
         %li.navis
           .mypage
-            =link_to  mypages_path, data: {"turbolinks" => false} do
+            =link_to  mypages_path(@user), data: {"turbolinks" => false} do
               = image_tag("https://static.mercdn.net/images/member_photo_noimage_thumb.png", size:"32x32",)
               マイページ
             .mypage__pulldown 

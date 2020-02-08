@@ -6,29 +6,29 @@
     .user-info-container
       %section.container
         %h2.container__head 本人情報の登録
-        = form_with model: @user, class: "container__body" do |f|
+        = form_with url: mypage_path(@user), class: "container__body" do |f|
           %div
             %p お客さまの本人情報をご登録ください。
-            %p 登録されたおなまえ・生年月日を変更する場合、本人確認の提出が必要になります。 
+            %p 登録されたおなまえ・生年月日を変更する場合、本人確認の提出が必要になります。
             = link_to root_path , class: 'link-right' do
               本人確認書類のアップデートについて
               %i.fa.fa-chevron-right
           .container__body--group
             %label お名前
             %p
-              名前を呼び出す
+              #{@user.first_name} #{@user.last_name}
           .container__body--group
             %label お名前カナ
             %p
-              読み仮名を呼び出す
+              #{@user.first_name_kana} #{@user.last_name_kana}
           .container__body--group
             %label 生年月日
             %div.user_birthday
-              年
-              .p /
-              月
-              .p /
-              日
+              #{@user.birthdate_year}年
+              .p
+              #{@user.birthdate_month}月
+              .p
+              #{@user.birthdate_day}日
           .container__body--group
             %label{for: "zip_code"} 郵便番号
             %span.form-arbitrary 任意

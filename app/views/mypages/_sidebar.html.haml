@@ -68,8 +68,8 @@
         = link_to 'メール/パスワード', class: 'mypage__sidebar__main__list__mail-password'
         / 矢印アイコン
       %li 
-        = link_to '本人確認', class: 'mypage__sidebar__main__list__identification'
-        / 矢印アイコン 
+        = link_to '本人確認', identification_mypage_path(current_user), class: 'mypage__sidebar__main__list__identification'
+        / 矢印アイコン
       %li 
         = link_to '電話番号の確認', class: 'mypage__sidebar__main__list__tell'
         / 矢印アイコン
