@@ -67,25 +67,21 @@ class ItemsController < ApplicationController
 
     redirect_to root_path
   end
-  
+
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
     redirect_to items_path
+
   end
   
 
 
+
   def show
     @item = Item.find(params[:id])
-    
-    
+    @item_all = Item.limit(9).order('id DESC')
   end
-
-  def ttt
-    @item = Item.all
-    
-  end 
 
   def pay
     @item = Item.find(params[:id])
