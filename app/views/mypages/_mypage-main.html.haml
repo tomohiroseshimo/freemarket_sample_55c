@@ -3,16 +3,15 @@
     %figure
       = image_tag 'commons/user-icon.png', width: '60', height: '60'
     %h2.mypage__main__user__name
-      user
-      / 現在ログイン中のユーザー名
+      #{current_user.nickname}
     %ul.mypage__main__user__evaluation
       %li.mypage__main__user__evaluation__number
-        %h 
+        %h
           評価
           %span
             0
       %li.mypage__main__user__evaluation__myitem
-        %h 
+        %h
           出品数
           %span
             0
