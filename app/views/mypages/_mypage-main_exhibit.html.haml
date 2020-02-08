@@ -36,7 +36,7 @@
           = link_to "/commodity/#{i.id}"  do
             .ex_list
               .ex_img
-                = image_tag i.images.first.variant(resize: "100x100").processed
+                = image_tag i.images.first.variant(resize: "100x100")
               .ex_name  
                 = i.name 
           .content__description
