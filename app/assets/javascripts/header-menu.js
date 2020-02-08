@@ -1,8 +1,8 @@
-$(document).on('turbolinks:load', function() {
+$(function() {
 $(function () {
   $(".category__pulldown").hide();
   $(".category").hover(function() {
-  
+    
     $(".category__pulldown").show();
     $(function(){
       $('tr[data-href]', '.category__pulldown').on('click', function(){

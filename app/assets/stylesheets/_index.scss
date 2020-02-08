@@ -1,5 +1,11 @@
 $full: 100%;
 $max-w: 1020px;
+$color-white: white;
+$color-black: black;
+$font-gray: #777777;
+$border-gray: #BBBBBB;
+$background-gray: #F5F5F5;
+$shadow-color: rgb(190, 187, 187);
 
 .clearfix::after {
   content: "";
@@ -17,7 +23,7 @@ $max-w: 1020px;
   width: 100%;
   height: 100px;
   margin: auto;
-  border-bottom: solid 1px #BBBBBB;
+  border-bottom: solid 1px $border-gray;
 }
 .header-container{
   width: 1020px;
@@ -59,7 +65,7 @@ $max-w: 1020px;
     height: 40px;
     cursor: pointer;
     a{
-      color:black;
+      color: $color-black;
     }
   }
 }
@@ -80,12 +86,12 @@ $max-w: 1020px;
       float: left;
       height: 42px;
       width: 250px;
-      background: white;
-      border-bottom: solid 1px #BBBBBB;
+      background: $color-white;
+      border-bottom: solid 1px $border-gray;
       &__pulldown {
-        background: white;
+        background: $color-white;
         font-size: 15px;
-        color: #777777;
+        color: $font-gray;
         width: 250px;
         position: absolute;
         left: 190px;
@@ -95,8 +101,11 @@ $max-w: 1020px;
       }
       a{
         text-align: center;
-        color: black;
+        color: $color-black;
         text-decoration: none;
+        i{
+          color: red;
+        }
       }
     }
     .brand{
@@ -104,9 +113,9 @@ $max-w: 1020px;
       height: 44px;
       width: 140px;
       &__pulldown {
-        background: white;
+        background: $color-white;
         font-size: 15px;
-        color: #777777;
+        color: $font-gray;
         width: 250px;
         position: absolute;
         left: 400px;
@@ -115,8 +124,11 @@ $max-w: 1020px;
       }
       a{
         text-align: center;
-        color: black;
+        color: $color-black;
         text-decoration: none;
+        i{
+          color: red;
+        }
       }
     }
   }
@@ -137,20 +149,23 @@ $max-w: 1020px;
         padding:0 14px 0 14px;
         width: 130px;
         &__pulldown {
-          background: white;
+          background: $color-white;
           font-size: 15px;
-          color: #777777;
+          color: $font-gray;
           width: 250px;
           position: absolute;
           left: 800px;
           top: 100px;
           z-index: 1;
         }
-      
+        i{
+          text-shadow: $shadow-color 3px 3px 0, $shadow-color -3px -3px 0, $shadow-color -3px 3px 0, $shadow-color 3px -3px 0, $shadow-color 0px 3px 0, $shadow-color 0 -3px 0, $shadow-color -3px 0 0, $shadow-color 3px 0 0;
+          color: white;
+        }
       }
         a{
           text-decoration: none;
-          color:black;
+          color:$color-black;
           vertical-align:text-top;
           height: 32px;
           img{
@@ -166,11 +181,11 @@ $max-w: 1020px;
           padding:0 14px 0 14px;
           width: 130px; 
           height: 42px;
-          border-bottom: solid 1px #BBBBBB;
+          border-bottom: solid 1px $border-gray;
           &__pulldown {
-            background: white;
+            background: $color-white;
             font-size: 15px;
-            color: black;
+            color: $color-black;
             width: 250px;
             position: absolute;
             left: 800px;
@@ -180,13 +195,17 @@ $max-w: 1020px;
         }
         a{
           text-decoration: none;
-          color:black;
+          color: $color-black;
           vertical-align:text-top;
           height: 32px;
           img{
             margin-right: 10px;
             border-radius: 50%;
             vertical-align: middle;
+          }
+          i{
+            text-shadow: $shadow-color 3px 3px 0, $shadow-color -3px -3px 0, $shadow-color -3px 3px 0, $shadow-color 3px -3px 0, $shadow-color 0px 3px 0, $shadow-color 0 -3px 0, $shadow-color -3px 0 0, $shadow-color 3px 0 0;
+            color: white;
           }
         }
         .navi-second {
@@ -196,11 +215,11 @@ $max-w: 1020px;
           padding:0 14px 0 14px;
           width: 130px; 
           height: 42px;
-          border-bottom: solid 1px #BBBBBB;
+          border-bottom: solid 1px $border-gray;
           &__pulldown-second {
-            background: white;
+            background: $color-white;
             font-size: 15px;
-            color: #777777;
+            color: $font-gray;
             width: 250px;
             position: absolute;
             left: 900px;
@@ -210,7 +229,7 @@ $max-w: 1020px;
         
         a{
           text-decoration: none;
-          color:black;
+          color: $color-black;
           vertical-align:text-top;
           height: 32px;
           img{
@@ -227,11 +246,11 @@ $max-w: 1020px;
         padding:0 14px 0 14px;
         width: 130px;
         height: 48px;
-        border-bottom: solid 1px #BBBBBB;
+        border-bottom: solid 1px $border-gray;
         &__pulldown {
-          background: white;
+          background: $color-white;
             font-size: 15px;
-            color: #777777;
+            color: $font-gray;
             width: 300px;
             position: absolute;
             left: 1050px;
@@ -240,7 +259,7 @@ $max-w: 1020px;
         }
         a{
           text-decoration: none;
-          color:black;
+          color: $color-black;
           vertical-align:text-top;
           height: 32px;
           img{
@@ -255,7 +274,10 @@ $max-w: 1020px;
 }
 
 .body{
-  background-color: #FFFFFF;
+  background-color: $background-gray;
+}
+.body_main{
+  background-color: $background-gray;
   position: relative;
   width: $max-w;
   min-height: 600px;
@@ -305,17 +327,24 @@ $max-w: 1020px;
 }
 
 .contents{
-  background-color: #F5F5F5;
-  height: 2230px;
+  background-color: $background-gray;
+  height: 100%;
   width: 1020px;
   
   &__body{
     &__subtitle{
-        margin-top: 40px;
-        font-size: 20px;
+        margin-bottom: 16px;
+        padding-top: 42px;
         display: flex;
+        .right_title{
+          font-size: 24px;
+          font-weight: 600;
+        }
         a{
           margin-left: auto;
+          padding-top: 9px;
+          color: #0095ee;
+          font-size: 14px;
           }
     }
     &__wrapper{
@@ -323,7 +352,7 @@ $max-w: 1020px;
       width: 1020px;
       &__list{
         a{
-          color: black;
+          color: $color-black;
           text-decoration: none;
           }
        }  
@@ -336,14 +365,18 @@ $max-w: 1020px;
   vertical-align: top;
   height: 252px;
   width: 188px;
-  background-color: white;
+  background-color: $color-white;
   margin: 5px 5px 5px 5px;
   box-sizing: border-box;
   &__image{
     height: 188px;
     width: 188px;
     background-color: #99FFFF;
-    // position: relative;
+    position: relative;
+    img{
+      height: 188px;
+      width: 188px;
+    }
     .content-img{
       max-width: 100%;
       height: auto;
@@ -361,9 +394,9 @@ $max-w: 1020px;
     padding: 0 8px;
   }
 }
-span{
-  // position: absolute;
-  color: white;
+span.content-price{
+  position: absolute;
+  color: $color-white;
   background-color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
   bottom: 4px;
@@ -372,14 +405,84 @@ span{
   border-bottom-right-radius: 10px;
 }
 
+.aside {
+  background-image: url("https://web-jp-assets.mercdn.net/_next/static/images/download_app_bg-b57d6f1a32f2aebd89cf6f43bc2e4b39.jpg");
+  &__body {
+    height: 250px;
+    width: 750px;
+    margin: 0 auto;
+    &__menu {
+    display: flex;
+    }
+  }
+}
+.right_group{
+  .group_upper{
+    color: $background-gray;
+    font-size:24px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  .group_lower{
+    color: $background-gray;
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  .logo-img{
+    height: 68px;
+    width: 68px;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+  .app-img{
+    vertical-align: middle;
+  }
+  .google-img{
+    vertical-align: middle;
+  }
+}
+.figure_img{
+  height: 260px;
+  width: 300px;
+  margin-left: 25px;
+}
+
+.new_item_button{
+  position: fixed;
+  z-index: 10;
+  .new_item_button__content{
+    width: 160px;
+    height: 160px;
+    background-color: red;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center
+  }
+  p{
+    color: $color-white;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  i{
+    color: $color-white;
+    font-size: 54px;
+  }
+}
 
 .footer{
   background-color:#222222;
   position: relative;
   bottom: 0;
-  color: white;
+  color: $color-white;
   width: 1440px;
   height: 391px;
+  z-index: 1;
   .nav{
     width: 1020px;
     margin: 0 auto;
@@ -407,7 +510,7 @@ span{
           display: inline-block;
           margin-top: 30px;
           a{
-            color: white;
+            color: $color-white;
             width:30px;
             margin-right:20px;
             i{

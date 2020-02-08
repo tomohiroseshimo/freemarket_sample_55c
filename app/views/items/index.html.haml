@@ -4,25 +4,52 @@
   -else
     = render "shared/header-login"
   .body
-    .slider
-      .slider_box
-        = image_tag '//www-mercari-jp.akamaized.net/assets/img/featured/camp/index/index_keyvisual.png?3296506464',:class => "slider-img"
-    .contents_header
-      %h2 人気のカテゴリー
-      .contents_header_tags
-        %ul.contents_header_buttons
-          %li.button レディース
-          %li.button メンズ
-          %li.button 家電・スマホ・カメラ
-          %li.button おもちゃ・ホビー・グッズ 
-
-    .contents
-      .contents__body
-        .contents__body__subtitle
-          %h3 商品一覧
-        .contents__body__wrapper
-          = render 'items/content'
+    .body_main
+      .slider
+        .slider_box
+          = image_tag '//www-mercari-jp.akamaized.net/assets/img/featured/camp/index/index_keyvisual.png?3296506464',:class => "slider-img"
+      .contents_header
+        %h2 人気のカテゴリー
+        .contents_header_tags
+          %ul.contents_header_buttons
+            %li.button レディース
+            %li.button メンズ
+            %li.button 家電・スマホ・カメラ
+            %li.button おもちゃ・ホビー・グッズ 
+      .contents
+        .contents__body
+          .contents__body__subtitle
+            %h3.right_title レディースアイテム
+            %a.left_title もっと見る 〉
+          .contents__body__wrapper
+            = render 'items/content'
+        .contents__body
+          .contents__body__subtitle
+            %h3.right_title メンズアイテム
+            %a.left_title もっと見る 〉
+          .contents__body__wrapper
+            = render 'items/content'
+    .new_item_button
+      = link_to new_item_path do
+        .new_item_button__content
+          %p 出品
+          = fa_icon "camera"
     .aside
+      .aside__body
+        .aside__body__menu
+          .right_group
+            .group_upper
+              スマホでかんたんフリマアプリ
+            .group_lower
+              今すぐ無料ダウンロード！
+            .logo
+              = image_tag 'https://web-jp-assets.mercdn.net/_next/static/images/mercari_icon-f75780e32e41e052c8aaa8b446331cd8.png', class: "logo-img"
+              %a
+                = image_tag 'https://web-jp-assets.mercdn.net/_next/static/images/app-store-a5c17948c6fd6d5b60b13d421cd60b35.svg', class: "app-img"
+              %a
+                = image_tag 'https://web-jp-assets.mercdn.net/_next/static/images/google-play-495575abb895b405aa6336b2a4304958.svg', class: "google-img"
+          .figure
+            = image_tag 'https://web-jp-assets.mercdn.net/_next/static/images/download_app_pc-a4418175e8be071827ac88d073f40e4a.png', class: "figure_img"
 
   = render "shared/footer"
   
