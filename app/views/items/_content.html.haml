@@ -1,6 +1,6 @@
 .contents__body__wrapper__list
   - @item.each do |i|
-    = link_to "/show/#{i.id}"  do
+    = link_to item_path(i)  do
       - i.id
       .content
         .content__image
