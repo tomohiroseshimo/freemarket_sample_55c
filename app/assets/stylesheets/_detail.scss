@@ -49,51 +49,97 @@
         top: 18px;
         }
       }
-    .buy_space {
-      width: 700px;
-      height: 70px;
-      margin-top: 25px;
-      .buy_box {
-        font-weight: 500;
-        font-size: 20px;
-        height: 50px;
-        width :380px;
-        background: #DD0000;
-        color: white;
-        line-height: 47px;
-        text-align: center;
-        margin: auto;
-        a {
-          text-decoration: none;
-          color: white;
-          width: 380px;
-          height: 50px;
-        }
-         }
-      .des_box {
-        font-weight: 500;
-        font-size: 20px;
-        height: 50px;
-        width :380px;
-        background: #888888;
-        color: white;
-        line-height: 47px;
-        text-align: center;
-        margin: auto;
-        a {
-          text-decoration: none;
-          color: white;
+    // .buy_space {
+    //   width: 700px;
+    //   height: 70px;
+    //   margin-top: 25px;
+    //   .buy_box {
+    //     font-weight: 500;
+    //     font-size: 20px;
+    //     height: 50px;
+    //     width :380px;
+    //     background: #DD0000;
+    //     color: white;
+    //     line-height: 47px;
+    //     text-align: center;
+    //     margin: auto;
+    //     a {
+    //       text-decoration: none;
+    //       color: white;
+    //       width: 380px;
+    //       height: 50px;
+    //     }
+    //      }
+    //   .des_box {
+    //     font-weight: 500;
+    //     font-size: 20px;
+    //     height: 50px;
+    //     width :380px;
+    //     background: #888888;
+    //     color: white;
+    //     line-height: 47px;
+    //     text-align: center;
+    //     margin: auto;
+    //     a {
+    //       text-decoration: none;
+    //       color: white;
           
-        }
-      }   
-      }
-    .description {
-      font-size: 20px;
-      padding: 20px 20px 20px 20px;
-      width: 660px;
-      height: 200px;
+    //     }
+    //   }   
+    //   }
+    // .description {
+    //   font-size: 20px;
+    //   padding: 20px 20px 20px 20px;
+    //   width: 660px;
+    //   height: 200px;
       
-    }    
+    // }    
    }
 }
+.item_container{
+  
+  .buy_space {
+    background-color: #fff;
+    width: 668px;
+    margin: 25px auto;
+    padding: 24px 16px;
+    .buy_box {
+      font-weight: 500;
+      font-size: 20px;
+      // height: 50px;
+      // width :380px;
+      background: #DD0000;
+      color: white;
+      line-height: 47px;
+      text-align: center;
+      margin: auto;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      }
+    .des_box {
+      font-weight: 500;
+      font-size: 20px;
+      // height: 50px;
+      // width :380px;
+      background: #888888;
+      color: white;
+      line-height: 47px;
+      text-align: center;
+      margin: auto;
+      margin-top: 30px;
+      a {
+        text-decoration: none;
+        color: white;
+        
+      }
+    }   
+    }
+}
 
+.description {
+  font-size: 20px;
+  padding-top: 32px;
+  width: 620px;
+} 
