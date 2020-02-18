@@ -52,7 +52,6 @@ get 'commodity/:id' => 'mypages#commodity'
 get 'items' => 'items#index'
 get "items/new" => "items#new"
 post 'items' => 'items#create'
-# get 'show/:id' => 'items#show'
 get "items/:id/edit" => "items#edit"
 get "after/:id" => "items#after",as: 'after'
 delete 'items/:id' => 'items#destroy'
