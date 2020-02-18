@@ -20,8 +20,8 @@
         &ensp; &ensp; &ensp; &ensp; &ensp; Googleで登録する
       .clear-board
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-        = f.email_field :email, autofocus: true, autocomplete: "email", class: "middle-contents-bottom-login__form"
-        = f.password_field :password, autocomplete: "current-password", class: "middle-contents-bottom-login__form"
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "middle-contents-bottom-login__form", placeholder: "メールアドレス"
+        = f.password_field :password, autocomplete: "current-password", class: "middle-contents-bottom-login__form", placeholder: "パスワード"
         .middle-contents-bottom-login__robot
           私はロボットではありません
         .actions
