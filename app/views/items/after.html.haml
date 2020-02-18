@@ -1,11 +1,10 @@
 .header-post
   .posts-header-logo
-    = image_tag 'https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg', :size =>'200x300' 
+    = link_to image_tag("https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg", :size =>'200x300'),root_path
 .middle-box-buy
-  .middle-contents-pay  
+  .middle-contents-pay
     .middle-contents-header
       #{@item.name}を購入しました
     .middle-contents-header
       = link_to root_path do
-        戻る  
-      
+        戻る
