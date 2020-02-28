@@ -15,4 +15,8 @@ class MypagesController < ApplicationController
   def commodity
     @item = Item.find(params[:id])
   end
+
+  def profile
+    @user = User.find_by(id: params[:id])
+  end
 end
