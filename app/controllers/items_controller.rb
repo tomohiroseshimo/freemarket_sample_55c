@@ -8,9 +8,6 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    # このまま導入するとunknown attribute 'item_id' for Image.というエラーが発生してしまう
-    # @parents = Category.all.order("id ASC").limit(10) ←全く同じコードをcategoriesコントローラーへ記載
-
   end
 
   def buy
@@ -24,8 +21,6 @@ class ItemsController < ApplicationController
 
   
   def create
-    # formのデータを受け取る
-    # binding.pry
     @item = Item.new(item_params)
     if @item.save
       redirect_to items_path, notice: '出品が完了しました'
@@ -35,6 +30,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @item = Item.find(params[:id])
   end
 
   def update
