@@ -24,6 +24,9 @@
     .middle-contents   
       .middle-contents-header
         電話番号の確認
+      - if @user.errors.any?  
+        .error_msg
+          %p 必須項目を入力してください。      
       .middle-contents-bottom
         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;携帯電話の番号
         = f.text_field :phone_number, placeholder: '携帯電話の番号を入力', class: "middle-contents-bottom__form-step2"

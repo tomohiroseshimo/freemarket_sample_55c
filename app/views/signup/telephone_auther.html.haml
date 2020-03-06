@@ -24,6 +24,9 @@
     .middle-contents-telephone   
       .middle-contents-header
         電話番号認証
+      - if @user.errors.any?  
+        .error_msg
+          %p 必須項目を入力してください。      
       .middle-contents-bottom
         &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;認証番号
         = f.text_field :authentication_number, placeholder: '認証番号を入力', class: "middle-contents-bottom__form-step3"

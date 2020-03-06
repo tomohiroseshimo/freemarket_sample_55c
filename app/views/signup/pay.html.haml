@@ -24,6 +24,9 @@
     .middle-contents-pays   
       .middle-contents-header
         支払い方法
+      - if @user.errors.any?  
+        .error_msg
+          %p 必須項目を入力してください。  
       .middle-contents-bottom
         .point-board
           カード番号

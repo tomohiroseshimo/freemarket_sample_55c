@@ -124,3 +124,16 @@ input[type="submit"] {
   height: 100px;
   width: 100px;
 }
+
+.field_with_errors {
+  display: contents;
+}
+
+.error_msg {
+  height: 25px;
+  width: 300px;
+  background: #BB0000;
+  margin: auto;
+  color: white;
+  text-align: center;
+}

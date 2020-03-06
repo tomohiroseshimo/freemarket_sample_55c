@@ -24,6 +24,9 @@
     .middle-contents-step1   
       .middle-contents-header
         会員情報入力
+      - if @user.errors.any?  
+        .error_msg
+          %p 必須項目を入力してください。    
       .middle-contents-bottom-step1
         .point-board
           ニックネーム
