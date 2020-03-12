@@ -81,7 +81,7 @@ class ItemsController < ApplicationController
 
   def pay
     @item = Item.find(params[:id])
-    Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PUBLIC_KEY]
+    Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_ACCESS_KEY]
     charge = Payjp::Charge.create(
       amount: @item.price, # 決済する値段
       card: params['payjp-token'],
