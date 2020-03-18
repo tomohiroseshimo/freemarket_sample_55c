@@ -18,7 +18,7 @@
       支払金額&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; ¥#{@item.price}
     .buy-btn   
       = form_tag(pay_path, method: :post) do
-        %script.payjp-button{:src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => Rails.application.credentials.payjp[:PAYJP_PUBLIC_KEY]}    
+        %script.payjp-button{:src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => Rails.application.credentials.payjp[:PAYJP_ACCESS_KEY]}    
     
 .board
 .foot
