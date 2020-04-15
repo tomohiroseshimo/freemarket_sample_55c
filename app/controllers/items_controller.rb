@@ -87,6 +87,7 @@ class ItemsController < ApplicationController
       card: params['payjp-token'],
       currency: 'jpy'
     )
+    @item.update(purchaser_id: current_user.id)
     redirect_to after_path
   end
 
