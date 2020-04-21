@@ -10,3 +10,8 @@
             = image_tag i.images.first.variant(resize: "188x188")
         .content__description
           = i.name
+        - if i.purchaser_id.present? 
+          .items-box_photo__sold
+            .items-box_photo__sold__inner
+              SOLD          
+     
