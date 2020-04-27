@@ -41,6 +41,7 @@ resources :mypages, only: [:index, :destroy, :edit, :update] do
   end
   member do
     get 'identification'
+    get 'profile'
   end
 end
 
